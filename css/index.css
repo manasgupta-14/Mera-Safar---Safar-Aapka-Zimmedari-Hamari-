@@ -182,11 +182,12 @@ header {
 
 .sec-nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 25px;
     list-style: none;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 5px 10px;
 }
 
 .sec-nav-links li a {
