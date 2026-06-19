@@ -72,7 +72,7 @@ header {
 
 .login-button {
     padding: 10px 28px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #ff6a45, #de9157);
     color: white;
     border: none;
     border-radius: 30px;
@@ -423,4 +423,105 @@ header {
         right: 10px;
         left: auto;
     }
+}
+
+.popular-places-container {
+    width: 100%;
+    background-color: #f0f7f9;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.popular-places-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    max-width: 1200px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.popular-places-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, orange, rgb(255, 230, 102), rgb(255, 99, 99));
+    border-radius: 10px;
+}
+
+.popular-places-heading h2 {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.popular-places-heading a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.popular-places-heading a:hover {
+    text-decoration: underline;
+}
+
+.popular-places-card {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 1200px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 250px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card .content {
+    padding: 15px 20px;
+    font-family: sans-serif;
+}
+
+.card .content h3 {
+    margin: 0;
+    color: #222;
+}
+
+.card .rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
