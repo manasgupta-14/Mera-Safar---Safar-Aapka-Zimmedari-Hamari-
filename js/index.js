@@ -1,3 +1,4 @@
+//Navbar
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -7,6 +8,7 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('toggle');
 });
 
+//Slider
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
@@ -44,3 +46,45 @@ setInterval(() => {
     }
     updateSlider();
 }, 5000);
+
+//API of nav destinations dropdown-menu
+
+const destinationMenu = document.getElementById("destinationMenu");
+
+fetch("./api/nav-bar-destination.json")
+    .then((response) => response.json())
+    .then((data) => {
+        data.forEach(item => {
+            destinationMenu.innerHTML += `
+            <li>
+                <a href="#" data-slug="${item.slug}">
+                    ${item.name}
+                </a>
+            </li>
+        `
+        });
+    })
+    .catch((error)=>{
+        console.log("Error",error);
+    })
+
+  //API of nav Tour Packages dropdown-menu
+
+  const tourPackages=document.getElementById("tourpackagesMenu");
+
+  fetch("./api/nav-bar-tour-packages.json")
+  
+  .then((response)=>response.json())
+  .then((data)=>{
+    data.forEach((item)=>{
+        tourPackages.innerHTML+=`
+            <li>
+                <a href="#" data-slug="${item.slug}">
+                    ${item.name}
+                </a>
+            </li>
+        `
+    });
+  }).catch((error)=>{
+        console.log("Error ",error)
+    })
