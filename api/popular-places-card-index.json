@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Red Fort",
+    "state": "Delhi",
+    "city": "Delhi",
+    "image": "red-fort.jpg",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Jhansi Fort",
+    "state": "Uttar Pradesh",
+    "city": "Jhansi",
+    "image": "jhansi-fort.png",
+    "rating": 4.5
+  },
+  {
+    "id": 3,
+    "name": "Lonavala",
+    "state": "Maharashtra",
+    "city": "Lonavala",
+    "image": "lonavala.png",
+    "rating": 4.6
+  },
+  {
+    "id": 4,
+    "name": "Statue of Unity",
+    "state": "Gujarat",
+    "city": "Ekta Nagar",
+    "image": "statue-of-unity.png",
+    "rating": 4.7
+  }
+]
