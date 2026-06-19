@@ -64,27 +64,71 @@ fetch("./api/nav-bar-destination.json")
         `
         });
     })
-    .catch((error)=>{
-        console.log("Error",error);
+    .catch((error) => {
+        console.log("Error", error);
     })
 
-  //API of nav Tour Packages dropdown-menu
+//API of nav Tour Packages dropdown-menu
 
-  const tourPackages=document.getElementById("tourpackagesMenu");
+const tourPackages = document.getElementById("tourpackagesMenu");
 
-  fetch("./api/nav-bar-tour-packages.json")
-  
-  .then((response)=>response.json())
-  .then((data)=>{
-    data.forEach((item)=>{
-        tourPackages.innerHTML+=`
+fetch("./api/nav-bar-tour-packages.json")
+
+    .then((response) => response.json())
+    .then((data) => {
+        data.forEach((item) => {
+            tourPackages.innerHTML += `
             <li>
                 <a href="#" data-slug="${item.slug}">
                     ${item.name}
                 </a>
             </li>
         `
-    });
-  }).catch((error)=>{
-        console.log("Error ",error)
+        });
+    }).catch((error) => {
+        console.log("Error ", error)
     })
+
+//Popular Places fetch With the help of API
+const popularPlaces = document.getElementById("popularPlacesCard");
+
+async function loadPopularPlaces() {
+    try {
+        const response = await fetch(
+            "./api/popular-places-card-index.json"
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                "Failed to load Api of Popular Places"
+            );
+        }
+
+        const data = await response.json();
+
+        let html = "";
+
+        data.forEach((item) => {
+            html += `
+        <div class="card">
+          <img src="./assets/${item.image}"
+               alt="${item.name}" />
+
+          <span class="rating">
+            ⭐ ${item.rating}
+          </span>
+
+          <div class="content">
+            <h3>${item.name}</h3>
+          </div>
+        </div>
+      `;
+        });
+
+        popularPlaces.innerHTML = html;
+    } catch (error) {
+        console.log("Error:", error);
+    }
+}
+
+loadPopularPlaces();
