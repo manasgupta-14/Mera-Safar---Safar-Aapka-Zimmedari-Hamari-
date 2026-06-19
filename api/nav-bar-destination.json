@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "States",
+    "slug": "states"
+  },
+  {
+    "id": 2,
+    "name": "Historical Places",
+    "slug": "historical"
+  },
+  {
+    "id": 3,
+    "name": "Hill Stations",
+    "slug": "hill-stations"
+  },
+  {
+    "id": 4,
+    "name": "Beaches",
+    "slug": "beaches"
+  },
+  {
+    "id": 5,
+    "name": "Religious Places",
+    "slug": "religious"
+  },
+  {
+    "id": 6,
+    "name": "Adventure Places",
+    "slug": "adventure"
+  },
+  {
+    "id": 7,
+    "name": "Wildlife Sanctuaries",
+    "slug": "wildlife"
+  }
+]
