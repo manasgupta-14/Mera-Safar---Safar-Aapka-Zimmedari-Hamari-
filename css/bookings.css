@@ -510,3 +510,36 @@ header {
         flex-wrap: wrap;
     }
 }
+
+/* --- Cancel & Refund Styles --- */
+.cancel-btn {
+    padding: 8px 16px;
+    background: #ef4444;
+    /* Red color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.cancel-btn:hover {
+    background: #dc2626;
+}
+
+.status-cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-disabled {
+    background: #cbd5e1 !important;
+    cursor: not-allowed !important;
+    color: #64748b !important;
+}
