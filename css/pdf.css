@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-buttons {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-home {
+    background-color: #333;
+    color: white;
+}
+
+.btn-download {
+    background-color: #ff5722;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Ticket Design --- */
+#pdfTicketContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-card {
+    padding: 40px;
+    background: #fff;
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #ff7e5f;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-header {
+    text-align: center;
+    border-bottom: 2px dashed #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.ticket-header h1 {
+    color: #ff5722;
+    margin: 0;
+}
+
+.ticket-header p {
+    color: #666;
+    margin-top: 5px;
+}
+
+.ticket-info-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.ticket-info-top h2 {
+    margin: 0;
+    color: #333;
+}
+
+.ticket-info-top p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.status h3 {
+    margin: 0;
+    color: #ff5722;
+}
+
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.ticket-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.bg-light {
+    background: #f8fafc;
+}
+
+.ticket-total {
+    background: #fff0eb;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.ticket-total h3 {
+    margin: 0;
+    color: #333;
+}
+
+.ticket-total .highlight {
+    color: #ff5722;
+}
+
+.ticket-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+    font-size: 12px;
+}
