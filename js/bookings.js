@@ -35,33 +35,56 @@ function loadMyBookings() {
         // Reverse array so newest bookings show first
         userBookings.reverse();
 
-        listContainer.innerHTML = userBookings.map(b => `
-            <div class="booking-item-card">
+        listContainer.innerHTML = userBookings.map(b => {
+            // Check if booking is cancelled
+            const isCancelled = b.Status === 'Cancelled';
+            
+            return `
+            <div class="booking-item-card" style="${isCancelled ? 'opacity: 0.7;' : ''}">
                 <div class="booking-details">
-                    <h3>${b.PackageName}</h3>
+                    <h3 style="${isCancelled ? 'text-decoration: line-through; color: #94a3b8;' : ''}">${b.PackageName}</h3>
                     <p><strong>Booking ID:</strong> ${b.BookingID}</p>
                     <p><strong>Travel Date:</strong> ${b.Date}</p>
                     <p><strong>Travellers:</strong> ${b.TotalPax} (${b.PackageType})</p>
                     <p><strong>Amount Paid:</strong> ₹${b.FinalPrice}</p>
                 </div>
                 <div class="booking-actions">
-                    <span class="status-badge">Confirmed ✅</span>
-                    <button class="view-ticket-btn" onclick="window.open('pdf.html?bookingId=${b.BookingID}', '_blank')">
+                    ${isCancelled 
+                        ? `<span class="status-cancelled">Refunded ❌</span>` 
+                        : `<span class="status-badge">Confirmed ✅</span>`
+                    }
+                    
+                    <button class="view-ticket-btn ${isCancelled ? 'btn-disabled' : ''}" 
+                        ${isCancelled ? 'disabled' : `onclick="window.open('pdf.html?bookingId=${b.BookingID}', '_blank')"`}>
                         View Ticket
                     </button>
-                    <button class="download-btn" onclick="downloadTicket('${b.BookingID}')">
+                    
+                    <button class="download-btn ${isCancelled ? 'btn-disabled' : ''}" 
+                        ${isCancelled ? 'disabled' : `onclick="downloadTicket('${b.BookingID}')"`}>
                         Download Ticket
                     </button>
+
+                    ${!isCancelled ? `
+                    <button class="cancel-btn" onclick="cancelBooking('${b.BookingID}')">
+                        Cancel & Refund
+                    </button>
+                    ` : ''}
                 </div>
             </div>
-        `).join("");
+        `}).join("");
     }
+}
+
+// Booking Cancel karne ka naya function
+// Booking Cancel karne ka naya function jo dusre page par bhejega
+function cancelBooking(bookingId) {
+    // Naye policy page par redirect karein aur URL me bookingId pass karein
+    window.location.href = `cancel.html?bookingId=${bookingId}`;
 }
 
 // Download functionality handle karne ka function
 function downloadTicket(bookingId) {
-    // Agar download handle karne ka code 'pdf.html' mein parameter se chalta hai:
-    window.location.href = `pdf.html?bookingId=${bookingId}&download=true`;
+    window.open(`pdf.html?bookingId=${bookingId}&download=true`, '_blank');
 }
 
 // Navbar Session Logic
