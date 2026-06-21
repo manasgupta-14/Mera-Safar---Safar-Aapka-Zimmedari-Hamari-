@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up || Mera Safar</title>
+    <link rel="stylesheet" href="./css/signUp.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-card">
+        <h2>Create New Account</h2>
+        <p>Register to get a flat 30% OFF on your first booking!</p>
+
+        <form id="signupForm">
+          <input
+            type="text"
+            id="signupName"
+            placeholder="Enter Full Name"
+            required
+          />
+          <input
+            type="email"
+            id="signupEmail"
+            placeholder="Enter Email Address"
+            required
+          />
+          <input
+            type="number"
+            id="signupMobile"
+            placeholder="Enter Mobile Number"
+            required
+          />
+          <input
+            type="date"
+            id="signupDob"
+            required
+            title="Select Date of Birth"
+          />
+          <input
+            type="password"
+            id="signupPassword"
+            placeholder="Enter Password"
+            required
+          />
+
+          <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+
+        <p class="toggle-link">
+          <a href="login.html">Already have an account? Login</a>
+        </p>
+      </div>
+    </div>
+    <script src="./js/signup.js"></script>
+  </body>
+</html>
