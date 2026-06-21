@@ -11,7 +11,7 @@
     <header>
       <div class="top-bar">
         <div class="logo">
-          <img src="./assets/logo-2.png" alt="Logo of Desh Darshan" />
+          <img src="./assets/logo-2.png" alt="Logo of Mera Safar" />
         </div>
 
         <div class="search-bar">
@@ -35,7 +35,7 @@
 
       <nav class="main-nav">
         <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li class="dropdown">
             <a href="#">Destinations ▾</a>
             <ul class="dropdown-menu" id="destinationMenu"></ul>
@@ -61,11 +61,6 @@
           <li><a href="#">🎫 Book Now</a></li>
           <li><a href="#">✈️ Plan Your Journey</a></li>
           <li><a href="#">🗺️ Trip Planner</a></li>
-          <li>
-            <a href="javascript:void(0)" onclick="openMyBookings()"
-              >🎫 Bookings</a
-            >
-          </li>
           <li><a href="#">🍽️ Restaurants & Cafes</a></li>
           <li><a href="#">🚗 Transport / Car Rentals</a></li>
           <li><a href="#">🌦️ Weather Info</a></li>
@@ -73,11 +68,7 @@
           <li><a href="#">📖 Travel Guide</a></li>
           <li><a href="#">❤️ Wishlist / Favorites</a></li>
           <li><a href="#">👤 My Account</a></li>
-          <li>
-            <a href="javascript:void(0)" onclick="openMyBookings()"
-              >📅 My Bookings</a
-            >
-          </li>
+          <li><a href="bookings.html">📅 My Bookings</a></li>
         </ul>
       </nav>
     </header>
@@ -279,212 +270,6 @@
       </div>
     </section>
 
-    <!-- Login / Signup Modal -->
-    <div id="loginModal" class="modal" style="z-index: 10000">
-      <div class="modal-content" style="max-width: 400px">
-        <span class="close-btn" onclick="closeLoginModal()">&times;</span>
-        <h2 id="authTitle" style="color: #666; margin-bottom: 15px">Login to Account</h2>
-        <p  id="authSubtitle">
-          
-        </p>
-
-        <div
-          class="form-grid"
-          id="authFormGrid"
-          style="grid-template-columns: 1fr"
-        >
-          <!-- EMAIL FIELD: Hamesha dikhega (Login & Signup) -->
-          <input
-            type="email"
-            id="loginEmail"
-            placeholder="Enter Email Address"
-            required
-          />
-
-          <!-- EXTRA FIELDS: Sirf Sign Up ke time dikhenge -->
-          <input
-            type="text"
-            id="signupName"
-            placeholder="Enter Full Name"
-            style="display: none"
-          />
-          <input
-            type="number"
-            id="signupMobile"
-            placeholder="Enter Mobile Number"
-            style="display: none"
-          />
-          <input
-            type="date"
-            id="signupDob"
-            placeholder="Date of Birth"
-            style="display: none"
-            title="Select Date of Birth"
-          />
-
-          <!-- PASSWORD FIELD: Hamesha dikhega -->
-          <input
-            type="password"
-            id="loginPassword"
-            placeholder="Enter Password"
-            required
-          />
-
-          <input type="hidden" id="authMode" value="login" />
-
-          <button type="button" class="submit-btn" onclick="handleAuth()">
-            Submit
-          </button>
-
-          <p style="text-align: center; margin-top: 10px; font-size: 14px">
-            <a
-              href="javascript:void(0)"
-              onclick="toggleAuthMode()"
-              id="authToggleText"
-              style="color: #ff5722; text-decoration: none; font-weight: bold"
-            >
-              Don't have an account? Sign Up
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- My Bookings Modal -->
-    <div id="myBookingsModal" class="modal" style="z-index: 10000">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeMyBookings()">&times;</span>
-        <h2>My Bookings</h2>
-        <div id="myBookingsList"></div>
-      </div>
-    </div>
-
-    <!-- Hidden PDF Ticket Template -->
-    <div id="pdfTicketContainer" style="display: none">
-      <div
-        id="ticketContent"
-        style="
-          padding: 40px;
-          font-family: &quot;Segoe UI&quot;, sans-serif;
-          background: #fff;
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
-          border: 2px solid #ff7e5f;
-          border-radius: 10px;
-        "
-      >
-        <div
-          style="
-            text-align: center;
-            border-bottom: 2px dashed #ddd;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-          "
-        >
-          <h1 style="color: #ff5722; margin: 0">MERA SAFAR</h1>
-          <p style="color: #666; margin: 5px 0 0 0">
-            Safar Aapka, Zimmedari Hamari
-          </p>
-        </div>
-
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-          "
-        >
-          <div>
-            <h2 style="margin: 0; color: #333">Booking Confirmation</h2>
-            <p style="margin: 5px 0; color: #555">
-              <strong>Booking ID:</strong> <span id="tkt-id"></span>
-            </p>
-            <p style="margin: 5px 0; color: #555">
-              <strong>Date & Time:</strong> <span id="tkt-time"></span>
-            </p>
-          </div>
-          <div style="text-align: right">
-            <h3 style="margin: 0; color: #ff5722">Status: CONFIRMED ✅</h3>
-          </div>
-        </div>
-
-        <table
-          style="width: 100%; border-collapse: collapse; margin-bottom: 30px"
-        >
-          <tr style="background: #f8fafc">
-            <td style="padding: 12px; border: 1px solid #ddd">
-              <strong>Passenger Name:</strong>
-            </td>
-            <td
-              style="padding: 12px; border: 1px solid #ddd"
-              id="tkt-name"
-            ></td>
-          </tr>
-          <tr>
-            <td style="padding: 12px; border: 1px solid #ddd">
-              <strong>Package Name:</strong>
-            </td>
-            <td
-              style="padding: 12px; border: 1px solid #ddd"
-              id="tkt-package"
-            ></td>
-          </tr>
-          <tr style="background: #f8fafc">
-            <td style="padding: 12px; border: 1px solid #ddd">
-              <strong>Travel Date:</strong>
-            </td>
-            <td
-              style="padding: 12px; border: 1px solid #ddd"
-              id="tkt-date"
-            ></td>
-          </tr>
-          <tr>
-            <td style="padding: 12px; border: 1px solid #ddd">
-              <strong>Total Travellers:</strong>
-            </td>
-            <td style="padding: 12px; border: 1px solid #ddd" id="tkt-pax"></td>
-          </tr>
-          <tr style="background: #f8fafc">
-            <td style="padding: 12px; border: 1px solid #ddd">
-              <strong>Contact Detail:</strong>
-            </td>
-            <td style="padding: 12px; border: 1px solid #ddd">
-              <span id="tkt-email"></span> | <span id="tkt-mobile"></span>
-            </td>
-          </tr>
-        </table>
-
-        <div
-          style="
-            background: #fff0eb;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: right;
-          "
-        >
-          <h3 style="margin: 0; color: #333">
-            Total Amount Paid:
-            <span style="color: #ff5722" id="tkt-price"></span>
-          </h3>
-        </div>
-
-        <div
-          style="
-            text-align: center;
-            margin-top: 40px;
-            color: #888;
-            font-size: 12px;
-          "
-        >
-          <p>Please carry a valid ID proof during your travel.</p>
-          <p>Thank you for choosing Mera Safar!</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- html2pdf Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
