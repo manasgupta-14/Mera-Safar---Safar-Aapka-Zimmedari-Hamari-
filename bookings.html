@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bookings || Mera Safar</title>
+    <link rel="shortcut icon" href="./assets/logo-2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bookings.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <img src="./assets/logo-2.png" alt="Logo of Mera Safar" />
+        </div>
+
+        <div class="search-bar">
+          <input
+            type="search"
+            class="search-bar-input"
+            placeholder="Search Your Destination"
+          />
+        </div>
+
+        <div class="login-btn desktop-login">
+          <button type="button" class="login-button">Login</button>
+        </div>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Destinations ▾</a>
+            <ul class="dropdown-menu" id="destinationMenu"></ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Tour Packages ▾</a>
+            <ul class="dropdown-menu" id="tourpackagesMenu"></ul>
+          </li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="#">Travel Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Help</a></li>
+          <li class="mobile-login">
+            <button type="button" class="login-button">Login</button>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="secondary-nav">
+        <ul class="sec-nav-links">
+          <li><a href="#">🌍 Explore Destinations</a></li>
+          <li><a href="#">🎫 Book Now</a></li>
+          <li><a href="#">✈️ Plan Your Journey</a></li>
+          <li><a href="#">🗺️ Trip Planner</a></li>
+          <li><a href="#">🍽️ Restaurants & Cafes</a></li>
+          <li><a href="#">🚗 Transport / Car Rentals</a></li>
+          <li><a href="#">🌦️ Weather Info</a></li>
+          <li><a href="#">📍 Nearby Attractions</a></li>
+          <li><a href="#">📖 Travel Guide</a></li>
+          <li><a href="#">❤️ Wishlist / Favorites</a></li>
+          <li><a href="#">👤 My Account</a></li>
+          <li><a href="bookings.html">📅 My Bookings</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="bookings-page-container">
+      <div class="bookings-header">
+        <h2>📅 My Journey Bookings</h2>
+        <p>View and manage all your past and upcoming trips.</p>
+      </div>
+
+      <div id="bookingsPageList" class="bookings-grid"></div>
+    </section>
+
+    <script src="./js/bookings.js"></script>
+  </body>
+</html>
