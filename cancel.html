@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancel & Refund Policy || Mera Safar</title>
+    <link rel="shortcut icon" href="./assets/logo-2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/cancel.css">
+  </head>
+  <body>
+    <div class="policy-container">
+      <h1>Cancellation & Refund Policy</h1>
+      <p>
+        Before proceeding with your cancellation, please read our terms
+        carefully.
+      </p>
+
+      <div class="booking-highlight">
+        You are about to cancel Booking ID:
+        <span id="cancel-booking-id" style="color: #ff5722">Loading...</span>
+      </div>
+
+      <h3>1. Cancellation Charges</h3>
+      <ul>
+        <li>
+          Cancellation 48 hours before the journey:
+          <strong>100% Refund</strong>.
+        </li>
+        <li>
+          Cancellation 24-48 hours before the journey:
+          <strong>50% Refund</strong>.
+        </li>
+        <li>
+          Cancellation within 24 hours of the journey:
+          <strong>No Refund</strong>.
+        </li>
+      </ul>
+
+      <h3>2. Refund Process</h3>
+      <p>
+        Once cancelled, the eligible refund amount will be credited to your
+        original payment method within <strong>3-5 business days</strong>.
+      </p>
+
+      <div class="btn-group">
+        <button class="btn btn-back" onclick="goBack()">Go Back</button>
+        <button class="btn btn-cancel" onclick="confirmCancellation()">
+          I Agree, Cancel Trip
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/cancel.js"></script>
+  </body>
+</html>
