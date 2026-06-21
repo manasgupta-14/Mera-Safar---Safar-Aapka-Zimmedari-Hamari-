@@ -8,45 +8,71 @@ let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
 let isLoggedIn = false;
 
-// ================= VERIFICATION LINK LOGIC =================
-function checkVerificationLink() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get('verify_token');
+// ================= SESSION & NAVBAR =================
+function updateNavbarUI() {
+    const loginBtns = document.querySelectorAll('.login-button');
 
-    if (token) {
-        let pendingUser = JSON.parse(localStorage.getItem("pendingUser"));
-
-        if (pendingUser && pendingUser.token === token) {
-            usersData = JSON.parse(localStorage.getItem("usersData")) || {};
-
-            usersData[pendingUser.email] = {
-                name: pendingUser.name,
-                email: pendingUser.email,
-                mobile: pendingUser.mobile,
-                dob: pendingUser.dob,
-                password: pendingUser.password,
-                isFirstTime: true,
-                createdAt: new Date().toLocaleString()
+    loginBtns.forEach(btn => {
+        if (isLoggedIn) {
+            btn.innerText = "Logout";
+            btn.onclick = (e) => {
+                e.preventDefault();
+                localStorage.removeItem("currentUser");
+                currentUser = null;
+                isLoggedIn = false;
+                alert("You have Successfully Logged Out");
+                updateNavbarUI();
             };
-            localStorage.setItem("usersData", JSON.stringify(usersData));
-
-            currentUser = { email: pendingUser.email, loginTime: Date.now() };
-            localStorage.setItem("currentUser", JSON.stringify(currentUser));
-            isLoggedIn = true;
-
-            localStorage.removeItem("pendingUser");
-
-            alert("✅ Email Verified Successfully! You have Successfully Created an Account on Mera Safar");
-
-            window.history.replaceState({}, document.title, window.location.pathname);
-            updateNavbarUI();
         } else {
-            alert("❌ Invalid or expired verification link!");
+            btn.innerText = "Login";
+            btn.onclick = (e) => {
+                e.preventDefault();
+                window.location.href = "login.html"; // Redirect to login page
+            };
+        }
+    });
+}
+
+function checkSession() {
+    if (currentUser) {
+        const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
+        if (Date.now() - currentUser.loginTime > TWO_DAYS_MS) {
+            alert("Your session has expired. Please log in again.");
+            localStorage.removeItem("currentUser");
+            currentUser = null;
+            isLoggedIn = false;
+        } else {
+            isLoggedIn = true;
+        }
+    } else {
+        isLoggedIn = false;
+    }
+    updateNavbarUI();
+}
+
+// ================= INITIALIZE ON LOAD =================
+document.addEventListener("DOMContentLoaded", () => {
+    checkSession();
+
+    // Check if user came back from login after a pending booking
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('action') === 'process_booking' && isLoggedIn) {
+        let savedBooking = localStorage.getItem("pendingBookingData");
+        if (savedBooking) {
+            pendingBookingData = JSON.parse(savedBooking);
+
+            // Re-apply first time discount if applicable
+            if (usersData[currentUser.email] && usersData[currentUser.email].isFirstTime) {
+                let price = parseFloat(pendingBookingData.FinalPrice.replace(/,/g, ''));
+                pendingBookingData.FinalPrice = (price * 0.70).toString();
+            }
+
+            processPaymentAndBooking();
+            localStorage.removeItem("pendingBookingData");
             window.history.replaceState({}, document.title, window.location.pathname);
         }
     }
-}
-checkVerificationLink();
+});
 
 // ================= NAVBAR & SLIDER =================
 const hamburger = document.querySelector('.hamburger');
@@ -185,49 +211,6 @@ if (trendingPlaces) {
     loadTrendingPlaces();
 }
 
-// ================= AUTHENTICATION UI LOGIC =================
-function updateNavbarUI() {
-    const loginBtns = document.querySelectorAll('.login-button');
-
-    loginBtns.forEach(btn => {
-        if (isLoggedIn) {
-            btn.innerText = "Logout";
-            btn.onclick = (e) => {
-                e.preventDefault();
-                localStorage.removeItem("currentUser");
-                currentUser = null;
-                isLoggedIn = false;
-                alert("You have Successfully Logged Out");
-                updateNavbarUI();
-            };
-        } else {
-            btn.innerText = "Login";
-            btn.onclick = (e) => {
-                e.preventDefault();
-                document.getElementById("loginModal").style.display = "block";
-            };
-        }
-    });
-}
-
-function checkSession() {
-    if (currentUser) {
-        const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
-        if (Date.now() - currentUser.loginTime > TWO_DAYS_MS) {
-            alert("Your session has expired. Please log in again.");
-            localStorage.removeItem("currentUser");
-            currentUser = null;
-            isLoggedIn = false;
-        } else {
-            isLoggedIn = true;
-        }
-    } else {
-        isLoggedIn = false;
-    }
-    updateNavbarUI();
-}
-checkSession();
-
 // ================= BOOKING MODAL LOGIC =================
 function openModal(packageId) {
     currentPackage = globalPackages.find(p => p.id === packageId);
@@ -350,122 +333,6 @@ function applyCoupon() {
     calculateTotal();
 }
 
-// ================= AUTHENTICATION (LOGIN & SIGNUP) =================
-function toggleAuthMode() {
-    let modeInput = document.getElementById("authMode");
-    let title = document.getElementById("authTitle");
-    let subtitle = document.getElementById("authSubtitle");
-    let toggleText = document.getElementById("authToggleText");
-    let nameInput = document.getElementById("signupName");
-    let mobileInput = document.getElementById("signupMobile");
-    let dobInput = document.getElementById("signupDob");
-
-    if (modeInput.value === "login") {
-        modeInput.value = "signup";
-        title.innerText = "Create New Account";
-        subtitle.innerText = "Register to get a flat 30% OFF on your first booking!";
-        toggleText.innerText = "Already have an account? Login";
-        nameInput.style.display = "block";
-        mobileInput.style.display = "block";
-        dobInput.style.display = "block";
-    } else {
-        modeInput.value = "login";
-        title.innerText = "Login to Account";
-        subtitle.innerText = "Login karte hi aapki payment proceed ho jayegi.";
-        toggleText.innerText = "Don't have an account? Sign Up";
-        nameInput.style.display = "none";
-        mobileInput.style.display = "none";
-        dobInput.style.display = "none";
-    }
-}
-
-function handleAuth() {
-    let email = document.getElementById("loginEmail").value.trim();
-    let pass = document.getElementById("loginPassword").value.trim();
-    let mode = document.getElementById("authMode").value;
-
-    usersData = JSON.parse(localStorage.getItem("usersData")) || {};
-
-    if (!email || !pass) {
-        alert("Please enter both Email and Password.");
-        return;
-    }
-
-    if (mode === "signup") {
-        let name = document.getElementById("signupName").value.trim();
-        let mobile = document.getElementById("signupMobile").value.trim();
-        let dob = document.getElementById("signupDob").value;
-
-        if (!name || !mobile || !dob) {
-            alert("Please fill Full Name, Mobile, and Date of Birth for Signup.");
-            return;
-        }
-
-        if (usersData[email]) {
-            alert("Account with this Email already exists! Please login.");
-            return;
-        }
-
-        let token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-
-        let pendingUser = {
-            name: name, email: email, mobile: mobile, dob: dob, password: pass, token: token
-        };
-        localStorage.setItem("pendingUser", JSON.stringify(pendingUser));
-
-        let currentUrl = window.location.origin + window.location.pathname;
-        let verifyLink = `${currentUrl}?verify_token=${token}`;
-
-        let subject = "Verify Your Mera Safar Account";
-        let body = `Hello ${name},\n\nPlease click the link below to verify your email and activate your account:\n\n${verifyLink}\n\nRegards,\nTeam Mera Safar`;
-
-        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        alert(`A verification email has been opened in your email app.\n\nTo create your account, please send the email and click the verification link provided in it.`);
-        closeLoginModal();
-
-    } else {
-        // LOGIN LOGIC
-        if (!usersData[email] || usersData[email].password !== pass) {
-            alert("Invalid Email or Password.");
-            return;
-        }
-
-        currentUser = { email: email, loginTime: Date.now() };
-        localStorage.setItem("currentUser", JSON.stringify(currentUser));
-        isLoggedIn = true;
-        updateNavbarUI();
-
-        closeLoginModal();
-
-        if (pendingBookingData) {
-            calculateTotal();
-            pendingBookingData.FinalPrice = document.getElementById("finalTotalDisplay").innerText;
-            setTimeout(() => {
-                processPaymentAndBooking();
-            }, 1000);
-        }
-    }
-}
-
-// Modal ko close karte time reset karne ka function
-function closeLoginModal() {
-    document.getElementById("loginModal").style.display = "none";
-
-    // Reset Inputs
-    document.getElementById("loginEmail").value = "";
-    document.getElementById("loginPassword").value = "";
-    document.getElementById("signupName").value = "";
-    document.getElementById("signupMobile").value = "";
-    document.getElementById("signupDob").value = "";
-
-    // Reset Form to Default "Login" State
-    let modeInput = document.getElementById("authMode");
-    if (modeInput.value === "signup") {
-        toggleAuthMode();
-    }
-}
-
 // ================= BOOKING SUBMIT & MAILS =================
 document.getElementById("bookingForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -481,7 +348,7 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
         return;
     }
 
-    pendingBookingData = {
+    let pendingData = {
         BookingID: "MS" + Math.floor(Math.random() * 100000),
         PackageName: currentPackage["package-name"],
         Name: document.getElementById("fullName").value,
@@ -497,8 +364,11 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
     };
 
     if (!isLoggedIn) {
-        document.getElementById("loginModal").style.display = "block";
+        // Redirect to login if not authenticated
+        localStorage.setItem("pendingBookingData", JSON.stringify(pendingData));
+        window.location.href = "login.html";
     } else {
+        pendingBookingData = pendingData;
         processPaymentAndBooking();
     }
 });
@@ -509,81 +379,37 @@ function sendBookingMail(data) {
     window.location.href = `mailto:${data.Email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-function generateTicketPDF(data) {
-    document.getElementById("tkt-id").innerText = data.BookingID;
-    document.getElementById("tkt-time").innerText = data.BookingTime;
-    document.getElementById("tkt-name").innerText = data.Name;
-    document.getElementById("tkt-package").innerText = data.PackageName;
-    document.getElementById("tkt-date").innerText = data.Date;
-    document.getElementById("tkt-pax").innerText = data.TotalPax + " (" + data.PackageType + ")";
-    document.getElementById("tkt-email").innerText = data.Email;
-    document.getElementById("tkt-mobile").innerText = data.Mobile;
-    document.getElementById("tkt-price").innerText = "₹" + data.FinalPrice;
-
-    const element = document.getElementById("ticketContent");
-    const container = document.getElementById("pdfTicketContainer");
-
-    container.style.display = "block";
-
-    const opt = {
-        margin: 0.5,
-        filename: `${data.BookingID}_MeraSafar_Ticket.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-
-    html2pdf().set(opt).from(element).save().then(() => {
-        container.style.display = "none";
-    });
-}
-
 function processPaymentAndBooking() {
     if (!pendingBookingData) return;
 
+    // Deduct seats
     localStorage.setItem(pendingBookingData.StorageKey, pendingBookingData.CurrentSeats - pendingBookingData.TotalPax);
 
+    // Add to My Bookings
     let myBookings = JSON.parse(localStorage.getItem("myBookings")) || [];
     myBookings.push(pendingBookingData);
     localStorage.setItem("myBookings", JSON.stringify(myBookings));
 
+    // Update First Time User Status
     if (usersData[currentUser.email] && usersData[currentUser.email].isFirstTime) {
         usersData[currentUser.email].isFirstTime = false;
         localStorage.setItem("usersData", JSON.stringify(usersData));
     }
 
+    // Add to upcoming Bookings
     let upcomingBookings = JSON.parse(localStorage.getItem("upcomingBookings")) || [];
     upcomingBookings.push(pendingBookingData);
     localStorage.setItem("upcomingBookings", JSON.stringify(upcomingBookings));
 
+    // Send Mail
     sendBookingMail(pendingBookingData);
-    generateTicketPDF(pendingBookingData);
 
-    alert(`🎉 Payment Successful!\nBooking ID: ${pendingBookingData.BookingID}\nYour ticket PDF is being downloaded.`);
+    // Redirect to PDF Ticket Page
+    let bookingId = pendingBookingData.BookingID;
+    alert(`🎉 Payment Successful!\nRedirecting to your ticket...`);
 
     closeModal();
     pendingBookingData = null;
-}
 
-// ================= MY BOOKINGS MODAL =================
-function openMyBookings() {
-    const listContainer = document.getElementById("myBookingsList");
-    let myBookings = JSON.parse(localStorage.getItem("myBookings")) || [];
-
-    if (myBookings.length === 0) {
-        listContainer.innerHTML = "<p>You have no bookings yet.</p>";
-    } else {
-        listContainer.innerHTML = myBookings.map(b => `
-            <div style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 8px; background: #fafafa;">
-                <h4 style="margin:0 0 8px 0; color: #ff5722;">${b.PackageName}</h4>
-                <p style="margin:4px 0; font-size: 14px;"><strong>ID:</strong> ${b.BookingID} | <strong>Date:</strong> ${b.Date}</p>
-                <p style="margin:4px 0; font-size: 14px;"><strong>Travellers:</strong> ${b.TotalPax} | <strong>Paid:</strong> ₹${b.FinalPrice}</p>
-            </div>
-        `).join("");
-    }
-    document.getElementById("myBookingsModal").style.display = "block";
-}
-
-function closeMyBookings() {
-    document.getElementById("myBookingsModal").style.display = "none";
+    window.location.href = `pdf.html?bookingId=${bookingId}`;
 }
