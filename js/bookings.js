@@ -1,3 +1,27 @@
+
+// ================= FETCH APIs =================
+const destinationMenu = document.getElementById("destinationMenu");
+if (destinationMenu) {
+    fetch("./api/nav-bar-destination.json")
+        .then((res) => res.json())
+        .then((data) => {
+            data.forEach(item => {
+                destinationMenu.innerHTML += `<li><a href="#" data-slug="${item.slug}">${item.name}</a></li>`;
+            });
+        }).catch(err => console.log(err));
+}
+
+const tourPackages = document.getElementById("tourpackagesMenu");
+if (tourPackages) {
+    fetch("./api/nav-bar-tour-packages.json")
+        .then((res) => res.json())
+        .then((data) => {
+            data.forEach((item) => {
+                tourPackages.innerHTML += `<li><a href="#" data-slug="${item.slug}">${item.name}</a></li>`;
+            });
+        }).catch(err => console.log(err));
+}
+
 let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
 let isLoggedIn = false;
 
@@ -38,7 +62,7 @@ function loadMyBookings() {
         listContainer.innerHTML = userBookings.map(b => {
             // Check if booking is cancelled
             const isCancelled = b.Status === 'Cancelled';
-            
+
             return `
             <div class="booking-item-card" style="${isCancelled ? 'opacity: 0.7;' : ''}">
                 <div class="booking-details">
@@ -49,10 +73,10 @@ function loadMyBookings() {
                     <p><strong>Amount Paid:</strong> ₹${b.FinalPrice}</p>
                 </div>
                 <div class="booking-actions">
-                    ${isCancelled 
-                        ? `<span class="status-cancelled">Refunded ❌</span>` 
-                        : `<span class="status-badge">Confirmed ✅</span>`
-                    }
+                    ${isCancelled
+                    ? `<span class="status-cancelled">Refunded ❌</span>`
+                    : `<span class="status-badge">Confirmed ✅</span>`
+                }
                     
                     <button class="view-ticket-btn ${isCancelled ? 'btn-disabled' : ''}" 
                         ${isCancelled ? 'disabled' : `onclick="window.open('pdf.html?bookingId=${b.BookingID}', '_blank')"`}>
