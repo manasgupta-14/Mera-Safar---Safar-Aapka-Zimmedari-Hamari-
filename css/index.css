@@ -780,6 +780,7 @@ header {
     }
 }
 
+/* Modals */
 .modal {
     display: none;
     position: fixed;
