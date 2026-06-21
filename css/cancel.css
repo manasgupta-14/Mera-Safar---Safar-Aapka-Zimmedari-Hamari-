@@ -1,0 +1,71 @@
+body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(255, 250, 243);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .policy-container {
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        max-width: 600px;
+        width: 90%;
+        border-top: 5px solid #ff5722;
+      }
+      h1 {
+        color: #1e293b;
+        margin-bottom: 10px;
+      }
+      h3 {
+        color: #ff5722;
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+      p,
+      li {
+        color: #475569;
+        line-height: 1.6;
+      }
+      .booking-highlight {
+        background: #fff0eb;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-weight: bold;
+        color: #333;
+        border: 1px dashed #ff5722;
+      }
+      .btn-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+      }
+      .btn {
+        flex: 1;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+        text-align: center;
+      }
+      .btn-cancel {
+        background: #ef4444;
+        color: white;
+      }
+      .btn-cancel:hover {
+        background: #dc2626;
+      }
+      .btn-back {
+        background: #e2e8f0;
+        color: #334155;
+      }
+      .btn-back:hover {
+        background: #cbd5e1;
+      }
