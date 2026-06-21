@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cat_01",
+    "name": "Adventure Tours",
+    "icon": "🏔️",
+    "slug": "adventure-tours"
+  },
+  {
+    "id": "cat_02",
+    "name": "Spiritual And Pilgrimage",
+    "icon": "🛕",
+    "slug": "spiritual-and-pligrimage "
+  },
+  {
+    "id": "cat_03",
+    "name": "Historical And Heritage",
+    "icon": "🏰",
+    "slug": "historical-and-heritage"
+  },
+  {
+    "id": "cat_04",
+    "name": "Hill Station Tours",
+    "icon": "🌄",
+    "slug": "hill-station-tours"
+  },
+  {
+    "id": "cat_05",
+    "name": "Beach Holidays",
+    "icon": "🏖️",
+    "slug": "beach-holidays"
+  },
+  {
+    "id": "cat_06",
+    "name": "Wildlife And Nature",
+    "icon": "🐅",
+    "slug": "wildlife-and-nature"
+  },
+  {
+    "id": "cat_07",
+    "name": "Honeymoon Tours",
+    "icon": "💑",
+    "slug": "honeymoon-tours"
+  },
+  {
+    "id": "cat_08",
+    "name": "Family Tours",
+    "icon": "👨‍👩‍👧‍👦",
+    "slug": "family-tours"
+  },
+  {
+    "id": "cat_09",
+    "name": "Solo Tours",
+    "icon": "👤",
+    "slug": "solo-tours"
+  },
+  {
+    "id": "cat_10",
+    "name": "Group Tours",
+    "icon": "👥",
+    "slug": "group-tours"
+  }
+]
