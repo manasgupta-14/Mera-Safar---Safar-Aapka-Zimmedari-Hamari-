@@ -1065,3 +1065,108 @@ header {
         width: 100%;
     }
 }
+
+.explore-category-index-section {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.explore-category-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.explore-category-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+}
+
+.explore-category-heading h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin: 0;
+}
+
+.explore-category-heading::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #fba100, #ffdb58, #ff6b6b);
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+}
+
+.view-all-btn {
+    text-decoration: none;
+    color: #0072ff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.explore-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+/* 1. Image ke wrapper ki height fix karein aur default ratio set karein */
+.card-image-wrapper {
+    width: 100%;
+    height: 220px;
+    /* Sabhi cards ki image height ab strictly 220px ho jayegi */
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+    /* Jab tak image load na ho, tab tak aacha background dikhe */
+}
+
+/* 2. Image ko stretch ya shrink hone se rokne ke liye object-fit lagayein */
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Yeh properties image ko bina crop ya stretch kiye poore box mein perfect fit karegi */
+    object-position: center;
+    /* Image ka main focus hamesha center mein rahega */
+    display: block;
+    /* Kisi bhi tarah ke inline space ko hatane ke liye */
+    transition: transform 0.5s ease;
+}
+
+/* 3. Ensure karein ki cards ki height bhi ek barabar (equal) dikhe chahe content kam-badi ho */
+.explore-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Yeh card ko grid row ki full height lene par majboor karega */
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eef2f5;
+}
+
+

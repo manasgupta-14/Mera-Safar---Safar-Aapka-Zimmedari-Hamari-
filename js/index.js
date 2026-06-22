@@ -413,3 +413,64 @@ function processPaymentAndBooking() {
 
     window.location.href = `pdf.html?bookingId=${bookingId}`;
 }
+
+// ================= EXPLORE CATEGORIES LOGIC =================
+const exploreCategories = document.getElementById("exploreCategoryCard");
+
+if (exploreCategories) {
+    const loadExploreCategories = async () => {
+        try {
+            const response = await fetch("./api/explore-categories-packages.json");
+            const data = await response.json();
+
+            // Target IDs: pkg_01 (Adventure), pkg_05 (Spiritual), pkg_29 (Family)
+            const targetPackageIds = ["pkg_06", "pkg_04", "pkg_19"];
+            const filterData = data.filter(item => targetPackageIds.includes(item.id));
+            
+            let html = "";
+
+            filterData.forEach((item) => {
+                // Agar image field blank "" hai (jaise pkg_29 mein hai), toh ek backup default image handle karein
+                const imageSrc = item.image ? item.image : "./assets/default-package.png";
+
+                html += `
+                <div class="explore-card">
+                  <div class="card-image-wrapper">
+                    <img src="${imageSrc}" alt="${item.name}" />
+                  </div>
+                  <div class="card-body">
+                    <div class="card-action-bar">
+                      <div class="discount-badge">${item.offerBadge || "Special"}</div>
+                    </div>
+                    <h3 class="package-title">${item.name}</h3>
+                    <div class="location-row">
+                      <span>📍</span> ${item.desitination}
+                    </div>
+                    <div class="meta-grid">
+                      <div class="meta-item">⏱️ ${item.duration}</div>
+                      <div class="meta-item">⭐ ${item.rating}</div>
+                      <div class="meta-item">👥 ${item.groupSize}</div>
+                    </div>
+                    <div class="tags-container">
+                      ${item.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="price-section">
+                      <div class="new-price">₹${item.price.toLocaleString('en-IN')}<small>/person</small></div>
+                    </div>
+                    <button class="book-now-btn">Book Now</button> 
+                  </div>
+                </div>
+                `;
+            });
+            exploreCategories.innerHTML = html;
+        } catch (error) { 
+            console.log("Explore Categories Error:", error); 
+        }
+    };
+    loadExploreCategories();
+}
+
+
+  
