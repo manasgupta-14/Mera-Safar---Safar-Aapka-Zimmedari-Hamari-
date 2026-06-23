@@ -426,7 +426,7 @@ if (exploreCategories) {
             // Target IDs: pkg_01 (Adventure), pkg_05 (Spiritual), pkg_29 (Family)
             const targetPackageIds = ["pkg_06", "pkg_04", "pkg_19"];
             const filterData = data.filter(item => targetPackageIds.includes(item.id));
-            
+
             let html = "";
 
             filterData.forEach((item) => {
@@ -465,12 +465,94 @@ if (exploreCategories) {
                 `;
             });
             exploreCategories.innerHTML = html;
-        } catch (error) { 
-            console.log("Explore Categories Error:", error); 
+        } catch (error) {
+            console.log("Explore Categories Error:", error);
         }
     };
     loadExploreCategories();
 }
 
 
-  
+
+document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const blogCards = document.querySelectorAll(".blog-card");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Remove active status from previous buttons
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            // Add active to current clicked button
+            button.classList.add("active");
+
+            const filterValue = button.getAttribute("data-target");
+
+            blogCards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+
+                if (filterValue === "all" || filterValue === cardCategory) {
+                    card.style.display = "flex";
+                    // Soft fade in animation trigger
+                    setTimeout(() => {
+                        card.style.opacity = "1";
+                        card.style.transform = "scale(1)";
+                    }, 50);
+                } else {
+                    card.style.opacity = "0";
+                    card.style.transform = "scale(0.95)";
+                    // Wait for fade animation before display none
+                    setTimeout(() => {
+                        card.style.display = "none";
+                    }, 300);
+                }
+            });
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".testimonial-card");
+    const dots = document.querySelectorAll(".dot");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+
+    let currentIndex = 0;
+
+    // Function to update slide visibility
+    function updateSlider(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+    }
+
+    // Next Slide Logic
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider(currentIndex);
+    });
+
+    // Previous Slide Logic
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider(currentIndex);
+    });
+
+    // Dots navigation click binding
+    dots.forEach(dot => {
+        dot.addEventListener("click", (e) => {
+            currentIndex = parseInt(e.target.getAttribute("data-index"));
+            updateSlider(currentIndex);
+        });
+    });
+
+    // Auto Slide Option (Every 5 seconds change automatically)
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider(currentIndex);
+    }, 5000);
+});
+
+
