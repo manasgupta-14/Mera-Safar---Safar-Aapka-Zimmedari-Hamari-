@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Your Booking | Mera Safar</title>
+    <link rel="shortcut icon" href="./assets/logo-2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/booking-modal.css">
+  </head>
+  <body>
+    <div class="booking-container">
+      <div class="page-header">
+        <h2 id="modalPackageTitle">Complete Your Booking</h2>
+        <!-- Cancel karke wapas home par bhejne ka link -->
+        <a href="index.html" class="back-link">&times; Cancel & Back to Home</a>
+      </div>
+
+      <form id="advancedBookingForm">
+        <!-- Section 1: Lead Profiler -->
+        <div class="form-section">
+          <h3>1. Contact Credentials (Lead Profiler)</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Legal Name *</label>
+              <input
+                type="text"
+                id="leadName"
+                required
+                placeholder="As shown on Government ID"
+              />
+            </div>
+            <div class="form-group">
+              <label>Mobile Number *</label>
+              <input
+                type="tel"
+                id="leadMobile"
+                pattern="[0-9]{10}"
+                required
+                placeholder="10-digit mobile number"
+              />
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input
+                type="email"
+                id="leadEmail"
+                required
+                placeholder="verification@domain.com"
+              />
+            </div>
+            <div class="form-group">
+              <label>Date of Birth *</label>
+              <input type="date" id="leadDOB" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Travel Matrix -->
+        <div class="form-section">
+          <h3>2. Travel Parametrization & Matrix Control</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Package Category Type</label>
+              <input
+                type="text"
+                id="modalPackageType"
+                readonly
+                value="Selected Package Auto-fill"
+                style="background: #eee"
+              />
+            </div>
+            <div class="form-group">
+              <label>Departure Date Selection *</label>
+              <input type="date" id="modalDepartureDate" required />
+            </div>
+            <div
+              class="form-group full-width"
+              style="display: flex; align-items: center; gap: 10px"
+            >
+              <input
+                type="checkbox"
+                id="includeReturn"
+                style="width: auto; transform: scale(1.2)"
+              />
+              <label style="margin: 0"
+                >Enable Return Ticket (Apply 40% OFF Onward base price)</label
+              >
+            </div>
+            <div
+              class="form-group full-width"
+              style="display: flex; align-items: center; gap: 10px"
+            >
+              <input
+                type="checkbox"
+                id="includeGuide"
+                style="width: auto; transform: scale(1.2)"
+              />
+              <label style="margin: 0"
+                >Enlist Local Tour Guide Support (Complimentary)</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Headcount -->
+        <div class="form-section">
+          <h3>3. Dynamic Headcount Manifest Roster</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Adult Count (Ages 12-60)</label>
+              <input type="number" id="countAdults" min="1" value="1" />
+            </div>
+            <div class="form-group">
+              <label>Children Count (Ages 2-12)</label>
+              <input type="number" id="countChildren" min="0" value="0" />
+            </div>
+            <div class="form-group">
+              <label>Senior Citizens (Ages 60+)</label>
+              <input type="number" id="countSeniors" min="0" value="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Billing Summary -->
+        <div class="form-section billing-section">
+          <h3>Calculated Invoice Output Summary</h3>
+          <div
+            class="form-grid"
+            style="grid-template-columns: 3fr 1fr; align-items: end"
+          >
+            <div class="form-group">
+              <label>Have a Promo Code?</label>
+              <input
+                type="text"
+                id="modalCouponCode"
+                placeholder="Enter PROMO CODE"
+              />
+            </div>
+            <button
+              type="button"
+              class="cancel-btn"
+              style="background: #2c3e50; color: #fff"
+            >
+              Apply
+            </button>
+          </div>
+
+          <div class="invoice-table">
+            <div class="invoice-row">
+              <span>Evaluated Passenger Index:</span>
+              <strong id="lblTotalPax">1</strong>
+            </div>
+            <div class="invoice-row">
+              <span>Onward Total Base Fare:</span>
+              <span>₹<span id="lblOnwardPrice">0</span></span>
+            </div>
+            <div class="invoice-row total-row">
+              <span>Net Payable Liability Amount:</span>
+              <span>₹<span id="lblFinalTotal">0</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Actions -->
+        <div class="footer-actions">
+          <a href="index.html" class="cancel-btn">Abort / Go Back</a>
+          <button type="submit" class="pay-now-btn">
+            Validate & Process Payment
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/booking-modal.js"></script>
+  </body>
+</html>
