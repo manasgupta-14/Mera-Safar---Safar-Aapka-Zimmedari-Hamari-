@@ -277,8 +277,145 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// ================= TESTIMONIAL SLIDER =================
-document.addEventListener("DOMContentLoaded", () => {
+// ================= TRAVEL BLOGS FETCH API =================
+const blogsGrid = document.querySelector(".blogs-grid");
+
+if (blogsGrid) {
+    const loadTravelBlogs = async () => {
+        try {
+            // Path check kar lein, jahan JSON file save ki hai
+            const response = await fetch("./api/travel-blogs-index.json");
+            const result = await response.json();
+
+            if (result.success && result.data) {
+                let html = "";
+
+                result.data.forEach((blog) => {
+                    html += `
+                    <div class="blog-card" data-category="${blog.category}">
+                        <div class="blog-img">
+                            <img src="${blog.image}" alt="${blog.title}" />
+                            <span class="badge">${blog.badge}</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> ${blog.date}</span>
+                                <span><i class="fa-regular fa-user"></i> ${blog.author}</span>
+                            </div>
+                            <h3>${blog.title}</h3>
+                            <p>${blog.excerpt}</p>
+                            <a href="${blog.link}" class="read-more-btn">
+                                Read More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    `;
+                });
+
+                blogsGrid.innerHTML = html;
+
+                // DATA LOAD HONE KE BAAD FILTER LOGIC RE-INITIALIZE KARNA ZARURI HAI
+                initializeBlogFilters();
+            }
+        } catch (error) {
+            console.log("Travel Blogs Fetch Error:", error);
+        }
+    };
+
+    loadTravelBlogs();
+}
+
+// Filter Logic ko Function me wrap kiya hai taaki dynamic data ke saath use kar sakein
+function initializeBlogFilters() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const blogCards = document.querySelectorAll(".blog-card");
+
+    if (filterButtons.length > 0 && blogCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const filterValue = button.getAttribute("data-target");
+
+                blogCards.forEach(card => {
+                    const cardCategory = card.getAttribute("data-category");
+
+                    if (filterValue === "all" || filterValue === cardCategory) {
+                        card.style.display = "flex"; // Agar block tha HTML me to block karein
+                        setTimeout(() => {
+                            card.style.opacity = "1";
+                            card.style.transform = "scale(1)";
+                        }, 50);
+                    } else {
+                        card.style.opacity = "0";
+                        card.style.transform = "scale(0.95)";
+                        setTimeout(() => {
+                            card.style.display = "none";
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+}
+
+// ================= TESTIMONIALS FETCH API & SLIDER =================
+const testimonialsWrapper = document.querySelector(".testimonials-wrapper");
+const dotIndicators = document.querySelector(".dot-indicators");
+
+if (testimonialsWrapper) {
+    const loadTestimonials = async () => {
+        try {
+            const response = await fetch("./api/testimonial-index.json");
+            const result = await response.json();
+
+            if (result.success && result.data) {
+                let cardsHtml = "";
+                let dotsHtml = "";
+
+                result.data.forEach((item, index) => {
+                    // Pehla card aur dot default "active" hona chahiye
+                    const isActive = index === 0 ? "active" : "";
+
+                    cardsHtml += `
+                    <div class="testimonial-card ${isActive}">
+                        <div class="quote-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="review-text">${item.text}</p>
+                        <div class="rating-stars">${item.ratingHtml}</div>
+                        <div class="user-info">
+                            <img src="${item.image}" alt="${item.name}" />
+                            <div>
+                                <h4>${item.name}</h4>
+                                <span>${item.designation}</span>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+
+                    // Dynamic dots generate kar rahe hain
+                    dotsHtml += `<span class="dot ${isActive}" data-index="${index}"></span>`;
+                });
+
+                // HTML inject kar diya
+                testimonialsWrapper.innerHTML = cardsHtml;
+                if (dotIndicators) dotIndicators.innerHTML = dotsHtml;
+
+                // DATA INJECT HONE KE BAAD SLIDER START KAREIN
+                initTestimonialSlider();
+            }
+        } catch (error) {
+            console.log("Testimonials Fetch Error:", error);
+        }
+    };
+
+    loadTestimonials();
+}
+
+// Fixed & Optimized Slider Logic Function
+function initTestimonialSlider() {
     const slides = document.querySelectorAll(".testimonial-card");
     const dots = document.querySelectorAll(".dot");
     const nextBtn = document.querySelector(".next-btn");
@@ -286,7 +423,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (slides.length > 0) {
         let currentIndex = 0;
+        let slideInterval; // Auto-play timer ke liye variable
 
+        // Slide update karne ka function
         function updateSlider(index) {
             slides.forEach(slide => slide.classList.remove("active"));
             dots.forEach(dot => dot.classList.remove("active"));
@@ -295,30 +434,86 @@ document.addEventListener("DOMContentLoaded", () => {
             if (dots[index]) dots[index].classList.add("active");
         }
 
+        // Auto-play shuru karne ka function
+        function startAutoPlay() {
+            slideInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider(currentIndex);
+            }, 5000);
+        }
+
+        // Manual click par timer reset karne ka function
+        function resetAutoPlay() {
+            clearInterval(slideInterval);
+            startAutoPlay();
+        }
+
+        // Next Button Click Event
         if (nextBtn) {
             nextBtn.addEventListener("click", () => {
                 currentIndex = (currentIndex + 1) % slides.length;
                 updateSlider(currentIndex);
+                resetAutoPlay(); // Timer reset karein taaki achanak double slide na ho
             });
         }
 
+        // Previous Button Click Event
         if (prevBtn) {
             prevBtn.addEventListener("click", () => {
                 currentIndex = (currentIndex - 1 + slides.length) % slides.length;
                 updateSlider(currentIndex);
+                resetAutoPlay();
             });
         }
 
+        // Dots Click Event
         dots.forEach(dot => {
             dot.addEventListener("click", (e) => {
                 currentIndex = parseInt(e.target.getAttribute("data-index"));
                 updateSlider(currentIndex);
+                resetAutoPlay();
             });
         });
 
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateSlider(currentIndex);
-        }, 5000);
+        // Initial load par auto-play start karein
+        startAutoPlay();
     }
-});
+}
+
+// ================= WHY CHOOSE US FETCH API =================
+const whyChooseGrid = document.querySelector(".why-cards-grid");
+
+if (whyChooseGrid) {
+    const loadWhyChooseUs = async () => {
+        try {
+            // Yahan apne JSON file ka sahi path daalein (jaise: "./api/why-choose-us.json")
+            const response = await fetch("./api/why-choose-us-index.json");
+            const result = await response.json();
+
+            // Check karenge ki success true hai aur data array maujood hai
+            if (result.success && result.data) {
+                let html = "";
+
+                result.data.forEach((item) => {
+                    html += `
+                    <div class="why-choose-card">
+                        <span class="card-number">${item.id}</span>
+                        <div class="icon-box">
+                            <i class="${item.icon}"></i>
+                        </div>
+                        <h3>${item.heading}</h3>
+                        <p>${item.paragraph}</p>
+                    </div>
+                    `;
+                });
+
+                // HTML inject kar rahe hain container mein
+                whyChooseGrid.innerHTML = html;
+            }
+        } catch (error) {
+            console.log("Why Choose Us Fetch Error:", error);
+        }
+    };
+
+    loadWhyChooseUs();
+}
