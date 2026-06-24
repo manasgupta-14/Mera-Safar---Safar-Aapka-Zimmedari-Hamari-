@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+< lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <body>
+  <>
     <header>
       <div class="top-bar">
         <div class="logo">
@@ -62,7 +62,8 @@
       <nav class="secondary-nav">
         <ul class="sec-nav-links">
           <li><a href="#">🌍 Explore Destinations</a></li>
-          <li><a href="#">🎫 Book Now</a></li>
+          <!-- Yahan booking.html ka direct link de diya gaya hai -->
+          <li><a href="booking.html">🎫 Book Now</a></li> 
           <li><a href="#">✈️ Plan Your Journey</a></li>
           <li><a href="#">🗺️ Trip Planner</a></li>
           <li><a href="#">🍽️ Restaurants & Cafes</a></li>
@@ -109,171 +110,6 @@
       </div>
     </section>
 
-    <section>
-      <div class="modal" id="bookingModal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal()">&times;</span>
-          <h2 id="modalPackageTitle">Package Name</h2>
-
-          <form id="bookingForm">
-            <div class="form-section">
-              <h3><span>1</span> Traveller Details</h3>
-              <div class="form-grid">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    id="fullName"
-                    required
-                  />
-                </div>
-                <div class="input-group">
-                  <input
-                    type="number"
-                    placeholder="Mobile Number"
-                    id="mobile"
-                    required
-                  />
-                </div>
-                <div class="input-group full-width">
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="Email Address"
-                    required
-                  />
-                </div>
-                <div class="input-group">
-                  <label for="adults">No. of Adults</label>
-                  <input
-                    type="number"
-                    id="adults"
-                    min="1"
-                    value="1"
-                    required
-                    onchange="calculateTotal()"
-                  />
-                </div>
-                <div class="input-group">
-                  <label for="children">No. of Children</label>
-                  <input
-                    type="number"
-                    id="children"
-                    min="0"
-                    value="0"
-                    onchange="calculateTotal()"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="form-section">
-              <h3><span>2</span> Departure Date & Seats</h3>
-              <select id="departureDate" required></select>
-            </div>
-
-            <div class="form-section">
-              <h3><span>3</span> Package Type</h3>
-              <select id="packageType">
-                <option value="Family">Family</option>
-                <option value="Couple">Couple</option>
-                <option value="Solo">Solo</option>
-                <option value="Friend">Friend</option>
-                <option value="Group">Group</option>
-              </select>
-            </div>
-
-            <div class="form-section">
-              <h3><span>4</span> Add-on Services</h3>
-              <div class="addons">
-                <label
-                  ><input
-                    type="checkbox"
-                    class="addon-cb"
-                    value="4000"
-                    onchange="calculateTotal()"
-                  />
-                  Hotel (+₹4,000)</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    class="addon-cb"
-                    value="2500"
-                    onchange="calculateTotal()"
-                  />
-                  Cab (+₹2,500)</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    class="addon-cb"
-                    value="1500"
-                    onchange="calculateTotal()"
-                  />
-                  Food (+₹1,500)</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    class="addon-cb"
-                    value="7000"
-                    onchange="calculateTotal()"
-                  />
-                  Flight (+₹7,000)</label
-                >
-              </div>
-            </div>
-
-            <div class="form-section">
-              <h3><span>5</span> Apply Coupon</h3>
-              <div class="coupon-section">
-                <input
-                  type="text"
-                  id="couponCode"
-                  placeholder="Enter Coupon Code"
-                />
-                <button type="button" class="apply-btn" onclick="applyCoupon()">
-                  Apply
-                </button>
-              </div>
-              <p id="couponMessage"></p>
-            </div>
-
-            <div class="price-breakdown">
-              <div class="price-row">
-                <span>Base Package (<span id="paxCount">1</span> Pax)</span>
-                <span>₹<span id="basePriceDisplay">0</span></span>
-              </div>
-              <div class="price-row">
-                <span>Add-ons Total</span>
-                <span>₹<span id="addonsDisplay">0</span></span>
-              </div>
-              <div class="price-row discount-row">
-                <span>Coupon Discount</span>
-                <span>- ₹<span id="discountDisplay">0</span></span>
-              </div>
-              <div
-                class="price-row discount-row"
-                id="firstTimeDiscountRow"
-                style="display: none; color: #ff5722"
-              >
-                <span>First-Time User (30% OFF)</span>
-                <span>- ₹<span id="firstTimeDiscountDisplay">0</span></span>
-              </div>
-              <hr />
-              <div class="price-row final-total">
-                <span>Final Total</span>
-                <span>₹<span id="finalTotalDisplay">0</span></span>
-              </div>
-            </div>
-
-            <button type="submit" class="submit-btn">Proceed to Pay</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <section class="explore-category-index-section">
       <div class="explore-category-container">
         <div class="explore-category-heading">
@@ -283,6 +119,7 @@
         <div class="explore-category-grid" id="exploreCategoryCard"></div>
       </div>
     </section>
+
 
     <div
       id="bookingModalOverlay"
