@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // HTML me Booking ID dikhana
-    document.getElementById("cancel-booking-id").innerText = bookingId;
+    const cancelTextEl = document.getElementById("cancel-booking-id");
+    if (cancelTextEl) {
+        cancelTextEl.innerText = bookingId;
+    }
 });
 
 function confirmCancellation() {
@@ -18,11 +21,13 @@ function confirmCancellation() {
     const bookingId = urlParams.get('bookingId');
 
     let myBookings = JSON.parse(localStorage.getItem("myBookings")) || [];
-    const bookingIndex = myBookings.findIndex(b => b.BookingID === bookingId);
+
+    // FIX: b.BookingID ki jagah b.bookingId kiya gaya hai
+    const bookingIndex = myBookings.findIndex(b => b.bookingId === bookingId);
 
     if (bookingIndex !== -1) {
-        // Status ko Cancelled me update karna
-        myBookings[bookingIndex].Status = 'Cancelled';
+        // FIX: Status ki jagah status (small 's') kiya gaya hai
+        myBookings[bookingIndex].status = 'Cancelled';
 
         // LocalStorage me save karna
         localStorage.setItem("myBookings", JSON.stringify(myBookings));
