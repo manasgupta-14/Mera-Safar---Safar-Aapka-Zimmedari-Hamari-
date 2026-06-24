@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // LocalStorage se booking details lana
     let myBookings = JSON.parse(localStorage.getItem("myBookings")) || [];
-    let bookingData = myBookings.find(b => b.BookingID === bookingId);
+    
+    // Yahan BookingID ki jagah bookingId aayega (exact match with previous code)
+    let bookingData = myBookings.find(b => b.bookingId === bookingId);
 
     if (!bookingData) {
         alert("Booking details not found!");
@@ -20,21 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // HTML elements mein data dalna
-    document.getElementById("tkt-id").innerText = bookingData.BookingID;
-    document.getElementById("tkt-time").innerText = bookingData.BookingTime;
-    document.getElementById("tkt-name").innerText = bookingData.Name;
-    document.getElementById("tkt-package").innerText = bookingData.PackageName;
-    document.getElementById("tkt-date").innerText = bookingData.Date;
-    document.getElementById("tkt-pax").innerText = bookingData.TotalPax + " (" + bookingData.PackageType + ")";
-    document.getElementById("tkt-email").innerText = bookingData.Email;
-    document.getElementById("tkt-mobile").innerText = bookingData.Mobile;
-    document.getElementById("tkt-price").innerText = "₹" + bookingData.FinalPrice;
+    // HTML elements mein data dalna (Saare variables lowercase/camelCase kiye gaye hain)
+    document.getElementById("tkt-id").innerText = bookingData.bookingId;
+    document.getElementById("tkt-time").innerText = bookingData.bookingTime;
+    document.getElementById("tkt-name").innerText = bookingData.name;
+    document.getElementById("tkt-package").innerText = bookingData.packageName;
+    document.getElementById("tkt-date").innerText = bookingData.departureDate; // Date ki jagah departureDate
+    document.getElementById("tkt-pax").innerText = bookingData.totalPax + " (" + bookingData.packageType + ")";
+    document.getElementById("tkt-email").innerText = bookingData.email;
+    document.getElementById("tkt-mobile").innerText = bookingData.mobile;
+    document.getElementById("tkt-price").innerText = "₹" + bookingData.totalAmount; // FinalPrice ki jagah totalAmount
 
     // FIX: Sirf tabhi download trigger karein jab URL me 'download=true' ho
     if (isDownload === 'true') {
         setTimeout(() => {
-            downloadPDF(bookingData.BookingID);
+            // Yahan bhi bookingId case theek kiya gaya hai
+            downloadPDF(bookingData.bookingId);
         }, 1000);
     }
 });
