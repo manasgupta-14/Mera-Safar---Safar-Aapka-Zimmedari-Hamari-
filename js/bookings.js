@@ -1,4 +1,3 @@
-
 // ================= FETCH APIs =================
 const destinationMenu = document.getElementById("destinationMenu");
 if (destinationMenu) {
@@ -44,8 +43,8 @@ function loadMyBookings() {
         return;
     }
 
-    // Filter bookings only for the logged-in user
-    let userBookings = myBookings.filter(b => b.Email === currentUser.email);
+    // FIX: 'b.Email' ki jagah 'b.email' kiya gaya hai
+    let userBookings = myBookings.filter(b => b.email === currentUser.email);
 
     if (userBookings.length === 0) {
         listContainer.innerHTML = `
@@ -60,17 +59,18 @@ function loadMyBookings() {
         userBookings.reverse();
 
         listContainer.innerHTML = userBookings.map(b => {
-            // Check if booking is cancelled
-            const isCancelled = b.Status === 'Cancelled';
+            // FIX: 'b.Status' ki jagah 'b.status' kiya gaya hai
+            const isCancelled = b.status === 'Cancelled';
 
+            // FIX: Saare variables ko exact match kiya gaya hai jo aapne booking-modal.js me save kiye the
             return `
             <div class="booking-item-card" style="${isCancelled ? 'opacity: 0.7;' : ''}">
                 <div class="booking-details">
-                    <h3 style="${isCancelled ? 'text-decoration: line-through; color: #94a3b8;' : ''}">${b.PackageName}</h3>
-                    <p><strong>Booking ID:</strong> ${b.BookingID}</p>
-                    <p><strong>Travel Date:</strong> ${b.Date}</p>
-                    <p><strong>Travellers:</strong> ${b.TotalPax} (${b.PackageType})</p>
-                    <p><strong>Amount Paid:</strong> ₹${b.FinalPrice}</p>
+                    <h3 style="${isCancelled ? 'text-decoration: line-through; color: #94a3b8;' : ''}">${b.packageName}</h3>
+                    <p><strong>Booking ID:</strong> ${b.bookingId}</p>
+                    <p><strong>Travel Date:</strong> ${b.departureDate}</p>
+                    <p><strong>Travellers:</strong> ${b.totalPax} (${b.packageType})</p>
+                    <p><strong>Amount Paid:</strong> ₹${b.totalAmount}</p>
                 </div>
                 <div class="booking-actions">
                     ${isCancelled
@@ -79,17 +79,17 @@ function loadMyBookings() {
                 }
                     
                     <button class="view-ticket-btn ${isCancelled ? 'btn-disabled' : ''}" 
-                        ${isCancelled ? 'disabled' : `onclick="window.open('pdf.html?bookingId=${b.BookingID}', '_blank')"`}>
+                        ${isCancelled ? 'disabled' : `onclick="window.open('pdf.html?bookingId=${b.bookingId}', '_blank')"`}>
                         View Ticket
                     </button>
                     
                     <button class="download-btn ${isCancelled ? 'btn-disabled' : ''}" 
-                        ${isCancelled ? 'disabled' : `onclick="downloadTicket('${b.BookingID}')"`}>
+                        ${isCancelled ? 'disabled' : `onclick="downloadTicket('${b.bookingId}')"`}>
                         Download Ticket
                     </button>
 
                     ${!isCancelled ? `
-                    <button class="cancel-btn" onclick="cancelBooking('${b.BookingID}')">
+                    <button class="cancel-btn" onclick="cancelBooking('${b.bookingId}')">
                         Cancel & Refund
                     </button>
                     ` : ''}
@@ -99,7 +99,6 @@ function loadMyBookings() {
     }
 }
 
-// Booking Cancel karne ka naya function
 // Booking Cancel karne ka naya function jo dusre page par bhejega
 function cancelBooking(bookingId) {
     // Naye policy page par redirect karein aur URL me bookingId pass karein
