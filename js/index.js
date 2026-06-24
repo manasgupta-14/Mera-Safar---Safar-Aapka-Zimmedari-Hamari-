@@ -1,16 +1,11 @@
 // ================= GLOBAL VARIABLES =================
-let currentPackage = null;
-let appliedCouponCode = "";
-let pendingBookingData = null;
-let globalPackages = [];
-
-let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
-let isLoggedIn = false;
+let isLoggedIn = currentUser ? true : false;
+let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
 // ================= SESSION & NAVBAR =================
 function updateNavbarUI() {
-    const loginBtns = document.querySelectorAll('.login-button');
+    const loginBtns = document.querySelectorAll('.login-button'); // Apne navbar button ki class yahan daalein
 
     loginBtns.forEach(btn => {
         if (isLoggedIn) {
@@ -20,14 +15,14 @@ function updateNavbarUI() {
                 localStorage.removeItem("currentUser");
                 currentUser = null;
                 isLoggedIn = false;
-                alert("You have Successfully Logged Out");
-                updateNavbarUI();
+                alert("Aap successfully log out ho gaye hain.");
+                window.location.reload(); // Page refresh to reset state
             };
         } else {
             btn.innerText = "Login";
             btn.onclick = (e) => {
                 e.preventDefault();
-                window.location.href = "login.html"; // Redirect to login page
+                window.location.href = "login.html";
             };
         }
     });
@@ -37,15 +32,13 @@ function checkSession() {
     if (currentUser) {
         const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
         if (Date.now() - currentUser.loginTime > TWO_DAYS_MS) {
-            alert("Your session has expired. Please log in again.");
+            alert("Session expire ho gaya hai. Kripya wapas login karein.");
             localStorage.removeItem("currentUser");
             currentUser = null;
             isLoggedIn = false;
         } else {
             isLoggedIn = true;
         }
-    } else {
-        isLoggedIn = false;
     }
     updateNavbarUI();
 }
@@ -53,25 +46,6 @@ function checkSession() {
 // ================= INITIALIZE ON LOAD =================
 document.addEventListener("DOMContentLoaded", () => {
     checkSession();
-
-    // Check if user came back from login after a pending booking
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('action') === 'process_booking' && isLoggedIn) {
-        let savedBooking = localStorage.getItem("pendingBookingData");
-        if (savedBooking) {
-            pendingBookingData = JSON.parse(savedBooking);
-
-            // Re-apply first time discount if applicable
-            if (usersData[currentUser.email] && usersData[currentUser.email].isFirstTime) {
-                let price = parseFloat(pendingBookingData.FinalPrice.replace(/,/g, ''));
-                pendingBookingData.FinalPrice = (price * 0.70).toString();
-            }
-
-            processPaymentAndBooking();
-            localStorage.removeItem("pendingBookingData");
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
-    }
 });
 
 // ================= NAVBAR & SLIDER =================
@@ -167,12 +141,14 @@ if (trendingPlaces) {
         try {
             const response = await fetch("./api/trending-places-index.json");
             const data = await response.json();
-            globalPackages = data;
 
             const filterData = data.filter(item => [1, 4, 6].includes(item.id));
             let html = "";
 
             filterData.forEach((item) => {
+                // Formatting original price to remove commas if present, just in case
+                let rawPrice = item["new-price"].toString().replace(/,/g, '');
+
                 html += `
                 <div class="package-card">
                   <div class="card-image-wrapper">
@@ -180,8 +156,8 @@ if (trendingPlaces) {
                   </div>
                   <div class="card-body">
                     <div class="card-action-bar">
-                      <div class="discount-badge">${item.discount || "20% OFF"}</div>
-                      <button class="wishlist-btn">❤️</button>
+                        <div class="discount-badge">${item.discount || "20% OFF"}</div>
+                        <button class="wishlist-btn">❤️</button>
                     </div>
                     <h3 class="package-title">${item["package-name"]}</h3>
                     <div class="location-row">
@@ -200,7 +176,7 @@ if (trendingPlaces) {
                       <span class="old-price"><del>₹${item["old-price"]}</del></span>
                       <div class="new-price">₹${item["new-price"]}<small>/person</small></div>
                     </div>
-                    <button class="book-now-btn" onclick="openModal(${item.id})">Book Now</button> 
+                    <button class="book-now-btn" onclick="localStorage.setItem('selectedPackagePrice', '${rawPrice}'); window.location.href='booking-modal.html?id=${item.id}'">Book Now</button> 
                   </div>
                 </div>
                 `;
@@ -211,227 +187,21 @@ if (trendingPlaces) {
     loadTrendingPlaces();
 }
 
-// ================= BOOKING MODAL LOGIC =================
-function openModal(packageId) {
-    currentPackage = globalPackages.find(p => p.id === packageId);
-    if (!currentPackage) return;
-
-    document.getElementById("modalPackageTitle").innerText = currentPackage["package-name"];
-    document.getElementById("bookingModal").style.display = "block";
-
-    appliedCouponCode = "";
-    document.getElementById("couponMessage").innerText = "";
-    document.getElementById("couponCode").value = "";
-
-    generateDatesAndSeats(currentPackage["departure-day"]);
-
-    document.querySelectorAll(".addon-cb").forEach(cb => cb.checked = false);
-    document.getElementById("adults").value = 1;
-    document.getElementById("children").value = 0;
-
-    calculateTotal();
-}
-
-function closeModal() {
-    document.getElementById("bookingModal").style.display = "none";
-}
-
-function generateDatesAndSeats(baseDateStr) {
-    const dateSelect = document.getElementById("departureDate");
-    dateSelect.innerHTML = "";
-    let baseDate = new Date(baseDateStr);
-
-    for (let i = 0; i < 4; i++) {
-        let newDate = new Date(baseDate);
-        newDate.setDate(baseDate.getDate() + (i * 5));
-
-        let options = { day: '2-digit', month: 'short', year: 'numeric' };
-        let formattedDate = newDate.toLocaleDateString('en-GB', options);
-
-        let storageKey = `seats_${currentPackage.id}_${formattedDate}`;
-        let availableSeats = localStorage.getItem(storageKey);
-
-        if (availableSeats === null) {
-            availableSeats = 50;
-            localStorage.setItem(storageKey, 50);
-        }
-
-        let option = document.createElement("option");
-        option.value = formattedDate;
-        option.innerText = `${formattedDate} - ${availableSeats} Seats Left`;
-        if (availableSeats == 0) option.disabled = true;
-        dateSelect.appendChild(option);
-    }
-}
-
-function calculateTotal() {
-    if (!currentPackage) return;
-    let adults = parseInt(document.getElementById("adults").value) || 1;
-    let children = parseInt(document.getElementById("children").value) || 0;
-    let totalPax = adults + children;
-
-    let basePriceTotal = currentPackage["new-price"] * totalPax;
-    let addonTotal = 0;
-    document.querySelectorAll(".addon-cb:checked").forEach(cb => {
-        addonTotal += parseInt(cb.value) * totalPax;
-    });
-
-    let subTotal = basePriceTotal + addonTotal;
-
-    let discountAmt = 0;
-    if (appliedCouponCode === "SUMMER10") {
-        discountAmt = subTotal * 0.10;
-    } else if (appliedCouponCode === "WELCOME500") {
-        discountAmt = 500;
-    } else if (appliedCouponCode === "MERASAFAR20") {
-        discountAmt = subTotal * 0.20;
-    }
-
-    let firstTimeDiscountAmt = 0;
-    let firstRowDisplay = document.getElementById("firstTimeDiscountRow");
-
-    if (isLoggedIn && usersData[currentUser.email] && usersData[currentUser.email].isFirstTime) {
-        firstTimeDiscountAmt = subTotal * 0.30;
-        firstRowDisplay.style.display = "flex";
-    } else {
-        firstRowDisplay.style.display = "none";
-    }
-
-    let finalTotal = subTotal - discountAmt - firstTimeDiscountAmt;
-    if (finalTotal < 0) finalTotal = 0;
-
-    document.getElementById("paxCount").innerText = totalPax;
-    document.getElementById("basePriceDisplay").innerText = basePriceTotal.toLocaleString('en-IN');
-    document.getElementById("addonsDisplay").innerText = addonTotal.toLocaleString('en-IN');
-    document.getElementById("discountDisplay").innerText = discountAmt.toLocaleString('en-IN');
-    document.getElementById("firstTimeDiscountDisplay").innerText = firstTimeDiscountAmt.toLocaleString('en-IN');
-    document.getElementById("finalTotalDisplay").innerText = finalTotal.toLocaleString('en-IN');
-}
-
-function applyCoupon() {
-    let code = document.getElementById("couponCode").value.toUpperCase();
-    let msg = document.getElementById("couponMessage");
-
-    if (code === "SUMMER10") {
-        appliedCouponCode = code;
-        msg.innerText = "10% Discount Applied! ✅";
-        msg.style.color = "green";
-    } else if (code === "WELCOME500") {
-        appliedCouponCode = code;
-        msg.innerText = "₹500 Flat Discount Applied! ✅";
-        msg.style.color = "green";
-    } else if (code === "MERASAFAR20") {
-        appliedCouponCode = code;
-        msg.innerText = "20% Discount Applied! ✅";
-        msg.style.color = "green";
-    } else {
-        appliedCouponCode = "";
-        msg.innerText = "Invalid Coupon Code ❌";
-        msg.style.color = "red";
-    }
-
-    calculateTotal();
-}
-
-// ================= BOOKING SUBMIT & MAILS =================
-document.getElementById("bookingForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    let selectedDate = document.getElementById("departureDate").value;
-    let paxCount = (parseInt(document.getElementById("adults").value) || 1) + (parseInt(document.getElementById("children").value) || 0);
-
-    let storageKey = `seats_${currentPackage.id}_${selectedDate}`;
-    let currentSeats = parseInt(localStorage.getItem(storageKey) || 50);
-
-    if (paxCount > currentSeats) {
-        alert(`Sorry! Only ${currentSeats} seats available for this date.`);
-        return;
-    }
-
-    let pendingData = {
-        BookingID: "MS" + Math.floor(Math.random() * 100000),
-        PackageName: currentPackage["package-name"],
-        Name: document.getElementById("fullName").value,
-        Mobile: document.getElementById("mobile").value,
-        Email: document.getElementById("email").value,
-        Date: selectedDate,
-        PackageType: document.getElementById("packageType").value,
-        TotalPax: paxCount,
-        FinalPrice: document.getElementById("finalTotalDisplay").innerText,
-        BookingTime: new Date().toLocaleString(),
-        StorageKey: storageKey,
-        CurrentSeats: currentSeats
-    };
-
-    if (!isLoggedIn) {
-        // Redirect to login if not authenticated
-        localStorage.setItem("pendingBookingData", JSON.stringify(pendingData));
-        window.location.href = "login.html";
-    } else {
-        pendingBookingData = pendingData;
-        processPaymentAndBooking();
-    }
-});
-
-function sendBookingMail(data) {
-    let subject = `Booking Confirmed - ${data.BookingID}`;
-    let body = `Hello ${data.Name},\n\nYour booking has been confirmed.\n\nBooking ID : ${data.BookingID}\nPackage : ${data.PackageName}\nTravel Date : ${data.Date}\nTravellers : ${data.TotalPax}\nPackage Type : ${data.PackageType}\nAmount Paid : ₹${data.FinalPrice}\n\nThank you for choosing Mera Safar.\n\nRegards,\nTeam Mera Safar`;
-    window.location.href = `mailto:${data.Email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-
-function processPaymentAndBooking() {
-    if (!pendingBookingData) return;
-
-    // Deduct seats
-    localStorage.setItem(pendingBookingData.StorageKey, pendingBookingData.CurrentSeats - pendingBookingData.TotalPax);
-
-    // Add to My Bookings
-    let myBookings = JSON.parse(localStorage.getItem("myBookings")) || [];
-    myBookings.push(pendingBookingData);
-    localStorage.setItem("myBookings", JSON.stringify(myBookings));
-
-    // Update First Time User Status
-    if (usersData[currentUser.email] && usersData[currentUser.email].isFirstTime) {
-        usersData[currentUser.email].isFirstTime = false;
-        localStorage.setItem("usersData", JSON.stringify(usersData));
-    }
-
-    // Add to upcoming Bookings
-    let upcomingBookings = JSON.parse(localStorage.getItem("upcomingBookings")) || [];
-    upcomingBookings.push(pendingBookingData);
-    localStorage.setItem("upcomingBookings", JSON.stringify(upcomingBookings));
-
-    // Send Mail
-    sendBookingMail(pendingBookingData);
-
-    // Redirect to PDF Ticket Page
-    let bookingId = pendingBookingData.BookingID;
-    alert(`🎉 Payment Successful!\nRedirecting to your ticket...`);
-
-    closeModal();
-    pendingBookingData = null;
-
-    window.location.href = `pdf.html?bookingId=${bookingId}`;
-}
-
-// ================= EXPLORE CATEGORIES LOGIC =================
 const exploreCategories = document.getElementById("exploreCategoryCard");
-
 if (exploreCategories) {
     const loadExploreCategories = async () => {
         try {
             const response = await fetch("./api/explore-categories-packages.json");
             const data = await response.json();
 
-            // Target IDs: pkg_01 (Adventure), pkg_05 (Spiritual), pkg_29 (Family)
             const targetPackageIds = ["pkg_06", "pkg_04", "pkg_19"];
             const filterData = data.filter(item => targetPackageIds.includes(item.id));
 
             let html = "";
 
             filterData.forEach((item) => {
-                // Agar image field blank "" hai (jaise pkg_29 mein hai), toh ek backup default image handle karein
                 const imageSrc = item.image ? item.image : "./assets/default-package.png";
+                let rawPrice = item.price.toString().replace(/,/g, '');
 
                 html += `
                 <div class="explore-card">
@@ -459,7 +229,7 @@ if (exploreCategories) {
                     <div class="price-section">
                       <div class="new-price">₹${item.price.toLocaleString('en-IN')}<small>/person</small></div>
                     </div>
-                    <button class="book-now-btn">Book Now</button> 
+                    <button class="book-now-btn" onclick="localStorage.setItem('selectedPackagePrice', '${rawPrice}'); window.location.href='booking-modal.html?id=${item.id}'">Book Now</button> 
                   </div>
                 </div>
                 `;
@@ -472,87 +242,83 @@ if (exploreCategories) {
     loadExploreCategories();
 }
 
-
-
+// ================= BLOG FILTERS =================
 document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const blogCards = document.querySelectorAll(".blog-card");
 
-    filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            // Remove active status from previous buttons
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-            // Add active to current clicked button
-            button.classList.add("active");
+    if (filterButtons.length > 0 && blogCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
 
-            const filterValue = button.getAttribute("data-target");
+                const filterValue = button.getAttribute("data-target");
 
-            blogCards.forEach(card => {
-                const cardCategory = card.getAttribute("data-category");
+                blogCards.forEach(card => {
+                    const cardCategory = card.getAttribute("data-category");
 
-                if (filterValue === "all" || filterValue === cardCategory) {
-                    card.style.display = "flex";
-                    // Soft fade in animation trigger
-                    setTimeout(() => {
-                        card.style.opacity = "1";
-                        card.style.transform = "scale(1)";
-                    }, 50);
-                } else {
-                    card.style.opacity = "0";
-                    card.style.transform = "scale(0.95)";
-                    // Wait for fade animation before display none
-                    setTimeout(() => {
-                        card.style.display = "none";
-                    }, 300);
-                }
+                    if (filterValue === "all" || filterValue === cardCategory) {
+                        card.style.display = "flex";
+                        setTimeout(() => {
+                            card.style.opacity = "1";
+                            card.style.transform = "scale(1)";
+                        }, 50);
+                    } else {
+                        card.style.opacity = "0";
+                        card.style.transform = "scale(0.95)";
+                        setTimeout(() => {
+                            card.style.display = "none";
+                        }, 300);
+                    }
+                });
             });
         });
-    });
+    }
 });
 
-
+// ================= TESTIMONIAL SLIDER =================
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".testimonial-card");
     const dots = document.querySelectorAll(".dot");
     const nextBtn = document.querySelector(".next-btn");
     const prevBtn = document.querySelector(".prev-btn");
 
-    let currentIndex = 0;
+    if (slides.length > 0) {
+        let currentIndex = 0;
 
-    // Function to update slide visibility
-    function updateSlider(index) {
-        slides.forEach(slide => slide.classList.remove("active"));
-        dots.forEach(dot => dot.classList.remove("active"));
+        function updateSlider(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            dots.forEach(dot => dot.classList.remove("active"));
 
-        slides[index].classList.add("active");
-        dots[index].classList.add("active");
-    }
+            slides[index].classList.add("active");
+            if (dots[index]) dots[index].classList.add("active");
+        }
 
-    // Next Slide Logic
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlider(currentIndex);
-    });
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider(currentIndex);
+            });
+        }
 
-    // Previous Slide Logic
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlider(currentIndex);
-    });
+        if (prevBtn) {
+            prevBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlider(currentIndex);
+            });
+        }
 
-    // Dots navigation click binding
-    dots.forEach(dot => {
-        dot.addEventListener("click", (e) => {
-            currentIndex = parseInt(e.target.getAttribute("data-index"));
-            updateSlider(currentIndex);
+        dots.forEach(dot => {
+            dot.addEventListener("click", (e) => {
+                currentIndex = parseInt(e.target.getAttribute("data-index"));
+                updateSlider(currentIndex);
+            });
         });
-    });
 
-    // Auto Slide Option (Every 5 seconds change automatically)
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlider(currentIndex);
-    }, 5000);
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider(currentIndex);
+        }, 5000);
+    }
 });
-
-
