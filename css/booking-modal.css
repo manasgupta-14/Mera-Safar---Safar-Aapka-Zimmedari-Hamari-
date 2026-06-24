@@ -1,0 +1,158 @@
+ body {
+     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #f4f7f6;
+     margin: 0;
+     padding: 20px;
+     color: #333;
+ }
+
+ .booking-container {
+     max-width: 800px;
+     margin: 0 auto;
+     background: #fff;
+     border-radius: 10px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+ }
+
+ .page-header {
+     background-color: #2c3e50;
+     color: #fff;
+     padding: 20px 30px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .page-header h2 {
+     margin: 0;
+     font-size: 24px;
+ }
+
+ .back-link {
+     color: #fff;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 14px;
+     background: rgba(255, 255, 255, 0.2);
+     padding: 8px 15px;
+     border-radius: 5px;
+     transition: 0.3s;
+ }
+
+ .back-link:hover {
+     background: rgba(255, 255, 255, 0.4);
+ }
+
+ form {
+     padding: 30px;
+ }
+
+ .form-section {
+     margin-bottom: 30px;
+     padding-bottom: 20px;
+     border-bottom: 1px solid #eee;
+ }
+
+ .form-section h3 {
+     color: #e74c3c;
+     margin-top: 0;
+     font-size: 18px;
+     margin-bottom: 15px;
+ }
+
+ .form-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 15px;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 5px;
+     font-weight: 600;
+     font-size: 14px;
+ }
+
+ .form-group input,
+ .form-group select {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-sizing: border-box;
+ }
+
+ .full-width {
+     grid-column: span 2;
+ }
+
+ .billing-section {
+     background: #f9f9f9;
+     padding: 20px;
+     border-radius: 8px;
+ }
+
+ .invoice-table {
+     margin-top: 15px;
+ }
+
+ .invoice-row {
+     display: flex;
+     justify-content: space-between;
+     padding: 10px 0;
+     border-bottom: 1px dashed #ccc;
+ }
+
+ .invoice-row.total-row {
+     font-size: 18px;
+     font-weight: bold;
+     color: #2c3e50;
+     border-bottom: none;
+     border-top: 2px solid #ddd;
+     padding-top: 15px;
+     margin-top: 10px;
+ }
+
+ .footer-actions {
+     display: flex;
+     justify-content: flex-end;
+     gap: 15px;
+     margin-top: 20px;
+ }
+
+ .cancel-btn {
+     background: #ccc;
+     color: #333;
+     padding: 12px 25px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-weight: bold;
+     text-decoration: none;
+ }
+
+ .pay-now-btn {
+     background: #e74c3c;
+     color: #fff;
+     padding: 12px 25px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-weight: bold;
+     font-size: 16px;
+ }
+
+ .pay-now-btn:hover {
+     background: #c0392b;
+ }
+
+ @media (max-width: 600px) {
+     .form-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .full-width {
+         grid-column: span 1;
+     }
+ }
