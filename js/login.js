@@ -9,22 +9,40 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     let pass = document.getElementById("loginPassword").value.trim();
     let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
-    if (!usersData[email] || usersData[email].password !== pass) {
-        alert("Invalid Email or Password.");
+    // 1. Check karein ki email register hai ya nahi
+    if (!usersData[email]) {
+        let goToSignup = confirm("❌ Account nahi mila! Kya aap naya account banana chahte hain?");
+        if (goToSignup) {
+            window.location.href = "signUp.html";
+        }
+        return; // Execution yahin rok dein
+    }
+
+    // 2. Check karein ki password sahi hai ya nahi
+    if (usersData[email].password !== pass) {
+        alert("❌ Galat Password. Kripya dobara koshish karein.");
         return;
     }
 
-    // Set User Session
-    let currentUser = { email: email, loginTime: Date.now() };
+    // 3. Set User Session (Login Successful)
+    let currentUser = {
+        email: email,
+        name: usersData[email].name, // Name bhi store kar rahe hain UI ke liye
+        loginTime: Date.now()
+    };
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-    // Check if user was redirected from booking page
+    // 4. Check if user was redirected from booking page
     let pendingBooking = localStorage.getItem("pendingBookingData");
-    if (pendingBooking) {
-        alert("Login Successful! Redirecting to process your booking...");
+    const urlParams = new URLSearchParams(window.location.search);
+    const action = urlParams.get('action');
+
+    // Agar pending booking hai ya URL mein process_booking likha hai
+    if (pendingBooking || action === 'process_booking') {
+        alert("✅ Login Successful! Aapki booking process ki jaa rahi hai...");
         window.location.href = "index.html?action=process_booking";
     } else {
-        alert("Login Successful!");
+        alert("✅ Login Successful!");
         window.location.href = "index.html";
     }
 });
@@ -50,7 +68,7 @@ function checkVerificationLink() {
             localStorage.setItem("usersData", JSON.stringify(usersData));
             localStorage.removeItem("pendingUser");
 
-            alert("✅ Email Verified! Your account is created. Please Login.");
+            alert("✅ Email Verified! Aapka account ban gaya hai. Kripya Login karein.");
             window.history.replaceState({}, document.title, window.location.pathname);
         } else {
             alert("❌ Invalid or expired verification link!");
