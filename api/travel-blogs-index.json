@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "blog_01",
+      "category": "beach",
+      "image": "https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=600&q=80",
+      "badge": "Premium",
+      "date": "June 20, 2026",
+      "author": "By Admin",
+      "title": "Andaman & Nicobar: Scuba Diving & Water Wonders",
+      "excerpt": "Kaahe ka stress? Andaman ke neele paani me dive lagayein aur explore karein ek bilkul anokhi underwater duniya...",
+      "link": "#"
+    },
+    {
+      "id": "blog_02",
+      "category": "beach",
+      "image": "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=600&q=80",
+      "badge": "Hidden Gem",
+      "date": "June 18, 2026",
+      "author": "By Traveller",
+      "title": "Varkala: The Magical Cliff & Beach Escape",
+      "excerpt": "Kerala ka ek aisa kona jahan Arabian Sea seedhe unche cliffs se takrata hai. Janiye wahan ke sabse shaant cafes ke baare me.",
+      "link": "#"
+    },
+    {
+      "id": "blog_03",
+      "category": "mountains",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80",
+      "badge": "Trending",
+      "date": "May 15, 2026",
+      "author": "By MeraSafar",
+      "title": "Chasing Clouds: Top Hidden Mountain Treks",
+      "excerpt": "Agar aapko bheed-bhad pasand nahi hai, toh ye unchartered pahadi raaste aur baraf se dhaki chotiyaan aapka intezar kar rahi hain.",
+      "link": "#"
+    },
+    {
+      "id": "blog_04",
+      "category": "heritage",
+      "image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+      "badge": "Unique",
+      "date": "April 10, 2026",
+      "author": "By Admin",
+      "title": "Pondicherry French Riviera Tour: India Me France Ka Swad",
+      "excerpt": "Yellow buildings, French architecture aur amazing beaches. Pondicherry ke White Town me chalte hue lagta hai jaise aap Europe me hain.",
+      "link": "#"
+    }
+  ]
+}
