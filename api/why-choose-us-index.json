@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "01",
+      "icon": "fa-solid fa-map-location-dot",
+      "heading": "Curated Travel Experiences",
+      "paragraph": "Every journey is carefully designed with unique destinations, hidden gems, and personalized experiences to make your trip truly memorable."
+    },
+    {
+      "id": "02",
+      "icon": "fa-solid fa-wallet",
+      "heading": "Transparent Pricing",
+      "paragraph": "Enjoy premium travel services with no hidden charges. We offer honest pricing and the best value for your money."
+    },
+    {
+      "id": "03",
+      "icon": "fa-solid fa-headset",
+      "heading": "24/7 Customer Support",
+      "paragraph": "From booking to your return journey, our dedicated team is available around the clock to ensure a safe and hassle-free travel experience."
+    }
+  ]
+}
