@@ -1648,6 +1648,18 @@ header {
     font-size: 1rem;
 }
 
+.slider-controls {
+    position: absolute; /* Ya relative, design ke hisaab se */
+    z-index: 10; /* Z-index badha dein taaki ye wrapper ke upar aa jaye */
+    pointer-events: auto;
+}
+
+.control-btn {
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
 /* User Profile Row */
 .user-info {
     display: flex;
