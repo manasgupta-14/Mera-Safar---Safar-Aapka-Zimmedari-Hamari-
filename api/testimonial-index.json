@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "text": "\"Mera Safar ke sath hamara Andaman ka trip bilkul kamaal ka tha! Scuba diving ka arrangement aur hotel stays sab kuch premium tha. Koi hidden cost nahi li aur guide bhi bohot friendly tha.\"",
+      "ratingHtml": "<i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i>",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      "name": "Anjali Sharma",
+      "designation": "Andaman Tour Traveller"
+    },
+    {
+      "id": 2,
+      "text": "\"Pondicherry ka French Riviera tour mind-blowing tha. Itinerary ka structure aur design itna perfect tha ki humne bina thake saari unique aur hidden places explore kar li. Recommended!\"",
+      "ratingHtml": "<i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star-half-stroke\"></i>",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      "name": "Rahul Verma",
+      "designation": "Pondicherry Tour Traveller"
+    },
+    {
+      "id": 3,
+      "text": "\"Varkala Cliff and Beach Escape was a hidden gem indeed. Mera Safar team ko 10/10 for their 24/7 customer support. Raat ko bhi hamari query ka unhone turant response diya.\"",
+      "ratingHtml": "<i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i>",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+      "name": "Priya Rai",
+      "designation": "Kerala Tour Traveller"
+    }
+  ]
+}
