@@ -11,7 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     // 1. Check karein ki email register hai ya nahi
     if (!usersData[email]) {
-        let goToSignup = confirm("❌ Account nahi mila! Kya aap naya account banana chahte hain?");
+        let goToSignup = confirm("❌ No account was found. Would you like to create a new account?");
         if (goToSignup) {
             window.location.href = "signUp.html";
         }
@@ -20,7 +20,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     // 2. Check karein ki password sahi hai ya nahi
     if (usersData[email].password !== pass) {
-        alert("❌ Galat Password. Kripya dobara koshish karein.");
+        alert("❌ Invalid password. Please try again.");
         return;
     }
 
@@ -39,7 +39,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     // Agar pending booking hai ya URL mein process_booking likha hai
     if (pendingBooking || action === 'process_booking') {
-        alert("✅ Login Successful! Aapki booking process ki jaa rahi hai...");
+        alert("✅ Login Successful! We are processing your booking...");
         window.location.href = "index.html?action=process_booking";
     } else {
         alert("✅ Login Successful!");
@@ -68,7 +68,7 @@ function checkVerificationLink() {
             localStorage.setItem("usersData", JSON.stringify(usersData));
             localStorage.removeItem("pendingUser");
 
-            alert("✅ Email Verified! Aapka account ban gaya hai. Kripya Login karein.");
+            alert("✅ Email Verified! Account created successfully. Please log in.");
             window.history.replaceState({}, document.title, window.location.pathname);
         } else {
             alert("❌ Invalid or expired verification link!");

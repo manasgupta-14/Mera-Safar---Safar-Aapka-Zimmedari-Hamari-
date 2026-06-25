@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let packagePrice = parseInt(localStorage.getItem("selectedPackagePrice"));
     if (isNaN(packagePrice) || packagePrice <= 0) {
         packagePrice = 5000; // Fallback price
-        console.warn("Card price fetch nahi hua, default 5000 apply ho raha hai.");
+        console.warn("Failed to fetch card price. Using default price: 5000.");
     }
 
     let discountPercentage = 0;
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Agar user logged in nahi hai
         if (!checkUser) {
-            alert("⚠️ Booking confirm karne ke liye pehle Login karna hoga. Aapko login page par bheja jaa raha hai.");
+            alert("⚠️ Please log in to confirm your booking. You will now be redirected to the login page.");
             window.location.href = "login.html?redirect=index.html";
             return;
         }

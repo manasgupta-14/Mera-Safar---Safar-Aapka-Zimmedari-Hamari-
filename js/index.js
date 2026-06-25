@@ -15,7 +15,7 @@ function updateNavbarUI() {
                 localStorage.removeItem("currentUser");
                 currentUser = null;
                 isLoggedIn = false;
-                alert("Aap successfully log out ho gaye hain.");
+                alert("✅ You have been successfully logged out.");
                 window.location.reload(); // Page refresh to reset state
             };
         } else {
@@ -32,7 +32,7 @@ function checkSession() {
     if (currentUser) {
         const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
         if (Date.now() - currentUser.loginTime > TWO_DAYS_MS) {
-            alert("Session expire ho gaya hai. Kripya wapas login karein.");
+            alert("Session expired. Please sign in again to continue.");
             localStorage.removeItem("currentUser");
             currentUser = null;
             isLoggedIn = false;
