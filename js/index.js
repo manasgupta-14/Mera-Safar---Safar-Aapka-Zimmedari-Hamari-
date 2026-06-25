@@ -115,24 +115,45 @@ if (tourPackages) {
 }
 
 const popularPlaces = document.getElementById("popularPlacesCard");
+
 if (popularPlaces) {
     async function loadPopularPlaces() {
         try {
             const response = await fetch("./api/popular-places-card-index.json");
             const data = await response.json();
             let html = "";
+
             data.forEach((item) => {
                 html += `
-                <div class="card">
-                  <img src="./assets/${item.image}" alt="${item.name}" />
-                  <span class="rating">⭐ ${item.rating}</span>
-                  <div class="content"><h3>${item.name}</h3></div>
-                </div>`;
+                <div class="card" style="border: 1px solid #ddd; border-radius: 8px; width: 300px;">
+                    <img src="./assets/${item.image}" alt="${item.name}" style="width:100%; border-radius:8px 8px 0 0;" />
+                    <div class="card-details" style="padding:15px;">
+                        <span class="rating">⭐ ${item.rating}</span>
+                        <h3 style="margin:5px 0;">${item.name}</h3>
+                        <p style="margin:0 0 10px; color:gray; font-size:.9rem;">${item.city}, ${item.state}</p>
+                        
+                        <button style="padding:10px 15px; background:#007bff; color:#fff; border:none; border-radius:5px; cursor:pointer; width: 100%;"
+                            onclick="openGoogleMaps(${item.lat}, ${item.lng})">
+                            📍 Open in Google Maps
+                        </button>
+                    </div>
+                </div>
+                `;
             });
+
             popularPlaces.innerHTML = html;
-        } catch (error) { console.log("Error:", error); }
+        } catch (error) {
+            console.log("Popular Places Error:", error);
+        }
     }
     loadPopularPlaces();
+}
+
+// Function jo direct Google Maps open karega
+function openGoogleMaps(lat, lng) {
+    // Google Maps automatically user ki current location access kar lega "My Location" ke roop me
+    const mapUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+    window.open(mapUrl, "_blank"); // "_blank" se naye tab me khulega
 }
 
 const trendingPlaces = document.getElementById("trendingPlacesCard");
@@ -517,3 +538,132 @@ if (whyChooseGrid) {
 
     loadWhyChooseUs();
 }
+
+const searchInput = document.getElementById("searchInput");
+const suggestionBox = document.getElementById("searchSuggestions");
+
+let allData = [];
+
+// Tumhari saari JSON files
+const files = [
+    "./api/packages.json",
+    "./api/nav-bar-tour-packages.json",
+    "./api/explore-categories-packages.json",
+    "./api/popular-places-card-index.json",
+    "./api/nav-bar-destination.json",
+    "./api/categories.json",
+    "./api/travel-blogs-index.json",
+    "./api/trending-places-index.json",
+    "./api/testimonial-index.json",
+    "./api/why-choose-us-index.json"
+];
+
+// Sab JSON load karo
+Promise.allSettled(
+    files.map(file =>
+        fetch(file).then(res => res.json())
+    )
+)
+    .then(results => {
+
+        results.forEach(result => {
+
+            if (
+                result.status === "fulfilled" &&
+                Array.isArray(result.value)
+            ) {
+                allData.push(...result.value);
+            }
+
+        });
+
+        console.log("Total Search Records:", allData.length);
+    });
+
+// Search
+searchInput.addEventListener("input", function () {
+
+    const keyword = this.value.trim().toLowerCase();
+
+    suggestionBox.innerHTML = "";
+
+    if (!keyword) {
+        suggestionBox.style.display = "none";
+        return;
+    }
+
+    const suggestions = new Set();
+
+    allData.forEach(item => {
+
+        const matched = Object.values(item).some(value => {
+
+            if (typeof value === "object") {
+                value = JSON.stringify(value);
+            }
+
+            return value &&
+                String(value)
+                    .toLowerCase()
+                    .includes(keyword);
+
+        });
+
+        if (matched) {
+
+            const text =
+                item.name ||
+                item.title ||
+                item.destination ||
+                item.place ||
+                item.category ||
+                item.slug;
+
+            if (text) {
+                suggestions.add(text);
+            }
+        }
+
+    });
+
+    const resultArray = [...suggestions].slice(0, 10);
+
+    if (!resultArray.length) {
+        suggestionBox.style.display = "none";
+        return;
+    }
+
+    resultArray.forEach(text => {
+
+        const div = document.createElement("div");
+
+        div.className = "suggestion-item";
+        div.textContent = text;
+
+        div.addEventListener("click", () => {
+
+            searchInput.value = text;
+            suggestionBox.style.display = "none";
+
+            // Search page par bhejna ho to
+            // window.location.href =
+            // `search.html?q=${encodeURIComponent(text)}`;
+
+        });
+
+        suggestionBox.appendChild(div);
+
+    });
+
+    suggestionBox.style.display = "block";
+
+});
+
+// Bahar click karne par hide
+document.addEventListener("click", e => {
+
+    if (!e.target.closest(".search-bar")) {
+        suggestionBox.style.display = "none";
+    }
+
+});
