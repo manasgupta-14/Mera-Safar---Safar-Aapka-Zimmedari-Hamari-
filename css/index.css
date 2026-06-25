@@ -1125,9 +1125,8 @@ header {
 
 .explore-category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    width: 100%;
 }
 
 /* 1. Image ke wrapper ki height fix karein aur default ratio set karein */
@@ -2083,4 +2082,35 @@ header {
     .footer-policy {
         justify-content: center;
     }
+}
+
+
+.search-suggestions{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.15);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 9999;
+    display: none;
+    margin-top: 5px;
+}
+
+.search-suggestions .suggestion-item{
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: .3s;
+}
+
+.search-suggestions .suggestion-item:hover{
+    background: #f5f5f5;
+}
+
+.search-suggestions .suggestion-item:last-child{
+    border-bottom: none;
 }
