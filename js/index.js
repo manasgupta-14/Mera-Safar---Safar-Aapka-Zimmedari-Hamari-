@@ -1,6 +1,6 @@
 // ================= GLOBAL VARIABLES =================
-let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
-let isLoggedIn = currentUser ? true : false;
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+let isLoggedIn = (currentUser !== null) || (localStorage.getItem("isLoggedIn") === "true");
 let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
 // ================= SESSION & NAVBAR =================
@@ -12,11 +12,18 @@ function updateNavbarUI() {
             btn.innerText = "Logout";
             btn.onclick = (e) => {
                 e.preventDefault();
+
+                // My Account aur Navbar dono ke variables delete karein
                 localStorage.removeItem("currentUser");
+                localStorage.removeItem("isLoggedIn");
+                localStorage.removeItem("userName");
+                localStorage.removeItem("userEmail");
+
                 currentUser = null;
                 isLoggedIn = false;
+
                 alert("✅ You have been successfully logged out.");
-                window.location.reload(); // Page refresh to reset state
+                window.location.href = "index.html"; // Redirect to home so everything resets smoothly
             };
         } else {
             btn.innerText = "Login";
@@ -33,7 +40,13 @@ function checkSession() {
         const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
         if (Date.now() - currentUser.loginTime > TWO_DAYS_MS) {
             alert("Session expired. Please sign in again to continue.");
+
+            // Session expire hone par bhi dono jagah se saaf karein
             localStorage.removeItem("currentUser");
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("userName");
+            localStorage.removeItem("userEmail");
+
             currentUser = null;
             isLoggedIn = false;
         } else {
@@ -42,6 +55,11 @@ function checkSession() {
     }
     updateNavbarUI();
 }
+
+// Call checkSession when page loads to set the Navbar correctly
+document.addEventListener("DOMContentLoaded", () => {
+    checkSession();
+});
 
 // ================= INITIALIZE ON LOAD =================
 document.addEventListener("DOMContentLoaded", () => {
@@ -178,7 +196,6 @@ if (trendingPlaces) {
                   <div class="card-body">
                     <div class="card-action-bar">
                         <div class="discount-badge">${item.discount || "20% OFF"}</div>
-                        <button class="wishlist-btn">❤️</button>
                     </div>
                     <h3 class="package-title">${item["package-name"]}</h3>
                     <div class="location-row">
