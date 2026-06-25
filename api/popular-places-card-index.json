@@ -5,7 +5,9 @@
     "state": "Delhi",
     "city": "Delhi",
     "image": "red-fort.jpg",
-    "rating": 4.5
+    "rating": 4.5,
+    "lat": 28.6562,
+    "lng": 77.241
   },
   {
     "id": 2,
@@ -13,7 +15,9 @@
     "state": "Uttar Pradesh",
     "city": "Jhansi",
     "image": "jhansi-fort.png",
-    "rating": 4.5
+    "rating": 4.5,
+    "lat": 25.4607,
+    "lng": 78.583
   },
   {
     "id": 3,
@@ -21,7 +25,9 @@
     "state": "Maharashtra",
     "city": "Lonavala",
     "image": "lonavala.png",
-    "rating": 4.6
+    "rating": 4.6,
+    "lat": 18.7515,
+    "lng": 73.4056
   },
   {
     "id": 4,
@@ -29,6 +35,8 @@
     "state": "Gujarat",
     "city": "Ekta Nagar",
     "image": "statue-of-unity.png",
-    "rating": 4.7
+    "rating": 4.7,
+    "lat": 21.838,
+    "lng": 73.7191
   }
 ]
