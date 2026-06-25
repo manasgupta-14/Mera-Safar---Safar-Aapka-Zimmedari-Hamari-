@@ -1,3 +1,5 @@
+// ================= js/login.js =================
+
 document.addEventListener("DOMContentLoaded", () => {
     checkVerificationLink();
 });
@@ -31,6 +33,12 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         loginTime: Date.now()
     };
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+    // 👇 YAHAN NAYI LINES ADD KI GAYI HAIN ACCOUNT PAGE KE LIYE 👇
+    localStorage.setItem("isLoggedIn", "true"); 
+    localStorage.setItem("userName", usersData[email].name); 
+    localStorage.setItem("userEmail", email); 
+    // 👆 ======================================================= 👆
 
     // 4. Check if user was redirected from booking page
     let pendingBooking = localStorage.getItem("pendingBookingData");
