@@ -1436,7 +1436,7 @@ header {
     transition: all 0.4s ease;
 }
 
-/* Individual Blog Card */
+/* Safari/Mobile browsers me hover par border-radius ko break hone se rokne ke liye */
 .blog-card {
     background: #ffffff;
     border-radius: 16px;
@@ -1445,6 +1445,8 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    /* NAYI LINE: Hover animation ke waqt corners ko smooth rakhega */
+    transform: translateZ(0); 
 }
 
 .blog-card:hover {
@@ -1452,17 +1454,21 @@ header {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Image Container with Badge */
+/* Image container ko better responsive banane ke liye fixed height hata kar aspect-ratio use karein */
 .blog-img {
     position: relative;
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Perfect widescreen ratio (220px height hata dein) */
     overflow: hidden;
 }
 
+/* Image alignment aur rendering fix karne ke liye */
 .blog-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:fill; /* Agar aap chahte hain ki image bilkul bhi na kate, toh ise 'contain' kar dein */
+    object-position: center top; /* Image ko perfectly center align karne ke liye */
+    display: block; /* Image ke neeche aane wale extra white space/gap ko hatane ke liye */
     transition: transform 0.5s ease;
 }
 
