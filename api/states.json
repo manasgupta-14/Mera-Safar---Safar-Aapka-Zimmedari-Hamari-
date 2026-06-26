@@ -1,0 +1,38 @@
+[
+  {
+    "id": "st_1",
+    "name": "Rajasthan",
+    "image": "./assets/states/rajasthan.jpg",
+    "description": "Experience the royal culture of Rajasthan."
+  },
+  {
+    "id": "st_2",
+    "name": "Kerala",
+    "image": "./assets/states/kerala.jpg",
+    "description": "God's Own Country with serene backwaters."
+  },
+  {
+    "id": "st_3",
+    "name": "Uttarakhand",
+    "image": "./assets/states/uttarakhand.jpg",
+    "description": "Land of majestic mountains and sacred temples."
+  },
+  {
+    "id": "st_4",
+    "name": "Uttar Pradesh",
+    "image": "./assets/states/uttar-pradesh.jpg",
+    "description": "Home to the Taj Mahal and rich cultural heritage."
+  },
+  {
+    "id": "st_5",
+    "name": "Goa",
+    "image": "./assets/states/goa.jpg",
+    "description": "Famous for beautiful beaches, nightlife, and Portuguese charm."
+  },
+  {
+    "id": "st_6",
+    "name": "Himachal Pradesh",
+    "image": "./assets/states/himachal-pradesh.jpg",
+    "description": "Snow-capped mountains, valleys, and adventure destinations."
+  }
+]
