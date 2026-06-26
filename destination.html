@@ -18,7 +18,12 @@
           <img src="./assets/logo-2.png" alt="Logo of Mera Safar" />
         </div>
         <div class="search-bar">
-          <input type="search" class="search-bar-input" id="searchInput" placeholder="Search Your Destination" />
+          <input
+            type="search"
+            class="search-bar-input"
+            id="searchInput"
+            placeholder="Search Your Destination"
+          />
           <div id="searchSuggestions" class="search-suggestions"></div>
         </div>
         <div class="login-btn desktop-login">
@@ -30,17 +35,15 @@
           <span class="line"></span>
         </div>
       </div>
-      <nav class="main-nav">
-        </nav>
-      <nav class="secondary-nav">
-        </nav>
+      <nav class="main-nav"></nav>
+      <nav class="secondary-nav"></nav>
     </header>
 
     <main>
       <div class="action-bar">
         <div class="title-container">
-            <h2 id="pageTitle">Loading Destinations...</h2>
-            <p id="pageSubtitle">Discover the most beautiful places to visit</p>
+          <h2 id="pageTitle">Loading Destinations...</h2>
+          <p id="pageSubtitle">Discover the most beautiful places to visit</p>
         </div>
         <button class="back-btn" id="backBtn" onclick="goBack()">
           <i class="fa-solid fa-arrow-left"></i> Back
@@ -50,26 +53,34 @@
       <div class="grid-container" id="gridView"></div>
 
       <div class="details-container" id="detailsView">
-        <img id="detailImage" src="" alt="Place Image" class="detail-hero-img" />
+        <img
+          id="detailImage"
+          src=""
+          alt="Place Image"
+          class="detail-hero-img"
+        />
         <div class="detail-content-wrapper">
-            <h2 id="detailName">Place Name</h2>
-            <div class="price-tag">
-              Package Starts at ₹<span id="detailPrice">0</span>
-            </div>
+          <h2 id="detailName">Place Name</h2>
+          <div class="price-tag">
+            Package Starts at ₹<span id="detailPrice">0</span>
+          </div>
 
-            <div class="info-section">
-              <h4><i class="fa-solid fa-clock-rotate-left"></i> History & About</h4>
-              <p id="detailHistory">History text goes here...</p>
-            </div>
+          <div class="info-section">
+            <h4>
+              <i class="fa-solid fa-clock-rotate-left"></i> History & About
+            </h4>
+            <p id="detailHistory">History text goes here...</p>
+          </div>
 
-            <div class="info-section">
-              <h4><i class="fa-solid fa-box-open"></i> Package Inclusions</h4>
-              <p id="detailPackage">Package details go here...</p>
-            </div>
+          <div class="info-section">
+            <h4><i class="fa-solid fa-box-open"></i> Package Inclusions</h4>
+            <p id="detailPackage">Package details go here...</p>
+          </div>
 
-            <a href="booking-modal.html" class="book-btn"
-              >Book Now <i class="fa-solid fa-arrow-right"></i
-            ></a>
+          <!-- ✅ CHANGED: a tag ki jagah button -->
+          <button class="book-btn" id="bookNowBtn">
+            Book Now <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </main>
