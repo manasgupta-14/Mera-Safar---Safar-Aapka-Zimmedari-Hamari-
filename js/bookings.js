@@ -1,13 +1,38 @@
 // ================= FETCH APIs =================
+// ================= FETCH APIs (Updated) =================
 const destinationMenu = document.getElementById("destinationMenu");
+
 if (destinationMenu) {
     fetch("./api/nav-bar-destination.json")
         .then((res) => res.json())
         .then((data) => {
+
+            let menuHTML = "";
+
             data.forEach(item => {
-                destinationMenu.innerHTML += `<li><a href="#" data-slug="${item.slug}">${item.name}</a></li>`;
+
+                // Default page
+                let page = "destination.html";
+                let query = "category";
+
+                // Historical option ke liye alag page
+                if (item.slug === "historical") {
+                    page = "historical.html";
+                    query = "category";
+                }
+
+                menuHTML += `
+                    <li>
+                        <a href="${page}?${query}=${item.slug}" data-slug="${item.slug}">
+                            ${item.name}
+                        </a>
+                    </li>
+                `;
             });
-        }).catch(err => console.log(err));
+
+            destinationMenu.innerHTML = menuHTML;
+        })
+        .catch(err => console.log("Error fetching destinations:", err));
 }
 
 const tourPackages = document.getElementById("tourpackagesMenu");
