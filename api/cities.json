@@ -1,0 +1,259 @@
+[
+  {
+    "id": "ct_1",
+    "stateId": "st_1",
+    "name": "Jaipur",
+    "image": "./assets/cities/jaipur.jpg",
+    "description": "The Pink City of India."
+  },
+  {
+    "id": "ct_2",
+    "stateId": "st_1",
+    "name": "Udaipur",
+    "image": "./assets/cities/udaipur.jpg",
+    "description": "Famous for its beautiful lakes and palaces."
+  },
+  {
+    "id": "ct_3",
+    "stateId": "st_1",
+    "name": "Jodhpur",
+    "image": "./assets/cities/jodhpur.jpg",
+    "description": "Known as the Blue City."
+  },
+  {
+    "id": "ct_4",
+    "stateId": "st_1",
+    "name": "Jaisalmer",
+    "image": "./assets/cities/jaisalmer.jpg",
+    "description": "The Golden City of Rajasthan."
+  },
+  {
+    "id": "ct_5",
+    "stateId": "st_1",
+    "name": "Bikaner",
+    "image": "./assets/cities/bikaner.jpg",
+    "description": "Famous for forts and camel festival."
+  },
+  {
+    "id": "ct_6",
+    "stateId": "st_1",
+    "name": "Mount Abu",
+    "image": "./assets/cities/mount-abu.jpg",
+    "description": "Rajasthan's only hill station."
+  },
+
+  {
+    "id": "ct_7",
+    "stateId": "st_2",
+    "name": "Munnar",
+    "image": "./assets/cities/munnar.jpg",
+    "description": "Beautiful tea gardens and hills."
+  },
+  {
+    "id": "ct_8",
+    "stateId": "st_2",
+    "name": "Alleppey",
+    "image": "./assets/cities/alleppey.jpg",
+    "description": "Famous for backwaters and houseboats."
+  },
+  {
+    "id": "ct_9",
+    "stateId": "st_2",
+    "name": "Kochi",
+    "image": "./assets/cities/kochi.jpg",
+    "description": "Historic port city with modern charm."
+  },
+  {
+    "id": "ct_10",
+    "stateId": "st_2",
+    "name": "Wayanad",
+    "image": "./assets/cities/wayanad.jpg",
+    "description": "Lush forests and waterfalls."
+  },
+  {
+    "id": "ct_11",
+    "stateId": "st_2",
+    "name": "Kovalam",
+    "image": "./assets/cities/kovalam.jpg",
+    "description": "Popular beach destination."
+  },
+  {
+    "id": "ct_12",
+    "stateId": "st_2",
+    "name": "Thekkady",
+    "image": "./assets/cities/thekkady.jpg",
+    "description": "Wildlife sanctuary and spice plantations."
+  },
+
+  {
+    "id": "ct_13",
+    "stateId": "st_3",
+    "name": "Nainital",
+    "image": "./assets/cities/nainital.jpg",
+    "description": "Lake city surrounded by hills."
+  },
+  {
+    "id": "ct_14",
+    "stateId": "st_3",
+    "name": "Mussoorie",
+    "image": "./assets/cities/mussoorie.jpg",
+    "description": "Queen of the Hills."
+  },
+  {
+    "id": "ct_15",
+    "stateId": "st_3",
+    "name": "Rishikesh",
+    "image": "./assets/cities/rishikesh.jpg",
+    "description": "Yoga capital and adventure hub."
+  },
+  {
+    "id": "ct_16",
+    "stateId": "st_3",
+    "name": "Haridwar",
+    "image": "./assets/cities/haridwar.jpg",
+    "description": "Sacred city on the Ganga."
+  },
+  {
+    "id": "ct_17",
+    "stateId": "st_3",
+    "name": "Auli",
+    "image": "./assets/cities/auli.jpg",
+    "description": "India's famous skiing destination."
+  },
+  {
+    "id": "ct_18",
+    "stateId": "st_3",
+    "name": "Dehradun",
+    "image": "./assets/cities/dehradun.jpg",
+    "description": "Capital city with scenic beauty."
+  },
+
+  {
+    "id": "ct_19",
+    "stateId": "st_4",
+    "name": "Agra",
+    "image": "./assets/cities/agra.jpg",
+    "description": "Home of the iconic Taj Mahal."
+  },
+  {
+    "id": "ct_20",
+    "stateId": "st_4",
+    "name": "Varanasi",
+    "image": "./assets/cities/varanasi.jpg",
+    "description": "One of the world's oldest living cities."
+  },
+  {
+    "id": "ct_21",
+    "stateId": "st_4",
+    "name": "Lucknow",
+    "image": "./assets/cities/lucknow.jpg",
+    "description": "City of Nawabs and kebabs."
+  },
+  {
+    "id": "ct_22",
+    "stateId": "st_4",
+    "name": "Prayagraj",
+    "image": "./assets/cities/prayagraj.jpg",
+    "description": "Famous for the Triveni Sangam."
+  },
+  {
+    "id": "ct_23",
+    "stateId": "st_4",
+    "name": "Gorakhpur",
+    "image": "./assets/cities/gorakhpur.jpg",
+    "description": "Known for Gorakhnath Temple and rich heritage."
+  },
+  {
+    "id": "ct_24",
+    "stateId": "st_4",
+    "name": "Ayodhya",
+    "image": "./assets/cities/ayodhya.jpg",
+    "description": "Sacred birthplace of Lord Rama."
+  },
+
+  {
+    "id": "ct_25",
+    "stateId": "st_5",
+    "name": "Panaji",
+    "image": "./assets/cities/panaji.jpg",
+    "description": "Capital city with Portuguese charm."
+  },
+  {
+    "id": "ct_26",
+    "stateId": "st_5",
+    "name": "Calangute",
+    "image": "./assets/cities/calangute.jpg",
+    "description": "Goa's most famous beach."
+  },
+  {
+    "id": "ct_27",
+    "stateId": "st_5",
+    "name": "Baga",
+    "image": "./assets/cities/baga.jpg",
+    "description": "Popular for nightlife and water sports."
+  },
+  {
+    "id": "ct_28",
+    "stateId": "st_5",
+    "name": "Candolim",
+    "image": "./assets/cities/candolim.jpg",
+    "description": "Peaceful beach with resorts."
+  },
+  {
+    "id": "ct_29",
+    "stateId": "st_5",
+    "name": "Vagator",
+    "image": "./assets/cities/vagator.jpg",
+    "description": "Cliffside beaches and vibrant cafes."
+  },
+  {
+    "id": "ct_30",
+    "stateId": "st_5",
+    "name": "Palolem",
+    "image": "./assets/cities/palolem.jpg",
+    "description": "One of South Goa's most scenic beaches."
+  },
+
+  {
+    "id": "ct_31",
+    "stateId": "st_6",
+    "name": "Shimla",
+    "image": "./assets/cities/shimla.jpg",
+    "description": "Queen of Hills."
+  },
+  {
+    "id": "ct_32",
+    "stateId": "st_6",
+    "name": "Manali",
+    "image": "./assets/cities/manali.jpg",
+    "description": "Adventure and snow paradise."
+  },
+  {
+    "id": "ct_33",
+    "stateId": "st_6",
+    "name": "Dharamshala",
+    "image": "./assets/cities/dharamshala.jpg",
+    "description": "Home of the Dalai Lama."
+  },
+  {
+    "id": "ct_34",
+    "stateId": "st_6",
+    "name": "Kasol",
+    "image": "./assets/cities/kasol.jpg",
+    "description": "A backpacker's favorite destination."
+  },
+  {
+    "id": "ct_35",
+    "stateId": "st_6",
+    "name": "Kullu",
+    "image": "./assets/cities/kullu.jpg",
+    "description": "Valley of Gods."
+  },
+  {
+    "id": "ct_36",
+    "stateId": "st_6",
+    "name": "Spiti",
+    "image": "./assets/cities/spiti.jpg",
+    "description": "Cold desert with breathtaking landscapes."
+  }
+]
