@@ -1,0 +1,86 @@
+[
+  {
+    "id": "pl_1",
+    "cityId": "ct_1",
+    "categoryId": "cat_02",
+    "name": "Hawa Mahal",
+    "image": "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=800&q=80",
+    "details": {
+      "history": "Built in 1799 by Maharaja Sawai Pratap Singh, this five-story palace is constructed of red and pink sandstone.",
+      "package": {
+        "price": 4500,
+        "description": "Includes 2N stay and sightseeing"
+      }
+    }
+  },
+  {
+    "id": "pl_2",
+    "cityId": "ct_1",
+    "categoryId": "cat_02",
+    "name": "Amer Fort",
+    "image": "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80",
+    "details": {
+      "history": "Built by Raja Man Singh I in 1592, known for its artistic Hindu style elements and cobbled paths.",
+      "package": {
+        "price": 5200,
+        "description": "Guided tour and elephant ride"
+      }
+    }
+  },
+  {
+    "id": "pl_19",
+    "cityId": "ct_19",
+    "categoryId": "cat_02",
+    "name": "Taj Mahal",
+    "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80",
+    "details": {
+      "history": "Commissioned in 1631 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.",
+      "package": {
+        "price": 5500,
+        "description": "Skip-the-line entry and 1N luxury stay"
+      }
+    }
+  },
+  {
+    "id": "pl_20",
+    "cityId": "ct_19",
+    "categoryId": "cat_02",
+    "name": "Agra Fort",
+    "image": "https://images.unsplash.com/photo-1598977123418-45f04b616a04?auto=format&fit=crop&w=800&q=80",
+    "details": {
+      "history": "A historical fort built in 1565 by Emperor Akbar, serving as the main residence of the Mughal Dynasty rulers.",
+      "package": {
+        "price": 2200,
+        "description": "Guided historical walk and sound & light show"
+      }
+    }
+  },
+  {
+    "id": "pl_23",
+    "cityId": "ct_12",
+    "categoryId": "cat_02",
+    "name": "Bara Imambara",
+    "image": "https://images.unsplash.com/photo-1600868153491-c6fe4283c742?auto=format&fit=crop&w=800&q=80",
+    "details": {
+      "history": "Built by Asaf-ud-Daula, Nawab of Awadh in 1784, famous for its incredible incredible maze, the Bhulbhulaiya.",
+      "package": {
+        "price": 1800,
+        "description": "Maze tour and traditional Awadhi dinner"
+      }
+    }
+  },
+  {
+    "id": "pl_25",
+    "cityId": "ct_13",
+    "categoryId": "cat_02",
+    "name": "Basilica of Bom Jesus",
+    "image": "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=800&q=80",
+    "details": {
+      "history": "Constructed in 1605, this UNESCO World Heritage Site holds the mortal remains of St. Francis Xavier.",
+      "package": {
+        "price": 2000,
+        "description": "Includes guided heritage tour of Old Goa and lunch"
+      }
+    }
+  }
+]
