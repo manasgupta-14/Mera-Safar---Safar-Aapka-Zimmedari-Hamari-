@@ -1,36 +1,36 @@
 [
   {
-    "id": 1,
+    "id": "cat_01",
     "name": "States",
     "slug": "states"
   },
   {
-    "id": 2,
+    "id": "cat_02",
     "name": "Historical Places",
     "slug": "historical"
   },
   {
-    "id": 3,
+    "id": "cat_03",
     "name": "Hill Stations",
     "slug": "hill-stations"
   },
   {
-    "id": 4,
+    "id": "cat_04",
     "name": "Beaches",
     "slug": "beaches"
   },
   {
-    "id": 5,
+    "id": "cat_05",
     "name": "Religious Places",
     "slug": "religious"
   },
   {
-    "id": 6,
+    "id": "cat_06",
     "name": "Adventure Places",
     "slug": "adventure"
   },
   {
-    "id": 7,
+    "id": "cat_07",
     "name": "Wildlife Sanctuaries",
     "slug": "wildlife"
   }
