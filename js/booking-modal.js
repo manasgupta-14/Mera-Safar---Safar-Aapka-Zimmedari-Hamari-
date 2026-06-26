@@ -13,6 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!form) return;
 
     // =========================================================
+    // ✅ NEW: HISTORICAL PLACE DATA FILL KARNA
+    // =========================================================
+    const savedPlace = JSON.parse(localStorage.getItem("selectedPlace"));
+
+    if (savedPlace) {
+        const titleEl = document.getElementById("modalPackageTitle");
+        if (titleEl) titleEl.innerText = savedPlace.name;
+
+        const typeEl = document.getElementById("modalPackageType");
+        if (typeEl) typeEl.value = savedPlace.details.package.type || "Standard";
+    }
+
+    // =========================================================
     // B. PACKAGE PRICE FETCH (From index.js click event)
     // =========================================================
     let packagePrice = parseInt(localStorage.getItem("selectedPackagePrice"));
