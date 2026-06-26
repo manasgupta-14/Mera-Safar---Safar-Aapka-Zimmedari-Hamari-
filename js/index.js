@@ -109,16 +109,21 @@ if (slider && slides.length > 0) {
     }, 5000);
 }
 
-// ================= FETCH APIs =================
+// ================= FETCH APIs (Updated) =================
 const destinationMenu = document.getElementById("destinationMenu");
+
 if (destinationMenu) {
     fetch("./api/nav-bar-destination.json")
         .then((res) => res.json())
         .then((data) => {
+            let menuHTML = "";
             data.forEach(item => {
-                destinationMenu.innerHTML += `<li><a href="#" data-slug="${item.slug}">${item.name}</a></li>`;
+                // Link ab destination.html par redirect karega with query parameter
+                menuHTML += `<li><a href="destination.html?category=${item.slug}" data-slug="${item.slug}">${item.name}</a></li>`;
             });
-        }).catch(err => console.log(err));
+            destinationMenu.innerHTML = menuHTML;
+        })
+        .catch(err => console.log("Error fetching destinations:", err));
 }
 
 const tourPackages = document.getElementById("tourpackagesMenu");
