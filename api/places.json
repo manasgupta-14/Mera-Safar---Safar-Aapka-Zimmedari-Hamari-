@@ -1,0 +1,2645 @@
+[
+  {
+    "id": "pl_1",
+    "cityId": "ct_1",
+    "categoryId": "cat_2",
+    "name": "Hawa Mahal",
+    "imageUrl": "",
+    "details": {
+      "history": "Built in 1799 by Maharaja Sawai Pratap Singh.",
+      "package": {
+        "price": 4500,
+        "description": "Includes 2N stay and sightseeing"
+      }
+    }
+  },
+  {
+    "id": "pl_2",
+    "cityId": "ct_1",
+    "categoryId": "cat_2",
+    "name": "Amer Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "16th-century hilltop fort in Jaipur.",
+      "package": {
+        "price": 5200,
+        "description": "Guided tour and elephant ride"
+      }
+    }
+  },
+  {
+    "id": "pl_3",
+    "cityId": "ct_1",
+    "categoryId": "cat_2",
+    "name": "City Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Historic seat of the Maharaja of Jaipur.",
+      "package": {
+        "price": 6000,
+        "description": "Palace tour and cultural show"
+      }
+    }
+  },
+  {
+    "id": "pl_4",
+    "cityId": "ct_1",
+    "categoryId": "cat_2",
+    "name": "Jantar Mantar",
+    "imageUrl": "",
+    "details": {
+      "history": "Astronomical observatory built in 1734.",
+      "package": {
+        "price": 2000,
+        "description": "Entry tickets and guided history walk"
+      }
+    }
+  },
+  {
+    "id": "pl_5",
+    "cityId": "ct_1",
+    "categoryId": "cat_1",
+    "name": "Jal Mahal",
+    "imageUrl": "",
+    "details": {
+      "history": "Water palace situated in Man Sagar Lake.",
+      "package": {
+        "price": 3500,
+        "description": "Boat ride and evening photography"
+      }
+    }
+  },
+  {
+    "id": "pl_6",
+    "cityId": "ct_1",
+    "categoryId": "cat_2",
+    "name": "Nahargarh Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Built in 1734 on the edge of Aravalli Hills.",
+      "package": {
+        "price": 4000,
+        "description": "Sunset view and dinner at fort"
+      }
+    }
+  },
+  {
+    "id": "pl_7",
+    "cityId": "ct_2",
+    "categoryId": "cat_2",
+    "name": "Lake Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Former summer palace of the Mewar dynasty.",
+      "package": {
+        "price": 15000,
+        "description": "Luxury stay on Lake Pichola"
+      }
+    }
+  },
+  {
+    "id": "pl_8",
+    "cityId": "ct_2",
+    "categoryId": "cat_2",
+    "name": "City Palace Udaipur",
+    "imageUrl": "",
+    "details": {
+      "history": "Complex built over 400 years in Udaipur.",
+      "package": { "price": 4500, "description": "Museum tour and light show" }
+    }
+  },
+  {
+    "id": "pl_9",
+    "cityId": "ct_2",
+    "categoryId": "cat_3",
+    "name": "Jag Mandir",
+    "imageUrl": "",
+    "details": {
+      "history": "Palace built on an island in Lake Pichola.",
+      "package": {
+        "price": 3000,
+        "description": "Boat transfer and heritage walk"
+      }
+    }
+  },
+  {
+    "id": "pl_10",
+    "cityId": "ct_2",
+    "categoryId": "cat_1",
+    "name": "Saheliyon Ki Bari",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous garden built for the royal ladies.",
+      "package": { "price": 1500, "description": "Nature walk and photography" }
+    }
+  },
+  {
+    "id": "pl_11",
+    "cityId": "ct_2",
+    "categoryId": "cat_2",
+    "name": "Monsoon Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Hilltop palatial residence overlooking the city.",
+      "package": { "price": 2500, "description": "Cab ride and sunset viewing" }
+    }
+  },
+  {
+    "id": "pl_12",
+    "cityId": "ct_2",
+    "categoryId": "cat_1",
+    "name": "Fateh Sagar Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Artificial lake built in 1678.",
+      "package": { "price": 2000, "description": "Evening speed boat ride" }
+    }
+  },
+  {
+    "id": "pl_13",
+    "cityId": "ct_3",
+    "categoryId": "cat_2",
+    "name": "Mehrangarh Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Massive fort in Jodhpur built in 1459.",
+      "package": { "price": 4800, "description": "Zip-lining and guided tour" }
+    }
+  },
+  {
+    "id": "pl_14",
+    "cityId": "ct_3",
+    "categoryId": "cat_2",
+    "name": "Umaid Bhawan Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Completed in 1943, one of the largest residences.",
+      "package": {
+        "price": 12500,
+        "description": "Premium stay and vintage car ride"
+      }
+    }
+  },
+  {
+    "id": "pl_15",
+    "cityId": "ct_3",
+    "categoryId": "cat_2",
+    "name": "Jaswant Thada",
+    "imageUrl": "",
+    "details": {
+      "history": "Marble cenotaph built in 1899.",
+      "package": {
+        "price": 1500,
+        "description": "Monument entry and local guide"
+      }
+    }
+  },
+  {
+    "id": "pl_16",
+    "cityId": "ct_3",
+    "categoryId": "cat_1",
+    "name": "Mandore Garden",
+    "imageUrl": "",
+    "details": {
+      "history": "Former capital of the Maharajas of Marwar.",
+      "package": {
+        "price": 2000,
+        "description": "Garden walk and temple visit"
+      }
+    }
+  },
+  {
+    "id": "pl_17",
+    "cityId": "ct_3",
+    "categoryId": "cat_1",
+    "name": "Balsamand Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Artificial lake built in 1159 AD.",
+      "package": {
+        "price": 3000,
+        "description": "Lakeside picnic and heritage walk"
+      }
+    }
+  },
+  {
+    "id": "pl_18",
+    "cityId": "ct_3",
+    "categoryId": "cat_4",
+    "name": "Ghanta Ghar",
+    "imageUrl": "",
+    "details": {
+      "history": "The clock tower of Rajasthan in Jodhpur.",
+      "package": { "price": 1000, "description": "Local market shopping tour" }
+    }
+  },
+  {
+    "id": "pl_19",
+    "cityId": "ct_4",
+    "categoryId": "cat_2",
+    "name": "Jaisalmer Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Golden fort built in 1156 AD.",
+      "package": {
+        "price": 5000,
+        "description": "Fort stay and cultural evening"
+      }
+    }
+  },
+  {
+    "id": "pl_20",
+    "cityId": "ct_4",
+    "categoryId": "cat_2",
+    "name": "Patwon Ki Haveli",
+    "imageUrl": "",
+    "details": {
+      "history": "Cluster of five historic havelis in Jaisalmer.",
+      "package": { "price": 2000, "description": "Architecture tour" }
+    }
+  },
+  {
+    "id": "pl_21",
+    "cityId": "ct_4",
+    "categoryId": "cat_1",
+    "name": "Sam Sand Dunes",
+    "imageUrl": "",
+    "details": {
+      "history": "Desert area famous for sand dunes.",
+      "package": {
+        "price": 6500,
+        "description": "Camel safari and desert camping"
+      }
+    }
+  },
+  {
+    "id": "pl_22",
+    "cityId": "ct_4",
+    "categoryId": "cat_1",
+    "name": "Gadisar Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Man-made reservoir built in 14th century.",
+      "package": { "price": 1500, "description": "Morning boat ride" }
+    }
+  },
+  {
+    "id": "pl_23",
+    "cityId": "ct_4",
+    "categoryId": "cat_2",
+    "name": "Nathmal Ki Haveli",
+    "imageUrl": "",
+    "details": {
+      "history": "Late 19th-century haveli with intricate carvings.",
+      "package": { "price": 1200, "description": "Heritage walk" }
+    }
+  },
+  {
+    "id": "pl_24",
+    "cityId": "ct_4",
+    "categoryId": "cat_2",
+    "name": "Kuldhara",
+    "imageUrl": "",
+    "details": {
+      "history": "Abandoned village with a haunted legacy.",
+      "package": {
+        "price": 2500,
+        "description": "Guided ghost town exploration"
+      }
+    }
+  },
+  {
+    "id": "pl_25",
+    "cityId": "ct_5",
+    "categoryId": "cat_3",
+    "name": "Brahma Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "One of the few temples dedicated to Lord Brahma.",
+      "package": { "price": 2000, "description": "VIP Darshan and offering" }
+    }
+  },
+  {
+    "id": "pl_26",
+    "cityId": "ct_5",
+    "categoryId": "cat_3",
+    "name": "Pushkar Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Sacred Hindu lake with 52 bathing ghats.",
+      "package": { "price": 1500, "description": "Evening Aarti viewing" }
+    }
+  },
+  {
+    "id": "pl_27",
+    "cityId": "ct_5",
+    "categoryId": "cat_3",
+    "name": "Savitri Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Hilltop temple dedicated to Brahma's first wife.",
+      "package": { "price": 1800, "description": "Ropeway ticket and trek" }
+    }
+  },
+  {
+    "id": "pl_28",
+    "cityId": "ct_5",
+    "categoryId": "cat_3",
+    "name": "Varaha Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient temple dedicated to Vishnu's boar incarnation.",
+      "package": { "price": 1000, "description": "Temple tour" }
+    }
+  },
+  {
+    "id": "pl_29",
+    "cityId": "ct_5",
+    "categoryId": "cat_4",
+    "name": "Pushkar Camel Fair Ground",
+    "imageUrl": "",
+    "details": {
+      "history": "Site of the famous annual livestock fair.",
+      "package": {
+        "price": 3000,
+        "description": "Cultural show and hot air balloon"
+      }
+    }
+  },
+  {
+    "id": "pl_30",
+    "cityId": "ct_5",
+    "categoryId": "cat_3",
+    "name": "Rangji Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Temple blending South Indian and Rajput styles.",
+      "package": {
+        "price": 1200,
+        "description": "Guided temple architecture tour"
+      }
+    }
+  },
+  {
+    "id": "pl_31",
+    "cityId": "ct_6",
+    "categoryId": "cat_2",
+    "name": "Junagarh Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Bikaner fort built in the late 16th century.",
+      "package": { "price": 3500, "description": "Fort entry and museum guide" }
+    }
+  },
+  {
+    "id": "pl_32",
+    "cityId": "ct_6",
+    "categoryId": "cat_3",
+    "name": "Karni Mata Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous rat temple located in Deshnoke.",
+      "package": { "price": 2500, "description": "Transport and guided visit" }
+    }
+  },
+  {
+    "id": "pl_33",
+    "cityId": "ct_6",
+    "categoryId": "cat_2",
+    "name": "Lalgarh Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Palace built for Sir Ganga Singh in 1902.",
+      "package": { "price": 5000, "description": "Heritage stay and dining" }
+    }
+  },
+  {
+    "id": "pl_34",
+    "cityId": "ct_6",
+    "categoryId": "cat_2",
+    "name": "Gajner Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Lakeside palace used as a hunting lodge.",
+      "package": { "price": 6000, "description": "1N stay and nature walk" }
+    }
+  },
+  {
+    "id": "pl_35",
+    "cityId": "ct_6",
+    "categoryId": "cat_1",
+    "name": "National Research Centre on Camel",
+    "imageUrl": "",
+    "details": {
+      "history": "Premier camel research institute established in 1984.",
+      "package": {
+        "price": 1500,
+        "description": "Tour and camel milk dairy visit"
+      }
+    }
+  },
+  {
+    "id": "pl_36",
+    "cityId": "ct_6",
+    "categoryId": "cat_3",
+    "name": "Bhandasar Jain Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "15th-century temple famous for leaf paintings.",
+      "package": {
+        "price": 1200,
+        "description": "Historical and religious tour"
+      }
+    }
+  },
+  {
+    "id": "pl_37",
+    "cityId": "ct_7",
+    "categoryId": "cat_1",
+    "name": "Eravikulam National Park",
+    "imageUrl": "",
+    "details": {
+      "history": "Sanctuary for the endangered Nilgiri Tahr.",
+      "package": {
+        "price": 3500,
+        "description": "Safari jeep ride and nature walk"
+      }
+    }
+  },
+  {
+    "id": "pl_38",
+    "cityId": "ct_7",
+    "categoryId": "cat_2",
+    "name": "Tea Museum",
+    "imageUrl": "",
+    "details": {
+      "history": "Museum by Tata Tea showcasing Munnar's legacy.",
+      "package": { "price": 1200, "description": "Museum tour and tea tasting" }
+    }
+  },
+  {
+    "id": "pl_39",
+    "cityId": "ct_7",
+    "categoryId": "cat_1",
+    "name": "Mattupetty Dam",
+    "imageUrl": "",
+    "details": {
+      "history": "Concrete gravity dam constructed in the 1940s.",
+      "package": {
+        "price": 2500,
+        "description": "Speed boating and scenic picnic"
+      }
+    }
+  },
+  {
+    "id": "pl_40",
+    "cityId": "ct_7",
+    "categoryId": "cat_1",
+    "name": "Anamudi",
+    "imageUrl": "",
+    "details": {
+      "history": "Highest peak in the Western Ghats.",
+      "package": { "price": 4000, "description": "Guided trekking expedition" }
+    }
+  },
+  {
+    "id": "pl_41",
+    "cityId": "ct_7",
+    "categoryId": "cat_1",
+    "name": "Echo Point",
+    "imageUrl": "",
+    "details": {
+      "history": "Scenic spot famous for natural echo phenomenon.",
+      "package": { "price": 1500, "description": "Photography and nature walk" }
+    }
+  },
+  {
+    "id": "pl_42",
+    "cityId": "ct_7",
+    "categoryId": "cat_1",
+    "name": "Top Station",
+    "imageUrl": "",
+    "details": {
+      "history": "Highest railway station in the Kundala Valley.",
+      "package": { "price": 2000, "description": "Sightseeing tour" }
+    }
+  },
+  {
+    "id": "pl_43",
+    "cityId": "ct_8",
+    "categoryId": "cat_2",
+    "name": "Fort Kochi",
+    "imageUrl": "",
+    "details": {
+      "history": "Historic colonial region in Kerala.",
+      "package": {
+        "price": 2800,
+        "description": "Walking tour and Kathakali show"
+      }
+    }
+  },
+  {
+    "id": "pl_44",
+    "cityId": "ct_8",
+    "categoryId": "cat_2",
+    "name": "Mattancherry Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Portuguese palace gifted to the Raja of Kochi.",
+      "package": { "price": 1500, "description": "Guided heritage tour" }
+    }
+  },
+  {
+    "id": "pl_45",
+    "cityId": "ct_8",
+    "categoryId": "cat_2",
+    "name": "Chinese Fishing Nets",
+    "imageUrl": "",
+    "details": {
+      "history": "Fixed land installations for fishing introduced in 14th century.",
+      "package": {
+        "price": 1000,
+        "description": "Sunset photography and local seafood"
+      }
+    }
+  },
+  {
+    "id": "pl_46",
+    "cityId": "ct_8",
+    "categoryId": "cat_3",
+    "name": "Jewish Synagogue",
+    "imageUrl": "",
+    "details": {
+      "history": "Oldest active synagogue in the Commonwealth.",
+      "package": { "price": 1200, "description": "Historical tour of Jew Town" }
+    }
+  },
+  {
+    "id": "pl_47",
+    "cityId": "ct_8",
+    "categoryId": "cat_4",
+    "name": "Marine Drive",
+    "imageUrl": "",
+    "details": {
+      "history": "Picturesque promenade in Kochi.",
+      "package": { "price": 2000, "description": "Evening backwater cruise" }
+    }
+  },
+  {
+    "id": "pl_48",
+    "cityId": "ct_8",
+    "categoryId": "cat_2",
+    "name": "Bolgatty Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Dutch palace built in 1744.",
+      "package": {
+        "price": 5500,
+        "description": "1N stay and island exploration"
+      }
+    }
+  },
+  {
+    "id": "pl_49",
+    "cityId": "ct_9",
+    "categoryId": "cat_1",
+    "name": "Vembanad Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Longest lake in India, core of Kerala backwaters.",
+      "package": {
+        "price": 8500,
+        "description": "1N traditional AC Houseboat stay"
+      }
+    }
+  },
+  {
+    "id": "pl_50",
+    "cityId": "ct_9",
+    "categoryId": "cat_4",
+    "name": "Marari Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Pristine beach located in Mararikulam village.",
+      "package": { "price": 4000, "description": "Resort stay and beach yoga" }
+    }
+  },
+  {
+    "id": "pl_51",
+    "cityId": "ct_9",
+    "categoryId": "cat_4",
+    "name": "Alappuzha Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous for a 137-year-old pier extending into the sea.",
+      "package": {
+        "price": 1500,
+        "description": "Evening beach visit and snacks"
+      }
+    }
+  },
+  {
+    "id": "pl_52",
+    "cityId": "ct_9",
+    "categoryId": "cat_2",
+    "name": "Krishnapuram Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "18th-century palace built by Anizham Thirunal.",
+      "package": {
+        "price": 2000,
+        "description": "Museum tour featuring murals"
+      }
+    }
+  },
+  {
+    "id": "pl_53",
+    "cityId": "ct_9",
+    "categoryId": "cat_1",
+    "name": "Pathiramanal",
+    "imageUrl": "",
+    "details": {
+      "history": "Small island in Vembanad Lake, a bird watcher's paradise.",
+      "package": { "price": 2500, "description": "Boat ride and bird watching" }
+    }
+  },
+  {
+    "id": "pl_54",
+    "cityId": "ct_9",
+    "categoryId": "cat_1",
+    "name": "Alleppey Backwaters",
+    "imageUrl": "",
+    "details": {
+      "history": "Network of interconnected canals and rivers.",
+      "package": {
+        "price": 3500,
+        "description": "Canoe tour through narrow canals"
+      }
+    }
+  },
+  {
+    "id": "pl_55",
+    "cityId": "ct_10",
+    "categoryId": "cat_2",
+    "name": "Edakkal Caves",
+    "imageUrl": "",
+    "details": {
+      "history": "Caves featuring pictorial writings from Neolithic age.",
+      "package": {
+        "price": 2500,
+        "description": "Trekking and cave exploration"
+      }
+    }
+  },
+  {
+    "id": "pl_56",
+    "cityId": "ct_10",
+    "categoryId": "cat_1",
+    "name": "Chembra Peak",
+    "imageUrl": "",
+    "details": {
+      "history": "Highest peak in Wayanad, known for heart-shaped lake.",
+      "package": {
+        "price": 3000,
+        "description": "Guided trek and forest permit"
+      }
+    }
+  },
+  {
+    "id": "pl_57",
+    "cityId": "ct_10",
+    "categoryId": "cat_1",
+    "name": "Banasura Sagar Dam",
+    "imageUrl": "",
+    "details": {
+      "history": "Largest earth dam in India.",
+      "package": {
+        "price": 2000,
+        "description": "Speed boating and park entry"
+      }
+    }
+  },
+  {
+    "id": "pl_58",
+    "cityId": "ct_10",
+    "categoryId": "cat_1",
+    "name": "Soochipara Falls",
+    "imageUrl": "",
+    "details": {
+      "history": "Three-tiered waterfall in Vellarimala.",
+      "package": { "price": 1500, "description": "Nature walk and swimming" }
+    }
+  },
+  {
+    "id": "pl_59",
+    "cityId": "ct_10",
+    "categoryId": "cat_1",
+    "name": "Pookode Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Freshwater lake nestled amidst evergreen forests.",
+      "package": { "price": 1200, "description": "Boating and aquarium visit" }
+    }
+  },
+  {
+    "id": "pl_60",
+    "cityId": "ct_10",
+    "categoryId": "cat_1",
+    "name": "Wayanad Wildlife Sanctuary",
+    "imageUrl": "",
+    "details": {
+      "history": "Established in 1973, part of the Nilgiri Biosphere.",
+      "package": {
+        "price": 3500,
+        "description": "Jeep safari and elephant spotting"
+      }
+    }
+  },
+  {
+    "id": "pl_61",
+    "cityId": "ct_11",
+    "categoryId": "cat_3",
+    "name": "Padmanabhaswamy Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient temple known for its massive wealth and Dravidian architecture.",
+      "package": { "price": 3000, "description": "VIP Darshan and local guide" }
+    }
+  },
+  {
+    "id": "pl_62",
+    "cityId": "ct_11",
+    "categoryId": "cat_2",
+    "name": "Napier Museum",
+    "imageUrl": "",
+    "details": {
+      "history": "Art and natural history museum established in 1855.",
+      "package": { "price": 1000, "description": "Museum entry and zoo visit" }
+    }
+  },
+  {
+    "id": "pl_63",
+    "cityId": "ct_11",
+    "categoryId": "cat_2",
+    "name": "Kowdiar Palace",
+    "imageUrl": "",
+    "details": {
+      "history": "Built in 1934 by Maharaja Sree Chithira Thirunal.",
+      "package": { "price": 1500, "description": "Exterior architecture tour" }
+    }
+  },
+  {
+    "id": "pl_64",
+    "cityId": "ct_11",
+    "categoryId": "cat_4",
+    "name": "Shangumugham Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous for the Matsya Kanyaka sculpture.",
+      "package": {
+        "price": 1200,
+        "description": "Sunset viewing and local snacks"
+      }
+    }
+  },
+  {
+    "id": "pl_65",
+    "cityId": "ct_11",
+    "categoryId": "cat_3",
+    "name": "Attukal Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Renowned for the annual Attukal Pongala festival.",
+      "package": { "price": 1500, "description": "Temple visit and offering" }
+    }
+  },
+  {
+    "id": "pl_66",
+    "cityId": "ct_11",
+    "categoryId": "cat_4",
+    "name": "Veli Tourist Village",
+    "imageUrl": "",
+    "details": {
+      "history": "Picnic spot where the Veli Lake meets the Arabian Sea.",
+      "package": {
+        "price": 1800,
+        "description": "Pedal boating and park access"
+      }
+    }
+  },
+  {
+    "id": "pl_67",
+    "cityId": "ct_12",
+    "categoryId": "cat_4",
+    "name": "Varkala Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Papanasam beach backed by red laterite cliffs.",
+      "package": {
+        "price": 3500,
+        "description": "Cliff-top dining and 1N stay"
+      }
+    }
+  },
+  {
+    "id": "pl_68",
+    "cityId": "ct_12",
+    "categoryId": "cat_3",
+    "name": "Janardanaswamy Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "2000-year-old temple dedicated to Lord Vishnu.",
+      "package": {
+        "price": 1000,
+        "description": "Temple tour and ritual offering"
+      }
+    }
+  },
+  {
+    "id": "pl_69",
+    "cityId": "ct_12",
+    "categoryId": "cat_3",
+    "name": "Sivagiri Mutt",
+    "imageUrl": "",
+    "details": {
+      "history": "Ashram founded by Sree Narayana Guru in 1904.",
+      "package": {
+        "price": 1500,
+        "description": "Ashram visit and spiritual session"
+      }
+    }
+  },
+  {
+    "id": "pl_70",
+    "cityId": "ct_12",
+    "categoryId": "cat_4",
+    "name": "Kappil Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Scenic spot where backwaters merge with the sea.",
+      "package": { "price": 2000, "description": "Backwater boating" }
+    }
+  },
+  {
+    "id": "pl_71",
+    "cityId": "ct_12",
+    "categoryId": "cat_4",
+    "name": "Varkala Cliff",
+    "imageUrl": "",
+    "details": {
+      "history": "Geological monument along the Arabian Sea.",
+      "package": { "price": 2500, "description": "Sunset walk and paragliding" }
+    }
+  },
+  {
+    "id": "pl_72",
+    "cityId": "ct_12",
+    "categoryId": "cat_2",
+    "name": "Anjengo Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Fort built by the British East India Company in 1696.",
+      "package": { "price": 1200, "description": "Historical tour" }
+    }
+  },
+  {
+    "id": "pl_73",
+    "cityId": "ct_13",
+    "categoryId": "cat_3",
+    "name": "Laxman Jhula",
+    "imageUrl": "",
+    "details": {
+      "history": "Suspension bridge built in 1929 across the Ganga.",
+      "package": { "price": 2500, "description": "Ashram tour and Ganga Aarti" }
+    }
+  },
+  {
+    "id": "pl_74",
+    "cityId": "ct_13",
+    "categoryId": "cat_3",
+    "name": "Ram Jhula",
+    "imageUrl": "",
+    "details": {
+      "history": "Iron suspension bridge built in 1986.",
+      "package": {
+        "price": 1500,
+        "description": "Walking tour of nearby ashrams"
+      }
+    }
+  },
+  {
+    "id": "pl_75",
+    "cityId": "ct_13",
+    "categoryId": "cat_3",
+    "name": "Triveni Ghat",
+    "imageUrl": "",
+    "details": {
+      "history": "The biggest and most famous ghat in Rishikesh.",
+      "package": { "price": 1000, "description": "Evening Maha Aarti viewing" }
+    }
+  },
+  {
+    "id": "pl_76",
+    "cityId": "ct_13",
+    "categoryId": "cat_3",
+    "name": "Parmarth Niketan",
+    "imageUrl": "",
+    "details": {
+      "history": "Largest ashram in Rishikesh, founded in 1942.",
+      "package": {
+        "price": 3000,
+        "description": "Yoga session and spiritual stay"
+      }
+    }
+  },
+  {
+    "id": "pl_77",
+    "cityId": "ct_13",
+    "categoryId": "cat_3",
+    "name": "Neelkanth Mahadev",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient Shiva temple located at a height of 1330 meters.",
+      "package": { "price": 2000, "description": "Trek and temple Darshan" }
+    }
+  },
+  {
+    "id": "pl_78",
+    "cityId": "ct_13",
+    "categoryId": "cat_4",
+    "name": "Shivpuri",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous hub for river rafting on the Ganges.",
+      "package": {
+        "price": 3200,
+        "description": "16km river rafting and camping"
+      }
+    }
+  },
+  {
+    "id": "pl_79",
+    "cityId": "ct_14",
+    "categoryId": "cat_1",
+    "name": "Naini Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Crescent-shaped lake central to Nainital.",
+      "package": { "price": 4200, "description": "Boating and 2N stay" }
+    }
+  },
+  {
+    "id": "pl_80",
+    "cityId": "ct_14",
+    "categoryId": "cat_3",
+    "name": "Naina Devi Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "One of the 51 Shakti Peethas situated on the lake shore.",
+      "package": { "price": 1000, "description": "Temple visit and offering" }
+    }
+  },
+  {
+    "id": "pl_81",
+    "cityId": "ct_14",
+    "categoryId": "cat_1",
+    "name": "Snow View Point",
+    "imageUrl": "",
+    "details": {
+      "history": "Viewpoint offering panoramic views of the Himalayas.",
+      "package": { "price": 1800, "description": "Cable car ride and lunch" }
+    }
+  },
+  {
+    "id": "pl_82",
+    "cityId": "ct_14",
+    "categoryId": "cat_1",
+    "name": "Tiffin Top",
+    "imageUrl": "",
+    "details": {
+      "history": "Also known as Dorothy's Seat, built by an army officer.",
+      "package": {
+        "price": 2000,
+        "description": "Horse riding and viewpoint trek"
+      }
+    }
+  },
+  {
+    "id": "pl_83",
+    "cityId": "ct_14",
+    "categoryId": "cat_1",
+    "name": "Eco Cave Gardens",
+    "imageUrl": "",
+    "details": {
+      "history": "Network of interconnected rocky caves.",
+      "package": {
+        "price": 1200,
+        "description": "Cave exploration and musical fountain"
+      }
+    }
+  },
+  {
+    "id": "pl_84",
+    "cityId": "ct_14",
+    "categoryId": "cat_4",
+    "name": "Mall Road",
+    "imageUrl": "",
+    "details": {
+      "history": "Primary street for shopping and dining in Nainital.",
+      "package": {
+        "price": 1500,
+        "description": "Shopping tour and local dinner"
+      }
+    }
+  },
+  {
+    "id": "pl_85",
+    "cityId": "ct_15",
+    "categoryId": "cat_1",
+    "name": "Kempty Falls",
+    "imageUrl": "",
+    "details": {
+      "history": "Developed as a tourist destination in the 1830s.",
+      "package": { "price": 2000, "description": "Transport, entry, and lunch" }
+    }
+  },
+  {
+    "id": "pl_86",
+    "cityId": "ct_15",
+    "categoryId": "cat_1",
+    "name": "Gun Hill",
+    "imageUrl": "",
+    "details": {
+      "history": "Historical hill where a cannon was fired daily.",
+      "package": {
+        "price": 1500,
+        "description": "Ropeway ride and sunset viewing"
+      }
+    }
+  },
+  {
+    "id": "pl_87",
+    "cityId": "ct_15",
+    "categoryId": "cat_1",
+    "name": "Camel's Back Road",
+    "imageUrl": "",
+    "details": {
+      "history": "Road named after a rocky outcrop shaped like a camel.",
+      "package": { "price": 1000, "description": "Nature walk and photography" }
+    }
+  },
+  {
+    "id": "pl_88",
+    "cityId": "ct_15",
+    "categoryId": "cat_1",
+    "name": "Lal Tibba",
+    "imageUrl": "",
+    "details": {
+      "history": "Highest point in Mussoorie providing Himalayan views.",
+      "package": {
+        "price": 1800,
+        "description": "Telescope viewing and café visit"
+      }
+    }
+  },
+  {
+    "id": "pl_89",
+    "cityId": "ct_15",
+    "categoryId": "cat_1",
+    "name": "Company Garden",
+    "imageUrl": "",
+    "details": {
+      "history": "Municipal garden with a variety of beautiful flowers.",
+      "package": { "price": 1200, "description": "Garden entry and boating" }
+    }
+  },
+  {
+    "id": "pl_90",
+    "cityId": "ct_15",
+    "categoryId": "cat_1",
+    "name": "Cloud's End",
+    "imageUrl": "",
+    "details": {
+      "history": "Geographical end of Mussoorie built in 1838.",
+      "package": {
+        "price": 2500,
+        "description": "Heritage walk and forest trek"
+      }
+    }
+  },
+  {
+    "id": "pl_91",
+    "cityId": "ct_16",
+    "categoryId": "cat_1",
+    "name": "Robber's Cave",
+    "imageUrl": "",
+    "details": {
+      "history": "River cave formation famous for disappearing streams.",
+      "package": { "price": 1500, "description": "Cave walk and Maggie points" }
+    }
+  },
+  {
+    "id": "pl_92",
+    "cityId": "ct_16",
+    "categoryId": "cat_1",
+    "name": "Sahastradhara",
+    "imageUrl": "",
+    "details": {
+      "history": "Thousands of fold spring known for medicinal waters.",
+      "package": {
+        "price": 1800,
+        "description": "Ropeway and sulphur spring bath"
+      }
+    }
+  },
+  {
+    "id": "pl_93",
+    "cityId": "ct_16",
+    "categoryId": "cat_3",
+    "name": "Mindrolling Monastery",
+    "imageUrl": "",
+    "details": {
+      "history": "One of the largest Buddhist centers in India, built in 1965.",
+      "package": { "price": 1200, "description": "Guided monastery tour" }
+    }
+  },
+  {
+    "id": "pl_94",
+    "cityId": "ct_16",
+    "categoryId": "cat_2",
+    "name": "Forest Research Institute",
+    "imageUrl": "",
+    "details": {
+      "history": "Premier research institute built in 1906 with Greco-Roman architecture.",
+      "package": { "price": 1500, "description": "Museum tour and campus walk" }
+    }
+  },
+  {
+    "id": "pl_95",
+    "cityId": "ct_16",
+    "categoryId": "cat_3",
+    "name": "Tapkeshwar Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient cave temple dedicated to Lord Shiva.",
+      "package": { "price": 1000, "description": "Temple darshan" }
+    }
+  },
+  {
+    "id": "pl_96",
+    "cityId": "ct_16",
+    "categoryId": "cat_1",
+    "name": "Malsi Deer Park",
+    "imageUrl": "",
+    "details": {
+      "history": "Mini zoological park at the base of the Shivalik range.",
+      "package": {
+        "price": 800,
+        "description": "Park entry and wildlife spotting"
+      }
+    }
+  },
+  {
+    "id": "pl_97",
+    "cityId": "ct_17",
+    "categoryId": "cat_3",
+    "name": "Har Ki Pauri",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous ghat on the banks of the Ganges.",
+      "package": {
+        "price": 1500,
+        "description": "Evening Ganga Aarti and VIP seating"
+      }
+    }
+  },
+  {
+    "id": "pl_98",
+    "cityId": "ct_17",
+    "categoryId": "cat_3",
+    "name": "Mansa Devi Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Temple dedicated to Goddess Mansa Devi on Bilwa Parvat.",
+      "package": {
+        "price": 1800,
+        "description": "Cable car ride and VIP darshan"
+      }
+    }
+  },
+  {
+    "id": "pl_99",
+    "cityId": "ct_17",
+    "categoryId": "cat_3",
+    "name": "Chandi Devi Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Temple situated atop the Neel Parvat built in 1929.",
+      "package": {
+        "price": 1800,
+        "description": "Trek/Ropeway and temple visit"
+      }
+    }
+  },
+  {
+    "id": "pl_100",
+    "cityId": "ct_17",
+    "categoryId": "cat_3",
+    "name": "Shantikunj",
+    "imageUrl": "",
+    "details": {
+      "history": "Headquarters of the All World Gayatri Pariwar.",
+      "package": {
+        "price": 1000,
+        "description": "Ashram tour and spiritual counseling"
+      }
+    }
+  },
+  {
+    "id": "pl_101",
+    "cityId": "ct_17",
+    "categoryId": "cat_3",
+    "name": "Maya Devi Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "One of the oldest temples and a Siddha Peetha.",
+      "package": { "price": 800, "description": "Historical temple tour" }
+    }
+  },
+  {
+    "id": "pl_102",
+    "cityId": "ct_17",
+    "categoryId": "cat_3",
+    "name": "Bharat Mata Mandir",
+    "imageUrl": "",
+    "details": {
+      "history": "Multi-storey temple dedicated to Mother India.",
+      "package": { "price": 1000, "description": "Guided tour of all 8 floors" }
+    }
+  },
+  {
+    "id": "pl_103",
+    "cityId": "ct_18",
+    "categoryId": "cat_4",
+    "name": "Auli Ropeway",
+    "imageUrl": "",
+    "details": {
+      "history": "One of the longest ropeways in Asia connecting Joshimath to Auli.",
+      "package": { "price": 2500, "description": "Two-way ropeway ticket" }
+    }
+  },
+  {
+    "id": "pl_104",
+    "cityId": "ct_18",
+    "categoryId": "cat_1",
+    "name": "Auli Artificial Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "World's highest man-made lake to provide fake snow.",
+      "package": { "price": 1500, "description": "Lake visit and skiing intro" }
+    }
+  },
+  {
+    "id": "pl_105",
+    "cityId": "ct_18",
+    "categoryId": "cat_1",
+    "name": "Gorson Bugyal",
+    "imageUrl": "",
+    "details": {
+      "history": "Meadows offering views of Nanda Devi peak.",
+      "package": { "price": 3000, "description": "Guided trekking tour" }
+    }
+  },
+  {
+    "id": "pl_106",
+    "cityId": "ct_18",
+    "categoryId": "cat_1",
+    "name": "Chattrakund",
+    "imageUrl": "",
+    "details": {
+      "history": "Small lake holding crystal clear sweet water.",
+      "package": { "price": 1500, "description": "Forest hike and picnic" }
+    }
+  },
+  {
+    "id": "pl_107",
+    "cityId": "ct_18",
+    "categoryId": "cat_1",
+    "name": "Kwani Bugyal",
+    "imageUrl": "",
+    "details": {
+      "history": "Alpine meadow popular among trekkers.",
+      "package": { "price": 3500, "description": "Camping and trekking" }
+    }
+  },
+  {
+    "id": "pl_108",
+    "cityId": "ct_18",
+    "categoryId": "cat_3",
+    "name": "Joshimath",
+    "imageUrl": "",
+    "details": {
+      "history": "Winter seat of Lord Badri established by Adi Shankaracharya.",
+      "package": { "price": 2000, "description": "Temple and math visit" }
+    }
+  },
+  {
+    "id": "pl_109",
+    "cityId": "ct_19",
+    "categoryId": "cat_2",
+    "name": "Taj Mahal",
+    "imageUrl": "",
+    "details": {
+      "history": "Mausoleum built in 1631 by Emperor Shah Jahan.",
+      "package": {
+        "price": 5500,
+        "description": "Skip-the-line entry and 1N luxury stay"
+      }
+    }
+  },
+  {
+    "id": "pl_110",
+    "cityId": "ct_19",
+    "categoryId": "cat_2",
+    "name": "Agra Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Mughal fort built in 1565 by Emperor Akbar.",
+      "package": { "price": 2200, "description": "Guided historical walk" }
+    }
+  },
+  {
+    "id": "pl_111",
+    "cityId": "ct_19",
+    "categoryId": "cat_2",
+    "name": "Fatehpur Sikri",
+    "imageUrl": "",
+    "details": {
+      "history": "City founded in 1569 by Akbar, abandoned due to water shortage.",
+      "package": { "price": 2500, "description": "Day trip and local guide" }
+    }
+  },
+  {
+    "id": "pl_112",
+    "cityId": "ct_19",
+    "categoryId": "cat_1",
+    "name": "Mehtab Bagh",
+    "imageUrl": "",
+    "details": {
+      "history": "Charbagh complex aligned perfectly with the Taj Mahal.",
+      "package": { "price": 1000, "description": "Sunset photography tour" }
+    }
+  },
+  {
+    "id": "pl_113",
+    "cityId": "ct_19",
+    "categoryId": "cat_2",
+    "name": "Tomb of Akbar",
+    "imageUrl": "",
+    "details": {
+      "history": "Mausoleum built in 1605-1613 in Sikandra.",
+      "package": { "price": 1500, "description": "Architecture tour" }
+    }
+  },
+  {
+    "id": "pl_114",
+    "cityId": "ct_19",
+    "categoryId": "cat_2",
+    "name": "Itmad-ud-Daula",
+    "imageUrl": "",
+    "details": {
+      "history": "Mausoleum known as the Baby Taj.",
+      "package": { "price": 1200, "description": "Heritage walk" }
+    }
+  },
+  {
+    "id": "pl_115",
+    "cityId": "ct_20",
+    "categoryId": "cat_3",
+    "name": "Kashi Vishwanath",
+    "imageUrl": "",
+    "details": {
+      "history": "Prominent Shiva temple rebuilt in 1780.",
+      "package": {
+        "price": 3000,
+        "description": "VIP Darshan and local transport"
+      }
+    }
+  },
+  {
+    "id": "pl_116",
+    "cityId": "ct_20",
+    "categoryId": "cat_3",
+    "name": "Dashashwamedh Ghat",
+    "imageUrl": "",
+    "details": {
+      "history": "Main ghat known for the daily Ganga Aarti.",
+      "package": {
+        "price": 1500,
+        "description": "Evening boat ride and Aarti view"
+      }
+    }
+  },
+  {
+    "id": "pl_117",
+    "cityId": "ct_20",
+    "categoryId": "cat_3",
+    "name": "Assi Ghat",
+    "imageUrl": "",
+    "details": {
+      "history": "Southernmost ghat where pilgrims bathe before worship.",
+      "package": {
+        "price": 1200,
+        "description": "Morning boat ride and Subah-e-Banaras"
+      }
+    }
+  },
+  {
+    "id": "pl_118",
+    "cityId": "ct_20",
+    "categoryId": "cat_2",
+    "name": "Sarnath",
+    "imageUrl": "",
+    "details": {
+      "history": "Place where Buddha gave his first sermon.",
+      "package": {
+        "price": 2000,
+        "description": "Guided tour of stupas and museum"
+      }
+    }
+  },
+  {
+    "id": "pl_119",
+    "cityId": "ct_20",
+    "categoryId": "cat_2",
+    "name": "Ramnagar Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Fort in Varanasi built in 1750 by Kashi Naresh.",
+      "package": {
+        "price": 1500,
+        "description": "Museum tour and river crossing"
+      }
+    }
+  },
+  {
+    "id": "pl_120",
+    "cityId": "ct_20",
+    "categoryId": "cat_3",
+    "name": "Sankat Mochan Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Hanuman temple founded by Tulsidas.",
+      "package": { "price": 800, "description": "Temple visit and offering" }
+    }
+  },
+  {
+    "id": "pl_121",
+    "cityId": "ct_21",
+    "categoryId": "cat_2",
+    "name": "Bara Imambara",
+    "imageUrl": "",
+    "details": {
+      "history": "Built by Asaf-ud-Daula in 1784, known for its labyrinth.",
+      "package": { "price": 1800, "description": "Maze tour and Awadhi dinner" }
+    }
+  },
+  {
+    "id": "pl_122",
+    "cityId": "ct_21",
+    "categoryId": "cat_2",
+    "name": "Chhota Imambara",
+    "imageUrl": "",
+    "details": {
+      "history": "Imposing monument built in 1838 known as Palace of Lights.",
+      "package": { "price": 1500, "description": "Heritage walk" }
+    }
+  },
+  {
+    "id": "pl_123",
+    "cityId": "ct_21",
+    "categoryId": "cat_2",
+    "name": "Rumi Darwaza",
+    "imageUrl": "",
+    "details": {
+      "history": "Imposing gateway built in 1784 showcasing Awadhi architecture.",
+      "package": { "price": 1200, "description": "Old Lucknow walking tour" }
+    }
+  },
+  {
+    "id": "pl_124",
+    "cityId": "ct_21",
+    "categoryId": "cat_2",
+    "name": "British Residency",
+    "imageUrl": "",
+    "details": {
+      "history": "Site of the historic 1857 Siege of Lucknow.",
+      "package": { "price": 1500, "description": "Guided history tour" }
+    }
+  },
+  {
+    "id": "pl_125",
+    "cityId": "ct_21",
+    "categoryId": "cat_1",
+    "name": "Ambedkar Park",
+    "imageUrl": "",
+    "details": {
+      "history": "Memorial park dedicated to Dr. B.R. Ambedkar built in 2008.",
+      "package": { "price": 1000, "description": "Park entry and photography" }
+    }
+  },
+  {
+    "id": "pl_126",
+    "cityId": "ct_21",
+    "categoryId": "cat_4",
+    "name": "Hazratganj",
+    "imageUrl": "",
+    "details": {
+      "history": "Major shopping area established in 1810.",
+      "package": {
+        "price": 2000,
+        "description": "Shopping and street food tour"
+      }
+    }
+  },
+  {
+    "id": "pl_127",
+    "cityId": "ct_22",
+    "categoryId": "cat_3",
+    "name": "Shri Krishna Janmasthan",
+    "imageUrl": "",
+    "details": {
+      "history": "Temple built around the prison cell where Krishna was born.",
+      "package": { "price": 1500, "description": "Temple darshan and guide" }
+    }
+  },
+  {
+    "id": "pl_128",
+    "cityId": "ct_22",
+    "categoryId": "cat_3",
+    "name": "Dwarkadhish Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Historic Hindu temple built in 1814.",
+      "package": { "price": 1200, "description": "Morning Aarti visit" }
+    }
+  },
+  {
+    "id": "pl_129",
+    "cityId": "ct_22",
+    "categoryId": "cat_3",
+    "name": "Vishram Ghat",
+    "imageUrl": "",
+    "details": {
+      "history": "Ghat where Lord Krishna rested after killing Kansa.",
+      "package": { "price": 1000, "description": "Evening boat ride" }
+    }
+  },
+  {
+    "id": "pl_130",
+    "cityId": "ct_22",
+    "categoryId": "cat_3",
+    "name": "Gita Mandir",
+    "imageUrl": "",
+    "details": {
+      "history": "Temple displaying the entire Bhagavad Gita on its walls.",
+      "package": { "price": 800, "description": "Temple tour" }
+    }
+  },
+  {
+    "id": "pl_131",
+    "cityId": "ct_22",
+    "categoryId": "cat_3",
+    "name": "Govardhan Hill",
+    "imageUrl": "",
+    "details": {
+      "history": "Sacred hill lifted by Lord Krishna.",
+      "package": { "price": 2000, "description": "Guided Parikrama" }
+    }
+  },
+  {
+    "id": "pl_132",
+    "cityId": "ct_22",
+    "categoryId": "cat_3",
+    "name": "Kusum Sarovar",
+    "imageUrl": "",
+    "details": {
+      "history": "Historical sandstone reservoir on the Govardhan parikrama path.",
+      "package": {
+        "price": 1500,
+        "description": "Photography and historical tour"
+      }
+    }
+  },
+  {
+    "id": "pl_133",
+    "cityId": "ct_23",
+    "categoryId": "cat_3",
+    "name": "Triveni Sangam",
+    "imageUrl": "",
+    "details": {
+      "history": "Confluence of three rivers: Ganga, Yamuna, and mythical Saraswati.",
+      "package": {
+        "price": 2500,
+        "description": "Boat ride to Sangam and rituals"
+      }
+    }
+  },
+  {
+    "id": "pl_134",
+    "cityId": "ct_23",
+    "categoryId": "cat_2",
+    "name": "Allahabad Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Massive fort built by Emperor Akbar in 1583.",
+      "package": {
+        "price": 1500,
+        "description": "Exterior tour and Akshayavat visit"
+      }
+    }
+  },
+  {
+    "id": "pl_135",
+    "cityId": "ct_23",
+    "categoryId": "cat_2",
+    "name": "Khusro Bagh",
+    "imageUrl": "",
+    "details": {
+      "history": "Walled garden housing tombs of Jahangir's family.",
+      "package": { "price": 1000, "description": "Heritage walk" }
+    }
+  },
+  {
+    "id": "pl_136",
+    "cityId": "ct_23",
+    "categoryId": "cat_2",
+    "name": "Anand Bhavan",
+    "imageUrl": "",
+    "details": {
+      "history": "Historic house museum of the Nehru family.",
+      "package": { "price": 1500, "description": "Museum entry and guide" }
+    }
+  },
+  {
+    "id": "pl_137",
+    "cityId": "ct_23",
+    "categoryId": "cat_1",
+    "name": "Chandrashekhar Azad Park",
+    "imageUrl": "",
+    "details": {
+      "history": "Largest park in Prayagraj, where Azad martyred himself.",
+      "package": { "price": 800, "description": "Park walk and museum visit" }
+    }
+  },
+  {
+    "id": "pl_138",
+    "cityId": "ct_23",
+    "categoryId": "cat_2",
+    "name": "All Saints Cathedral",
+    "imageUrl": "",
+    "details": {
+      "history": "Gothic style church built in the late 19th century.",
+      "package": { "price": 1000, "description": "Architectural tour" }
+    }
+  },
+  {
+    "id": "pl_139",
+    "cityId": "ct_24",
+    "categoryId": "cat_3",
+    "name": "Ram Janmabhoomi",
+    "imageUrl": "",
+    "details": {
+      "history": "Sacred site recognized as the birthplace of Lord Rama.",
+      "package": { "price": 2000, "description": "VIP Darshan and local guide" }
+    }
+  },
+  {
+    "id": "pl_140",
+    "cityId": "ct_24",
+    "categoryId": "cat_3",
+    "name": "Hanuman Garhi",
+    "imageUrl": "",
+    "details": {
+      "history": "10th-century temple dedicated to Lord Hanuman.",
+      "package": { "price": 1200, "description": "Temple visit and offering" }
+    }
+  },
+  {
+    "id": "pl_141",
+    "cityId": "ct_24",
+    "categoryId": "cat_3",
+    "name": "Kanak Bhawan",
+    "imageUrl": "",
+    "details": {
+      "history": "Palace gifted to Sita by Kaikeyi after her marriage.",
+      "package": { "price": 1500, "description": "Heritage temple tour" }
+    }
+  },
+  {
+    "id": "pl_142",
+    "cityId": "ct_24",
+    "categoryId": "cat_3",
+    "name": "Nageshwarnath Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient temple said to have been established by Kush.",
+      "package": { "price": 1000, "description": "Darshan during Aarti" }
+    }
+  },
+  {
+    "id": "pl_143",
+    "cityId": "ct_24",
+    "categoryId": "cat_3",
+    "name": "Treta Ke Thakur",
+    "imageUrl": "",
+    "details": {
+      "history": "Temple where Lord Rama performed the Ashvamedha Yagya.",
+      "package": { "price": 1000, "description": "Historical religious tour" }
+    }
+  },
+  {
+    "id": "pl_144",
+    "cityId": "ct_24",
+    "categoryId": "cat_3",
+    "name": "Guptar Ghat",
+    "imageUrl": "",
+    "details": {
+      "history": "Ghat where Lord Rama took Jal Samadhi.",
+      "package": { "price": 1500, "description": "Evening boat ride" }
+    }
+  },
+  {
+    "id": "pl_145",
+    "cityId": "ct_25",
+    "categoryId": "cat_2",
+    "name": "Church of Immaculate Conception",
+    "imageUrl": "",
+    "details": {
+      "history": "One of the first churches built in Goa in 1541.",
+      "package": { "price": 1500, "description": "Guided tour of Panjim" }
+    }
+  },
+  {
+    "id": "pl_146",
+    "cityId": "ct_25",
+    "categoryId": "cat_2",
+    "name": "Fontainhas",
+    "imageUrl": "",
+    "details": {
+      "history": "Old Latin Quarter maintaining Portuguese influence.",
+      "package": {
+        "price": 2000,
+        "description": "Heritage walk and feni tasting"
+      }
+    }
+  },
+  {
+    "id": "pl_147",
+    "cityId": "ct_25",
+    "categoryId": "cat_4",
+    "name": "Miramar Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Urban beach located at the Mandovi River confluence.",
+      "package": { "price": 1500, "description": "Sunset cruise" }
+    }
+  },
+  {
+    "id": "pl_148",
+    "cityId": "ct_25",
+    "categoryId": "cat_1",
+    "name": "Dona Paula",
+    "imageUrl": "",
+    "details": {
+      "history": "Viewpoint where two of Goa's rivers meet the Arabian Sea.",
+      "package": {
+        "price": 1200,
+        "description": "Water sports and sightseeing"
+      }
+    }
+  },
+  {
+    "id": "pl_149",
+    "cityId": "ct_25",
+    "categoryId": "cat_2",
+    "name": "Goa State Museum",
+    "imageUrl": "",
+    "details": {
+      "history": "Museum showcasing Goan artifacts and history.",
+      "package": { "price": 1000, "description": "Museum entry and tour" }
+    }
+  },
+  {
+    "id": "pl_150",
+    "cityId": "ct_25",
+    "categoryId": "cat_4",
+    "name": "Casino Royale",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous offshore casino on the Mandovi River.",
+      "package": {
+        "price": 5000,
+        "description": "Entry, chips, and buffet dinner"
+      }
+    }
+  },
+  {
+    "id": "pl_151",
+    "cityId": "ct_26",
+    "categoryId": "cat_4",
+    "name": "Bogmalo Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Small, picturesque beach situated in a bay.",
+      "package": {
+        "price": 2500,
+        "description": "Beachside dining and diving intro"
+      }
+    }
+  },
+  {
+    "id": "pl_152",
+    "cityId": "ct_26",
+    "categoryId": "cat_1",
+    "name": "Japanese Garden",
+    "imageUrl": "",
+    "details": {
+      "history": "Garden offering stunning views of the Arabian Sea.",
+      "package": { "price": 1000, "description": "Picnic and photography" }
+    }
+  },
+  {
+    "id": "pl_153",
+    "cityId": "ct_26",
+    "categoryId": "cat_2",
+    "name": "Naval Aviation Museum",
+    "imageUrl": "",
+    "details": {
+      "history": "Military aviation museum established in 1998.",
+      "package": {
+        "price": 1500,
+        "description": "Guided tour of vintage aircraft"
+      }
+    }
+  },
+  {
+    "id": "pl_154",
+    "cityId": "ct_26",
+    "categoryId": "cat_2",
+    "name": "Mormugao Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Fortress built in 1624 to protect the harbor.",
+      "package": { "price": 1200, "description": "Historical tour" }
+    }
+  },
+  {
+    "id": "pl_155",
+    "cityId": "ct_26",
+    "categoryId": "cat_4",
+    "name": "Hansa Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Pristine beach controlled by the Indian Navy.",
+      "package": { "price": 2000, "description": "Guided beach access" }
+    }
+  },
+  {
+    "id": "pl_156",
+    "cityId": "ct_26",
+    "categoryId": "cat_1",
+    "name": "Heart Shaped Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Natural lagoon known for its unique shape near Bogmalo.",
+      "package": {
+        "price": 1500,
+        "description": "Trekking and viewpoint visit"
+      }
+    }
+  },
+  {
+    "id": "pl_157",
+    "cityId": "ct_27",
+    "categoryId": "cat_4",
+    "name": "Colva Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Oldest and largest beach in South Goa.",
+      "package": {
+        "price": 3000,
+        "description": "Water sports and shack dinner"
+      }
+    }
+  },
+  {
+    "id": "pl_158",
+    "cityId": "ct_27",
+    "categoryId": "cat_2",
+    "name": "Monte Hill",
+    "imageUrl": "",
+    "details": {
+      "history": "Historic hill featuring a chapel built in 1520.",
+      "package": { "price": 1000, "description": "Sightseeing walk" }
+    }
+  },
+  {
+    "id": "pl_159",
+    "cityId": "ct_27",
+    "categoryId": "cat_4",
+    "name": "Benaulim Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Tranquil beach famous for fishing and myth of Parashurama.",
+      "package": { "price": 2500, "description": "Dolphin spotting boat trip" }
+    }
+  },
+  {
+    "id": "pl_160",
+    "cityId": "ct_27",
+    "categoryId": "cat_4",
+    "name": "Majorda Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Beach where Jesuits allegedly discovered Goan toddy.",
+      "package": { "price": 2500, "description": "Beach stay and baking tour" }
+    }
+  },
+  {
+    "id": "pl_161",
+    "cityId": "ct_27",
+    "categoryId": "cat_2",
+    "name": "Holy Spirit Church",
+    "imageUrl": "",
+    "details": {
+      "history": "Large church built by the Jesuits in 1564.",
+      "package": { "price": 1000, "description": "Architectural tour" }
+    }
+  },
+  {
+    "id": "pl_162",
+    "cityId": "ct_27",
+    "categoryId": "cat_4",
+    "name": "Margao Market",
+    "imageUrl": "",
+    "details": {
+      "history": "Bustling traditional market of South Goa.",
+      "package": {
+        "price": 1500,
+        "description": "Spice shopping and local food"
+      }
+    }
+  },
+  {
+    "id": "pl_163",
+    "cityId": "ct_28",
+    "categoryId": "cat_4",
+    "name": "Calangute Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Known as the Queen of Beaches in Goa.",
+      "package": { "price": 3500, "description": "Parasailing and beach party" }
+    }
+  },
+  {
+    "id": "pl_164",
+    "cityId": "ct_28",
+    "categoryId": "cat_4",
+    "name": "Baga Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous for nightlife and the hippie culture of the 60s.",
+      "package": {
+        "price": 4500,
+        "description": "Water sports combo and 1N stay"
+      }
+    }
+  },
+  {
+    "id": "pl_165",
+    "cityId": "ct_28",
+    "categoryId": "cat_4",
+    "name": "Tito's Lane",
+    "imageUrl": "",
+    "details": {
+      "history": "Epicenter of Goa's clubbing scene since 1971.",
+      "package": { "price": 3000, "description": "VIP club entry and drinks" }
+    }
+  },
+  {
+    "id": "pl_166",
+    "cityId": "ct_28",
+    "categoryId": "cat_2",
+    "name": "St. Alex Church",
+    "imageUrl": "",
+    "details": {
+      "history": "Church with massive Indian style cupolas built in 1741.",
+      "package": { "price": 1000, "description": "Heritage walk" }
+    }
+  },
+  {
+    "id": "pl_167",
+    "cityId": "ct_28",
+    "categoryId": "cat_4",
+    "name": "Candolim Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Calmer beach strip starting from Fort Aguada.",
+      "package": { "price": 4000, "description": "Luxury beach resort 1N stay" }
+    }
+  },
+  {
+    "id": "pl_168",
+    "cityId": "ct_28",
+    "categoryId": "cat_2",
+    "name": "Aguada Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "17th-century Portuguese fort and lighthouse.",
+      "package": { "price": 1200, "description": "Guided tour and entry fees" }
+    }
+  },
+  {
+    "id": "pl_169",
+    "cityId": "ct_29",
+    "categoryId": "cat_4",
+    "name": "Anjuna Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous for its trance parties and rock formations.",
+      "package": { "price": 3000, "description": "Beach club access" }
+    }
+  },
+  {
+    "id": "pl_170",
+    "cityId": "ct_29",
+    "categoryId": "cat_2",
+    "name": "Chapora Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Fort built by Adil Shah, famously featured in Dil Chahta Hai.",
+      "package": { "price": 1500, "description": "Trek and sunset view" }
+    }
+  },
+  {
+    "id": "pl_171",
+    "cityId": "ct_29",
+    "categoryId": "cat_4",
+    "name": "Curlies",
+    "imageUrl": "",
+    "details": {
+      "history": "One of the oldest and most iconic beach shacks in Goa.",
+      "package": { "price": 2500, "description": "Seafront dining experience" }
+    }
+  },
+  {
+    "id": "pl_172",
+    "cityId": "ct_29",
+    "categoryId": "cat_4",
+    "name": "Anjuna Flea Market",
+    "imageUrl": "",
+    "details": {
+      "history": "Started by hippies in the 1960s to barter goods.",
+      "package": { "price": 1000, "description": "Guided shopping tour" }
+    }
+  },
+  {
+    "id": "pl_173",
+    "cityId": "ct_29",
+    "categoryId": "cat_4",
+    "name": "Vagator Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Crescent beach famous for its red cliffs.",
+      "package": { "price": 3500, "description": "Sundowner party pass" }
+    }
+  },
+  {
+    "id": "pl_174",
+    "cityId": "ct_29",
+    "categoryId": "cat_4",
+    "name": "Ozran Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Also known as Little Vagator, featuring a Shiva rock carving.",
+      "package": { "price": 2000, "description": "Beach hopping tour" }
+    }
+  },
+  {
+    "id": "pl_175",
+    "cityId": "ct_30",
+    "categoryId": "cat_4",
+    "name": "Palolem Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Crescent-shaped beach enclosed by thick forest.",
+      "package": { "price": 5500, "description": "2N stay in luxury beach hut" }
+    }
+  },
+  {
+    "id": "pl_176",
+    "cityId": "ct_30",
+    "categoryId": "cat_4",
+    "name": "Agonda Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Quiet beach known as a nesting site for Olive Ridley turtles.",
+      "package": {
+        "price": 4000,
+        "description": "Eco-resort stay and nature walk"
+      }
+    }
+  },
+  {
+    "id": "pl_177",
+    "cityId": "ct_30",
+    "categoryId": "cat_1",
+    "name": "Butterfly Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Secluded cove accessible only by boat or jungle trek.",
+      "package": { "price": 2500, "description": "Boat ride and snorkeling" }
+    }
+  },
+  {
+    "id": "pl_178",
+    "cityId": "ct_30",
+    "categoryId": "cat_4",
+    "name": "Cola Beach",
+    "imageUrl": "",
+    "details": {
+      "history": "Hidden beach featuring a freshwater emerald lagoon.",
+      "package": { "price": 3500, "description": "Kayaking and private tent" }
+    }
+  },
+  {
+    "id": "pl_179",
+    "cityId": "ct_30",
+    "categoryId": "cat_2",
+    "name": "Cabo de Rama Fort",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient fort claimed by Portuguese in 1763.",
+      "package": { "price": 1000, "description": "Sightseeing and nature walk" }
+    }
+  },
+  {
+    "id": "pl_180",
+    "cityId": "ct_30",
+    "categoryId": "cat_1",
+    "name": "Cotigao Wildlife Sanctuary",
+    "imageUrl": "",
+    "details": {
+      "history": "Established in 1968, known for its tall trees and treetop watchtower.",
+      "package": {
+        "price": 2000,
+        "description": "Jungle trek and watchtower visit"
+      }
+    }
+  },
+  {
+    "id": "pl_181",
+    "cityId": "ct_31",
+    "categoryId": "cat_3",
+    "name": "Hidimba Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Wooden temple built in 1553 surrounded by cedar forest.",
+      "package": { "price": 1500, "description": "Local sightseeing tour" }
+    }
+  },
+  {
+    "id": "pl_182",
+    "cityId": "ct_31",
+    "categoryId": "cat_1",
+    "name": "Solang Valley",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous for winter sports and summer adventure activities.",
+      "package": { "price": 3500, "description": "Paragliding and ATV ride" }
+    }
+  },
+  {
+    "id": "pl_183",
+    "cityId": "ct_31",
+    "categoryId": "cat_1",
+    "name": "Rohtang Pass",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient trade route connecting Kullu with Lahaul and Spiti.",
+      "package": { "price": 4000, "description": "Snow activities and permit" }
+    }
+  },
+  {
+    "id": "pl_184",
+    "cityId": "ct_31",
+    "categoryId": "cat_3",
+    "name": "Manu Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Dedicated to the sage Manu, the creator of the world in Hindu mythology.",
+      "package": { "price": 1000, "description": "Old Manali walking tour" }
+    }
+  },
+  {
+    "id": "pl_185",
+    "cityId": "ct_31",
+    "categoryId": "cat_3",
+    "name": "Vashisht Baths",
+    "imageUrl": "",
+    "details": {
+      "history": "Natural hot water springs located in a small village.",
+      "package": {
+        "price": 1200,
+        "description": "Temple visit and hot spring bath"
+      }
+    }
+  },
+  {
+    "id": "pl_186",
+    "cityId": "ct_31",
+    "categoryId": "cat_4",
+    "name": "Old Manali",
+    "imageUrl": "",
+    "details": {
+      "history": "Famous for its rustic charm, cafes, and apple orchards.",
+      "package": { "price": 2500, "description": "Cafe hopping and live music" }
+    }
+  },
+  {
+    "id": "pl_187",
+    "cityId": "ct_32",
+    "categoryId": "cat_4",
+    "name": "The Ridge",
+    "imageUrl": "",
+    "details": {
+      "history": "Open space in Shimla constructed during the British era.",
+      "package": { "price": 3500, "description": "1N stay near Mall Road" }
+    }
+  },
+  {
+    "id": "pl_188",
+    "cityId": "ct_32",
+    "categoryId": "cat_4",
+    "name": "Mall Road",
+    "imageUrl": "",
+    "details": {
+      "history": "Constructed by the British, the main commercial street of Shimla.",
+      "package": { "price": 1500, "description": "Heritage walk and shopping" }
+    }
+  },
+  {
+    "id": "pl_189",
+    "cityId": "ct_32",
+    "categoryId": "cat_3",
+    "name": "Jakhu Temple",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient temple dedicated to Lord Hanuman on Shimla's highest peak.",
+      "package": {
+        "price": 1800,
+        "description": "Ropeway ride and temple visit"
+      }
+    }
+  },
+  {
+    "id": "pl_190",
+    "cityId": "ct_32",
+    "categoryId": "cat_2",
+    "name": "Christ Church",
+    "imageUrl": "",
+    "details": {
+      "history": "Second oldest church in North India, built in 1857.",
+      "package": { "price": 1000, "description": "Architectural tour" }
+    }
+  },
+  {
+    "id": "pl_191",
+    "cityId": "ct_32",
+    "categoryId": "cat_2",
+    "name": "Viceregal Lodge",
+    "imageUrl": "",
+    "details": {
+      "history": "Residence of the British Viceroy, built in 1888.",
+      "package": { "price": 1200, "description": "Guided historical tour" }
+    }
+  },
+  {
+    "id": "pl_192",
+    "cityId": "ct_32",
+    "categoryId": "cat_1",
+    "name": "Kufri",
+    "imageUrl": "",
+    "details": {
+      "history": "A small hill station founded in 1819 by the British.",
+      "package": { "price": 2500, "description": "Yak ride and amusement park" }
+    }
+  },
+  {
+    "id": "pl_193",
+    "cityId": "ct_33",
+    "categoryId": "cat_3",
+    "name": "Namgyal Monastery",
+    "imageUrl": "",
+    "details": {
+      "history": "Relocated to Dharamshala in 1959, the personal monastery of the Dalai Lama.",
+      "package": { "price": 2500, "description": "Tibetan culture tour" }
+    }
+  },
+  {
+    "id": "pl_194",
+    "cityId": "ct_33",
+    "categoryId": "cat_3",
+    "name": "Tsuglagkhang Complex",
+    "imageUrl": "",
+    "details": {
+      "history": "The largest Tibetan temple outside Tibet.",
+      "package": {
+        "price": 1500,
+        "description": "Meditation session and museum"
+      }
+    }
+  },
+  {
+    "id": "pl_195",
+    "cityId": "ct_33",
+    "categoryId": "cat_1",
+    "name": "Triund Trek",
+    "imageUrl": "",
+    "details": {
+      "history": "Trekking trail used for centuries by local Gaddi shepherds.",
+      "package": {
+        "price": 3200,
+        "description": "Guided trek and overnight camping"
+      }
+    }
+  },
+  {
+    "id": "pl_196",
+    "cityId": "ct_33",
+    "categoryId": "cat_1",
+    "name": "Bhagsunag Waterfall",
+    "imageUrl": "",
+    "details": {
+      "history": "Scenic waterfall connected to an ancient Shiva temple.",
+      "package": { "price": 1200, "description": "Trek and temple visit" }
+    }
+  },
+  {
+    "id": "pl_197",
+    "cityId": "ct_33",
+    "categoryId": "cat_4",
+    "name": "HPCA Stadium",
+    "imageUrl": "",
+    "details": {
+      "history": "Picturesque cricket stadium situated at an altitude of 1457 meters.",
+      "package": { "price": 1000, "description": "Stadium tour" }
+    }
+  },
+  {
+    "id": "pl_198",
+    "cityId": "ct_33",
+    "categoryId": "cat_2",
+    "name": "St. John in the Wilderness",
+    "imageUrl": "",
+    "details": {
+      "history": "Neo-Gothic church built in 1852 amidst deodar forests.",
+      "package": { "price": 1000, "description": "Heritage tour" }
+    }
+  },
+  {
+    "id": "pl_199",
+    "cityId": "ct_34",
+    "categoryId": "cat_1",
+    "name": "Khajjiar",
+    "imageUrl": "",
+    "details": {
+      "history": "Often referred to as the Mini Switzerland of India.",
+      "package": {
+        "price": 3500,
+        "description": "Zorbing, horse riding, and picnic"
+      }
+    }
+  },
+  {
+    "id": "pl_200",
+    "cityId": "ct_34",
+    "categoryId": "cat_1",
+    "name": "Panchpula",
+    "imageUrl": "",
+    "details": {
+      "history": "Scenic spot where a monument stands for freedom fighter Sardar Ajit Singh.",
+      "package": { "price": 1200, "description": "Nature walk and photography" }
+    }
+  },
+  {
+    "id": "pl_201",
+    "cityId": "ct_34",
+    "categoryId": "cat_1",
+    "name": "Dainkund Peak",
+    "imageUrl": "",
+    "details": {
+      "history": "Highest peak in Dalhousie, known as the singing hill.",
+      "package": {
+        "price": 2000,
+        "description": "Guided trek to Pholani Devi temple"
+      }
+    }
+  },
+  {
+    "id": "pl_202",
+    "cityId": "ct_34",
+    "categoryId": "cat_1",
+    "name": "Kalatop Wildlife Sanctuary",
+    "imageUrl": "",
+    "details": {
+      "history": "Established in 1958, home to the Himalayan black bear.",
+      "package": {
+        "price": 2500,
+        "description": "Jungle safari and forest rest house visit"
+      }
+    }
+  },
+  {
+    "id": "pl_203",
+    "cityId": "ct_34",
+    "categoryId": "cat_1",
+    "name": "Satdhara Falls",
+    "imageUrl": "",
+    "details": {
+      "history": "Seven springs believed to have therapeutic value due to mica.",
+      "package": { "price": 1000, "description": "Nature walk" }
+    }
+  },
+  {
+    "id": "pl_204",
+    "cityId": "ct_34",
+    "categoryId": "cat_2",
+    "name": "St. John's Church",
+    "imageUrl": "",
+    "details": {
+      "history": "Oldest church in Dalhousie, built in 1863.",
+      "package": { "price": 1000, "description": "Historical tour" }
+    }
+  },
+  {
+    "id": "pl_205",
+    "cityId": "ct_35",
+    "categoryId": "cat_1",
+    "name": "Kheerganga Trek",
+    "imageUrl": "",
+    "details": {
+      "history": "Trek leading to natural hot water springs at 2960 meters.",
+      "package": {
+        "price": 4000,
+        "description": "2-day trek with tent camping"
+      }
+    }
+  },
+  {
+    "id": "pl_206",
+    "cityId": "ct_35",
+    "categoryId": "cat_3",
+    "name": "Manikaran Sahib",
+    "imageUrl": "",
+    "details": {
+      "history": "Important pilgrimage site for Sikhs and Hindus, known for hot springs.",
+      "package": { "price": 1500, "description": "Langar and hot spring bath" }
+    }
+  },
+  {
+    "id": "pl_207",
+    "cityId": "ct_35",
+    "categoryId": "cat_4",
+    "name": "Tosh Village",
+    "imageUrl": "",
+    "details": {
+      "history": "Traditional Himachali village situated at the edge of the Parvati Valley.",
+      "package": {
+        "price": 2500,
+        "description": "Homestay and local cafe tour"
+      }
+    }
+  },
+  {
+    "id": "pl_208",
+    "cityId": "ct_35",
+    "categoryId": "cat_1",
+    "name": "Parvati River",
+    "imageUrl": "",
+    "details": {
+      "history": "Glacial river originating from the ManTalai Glacier.",
+      "package": {
+        "price": 1500,
+        "description": "Riverside camping and bonfire"
+      }
+    }
+  },
+  {
+    "id": "pl_209",
+    "cityId": "ct_35",
+    "categoryId": "cat_1",
+    "name": "Chalal Trek",
+    "imageUrl": "",
+    "details": {
+      "history": "Known as the trance village of Kasol, accessible by a suspension bridge.",
+      "package": { "price": 1200, "description": "Guided village trek" }
+    }
+  },
+  {
+    "id": "pl_210",
+    "cityId": "ct_35",
+    "categoryId": "cat_2",
+    "name": "Malana Village",
+    "imageUrl": "",
+    "details": {
+      "history": "Ancient solitary village with its own unique democratic system.",
+      "package": {
+        "price": 3000,
+        "description": "Guided cultural tour (outside interaction)"
+      }
+    }
+  },
+  {
+    "id": "pl_211",
+    "cityId": "ct_36",
+    "categoryId": "cat_3",
+    "name": "Key Monastery",
+    "imageUrl": "",
+    "details": {
+      "history": "Founded in the 11th century, it is the biggest monastery in Spiti.",
+      "package": {
+        "price": 2500,
+        "description": "Monastery tour and lama interaction"
+      }
+    }
+  },
+  {
+    "id": "pl_212",
+    "cityId": "ct_36",
+    "categoryId": "cat_1",
+    "name": "Chandratal Lake",
+    "imageUrl": "",
+    "details": {
+      "history": "Crescent-shaped high altitude lake situated at 4300 meters.",
+      "package": { "price": 5000, "description": "Overnight luxury camping" }
+    }
+  },
+  {
+    "id": "pl_213",
+    "cityId": "ct_36",
+    "categoryId": "cat_4",
+    "name": "Kaza",
+    "imageUrl": "",
+    "details": {
+      "history": "The sub-divisional headquarters of the remote Spiti Valley.",
+      "package": {
+        "price": 3500,
+        "description": "Local sightseeing and homestay"
+      }
+    }
+  },
+  {
+    "id": "pl_214",
+    "cityId": "ct_36",
+    "categoryId": "cat_1",
+    "name": "Pin Valley National Park",
+    "imageUrl": "",
+    "details": {
+      "history": "Established in 1987, natural habitat of the snow leopard.",
+      "package": {
+        "price": 4500,
+        "description": "Wildlife trekking expedition"
+      }
+    }
+  },
+  {
+    "id": "pl_215",
+    "cityId": "ct_36",
+    "categoryId": "cat_3",
+    "name": "Tabo Monastery",
+    "imageUrl": "",
+    "details": {
+      "history": "Founded in 996 CE, often called the Ajanta of the Himalayas.",
+      "package": {
+        "price": 2000,
+        "description": "Historical tour of the mud stupas"
+      }
+    }
+  },
+  {
+    "id": "pl_216",
+    "cityId": "ct_36",
+    "categoryId": "cat_3",
+    "name": "Dhankar Monastery",
+    "imageUrl": "",
+    "details": {
+      "history": "1000-year-old fort monastery built on a 300-meter high spur.",
+      "package": {
+        "price": 2500,
+        "description": "Trek to Dhankar Lake and monastery tour"
+      }
+    }
+  }
+]
