@@ -116,11 +116,30 @@ if (destinationMenu) {
     fetch("./api/nav-bar-destination.json")
         .then((res) => res.json())
         .then((data) => {
+
             let menuHTML = "";
+
             data.forEach(item => {
-                // Link ab destination.html par redirect karega with query parameter
-                menuHTML += `<li><a href="destination.html?category=${item.slug}" data-slug="${item.slug}">${item.name}</a></li>`;
+
+                // Default page
+                let page = "destination.html";
+                let query = "category";
+
+                // Historical option ke liye alag page
+                if (item.slug === "historical") {
+                    page = "historical.html";
+                    query = "category";
+                }
+
+                menuHTML += `
+                    <li>
+                        <a href="${page}?${query}=${item.slug}" data-slug="${item.slug}">
+                            ${item.name}
+                        </a>
+                    </li>
+                `;
             });
+
             destinationMenu.innerHTML = menuHTML;
         })
         .catch(err => console.log("Error fetching destinations:", err));
