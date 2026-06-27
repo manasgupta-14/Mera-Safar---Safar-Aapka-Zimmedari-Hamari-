@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Blogs - Mera Safar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/travel-blog.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="./assets/logo-2.png" alt="Mera Safar Logo" />
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input
+            type="search"
+            class="search-bar-input"
+            id="searchInput"
+            placeholder="Search Your Destination"
+          />
+          <div id="searchSuggestions" class="search-suggestions"></div>
+        </div>
+
+        <!-- Desktop Login -->
+        <div class="login-btn desktop-login">
+          <button type="button" class="login-button">Login</button>
+        </div>
+
+        <!-- Mobile Login (small screens) -->
+        <div class="login-btn mobile-login">
+          <button type="button" class="login-button">Login</button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <div
+          class="hamburger"
+          aria-label="Menu toggle"
+          role="button"
+          tabindex="0"
+        >
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Heading -->
+    <h1 class="page-heading">Explore Our Travel Blogs</h1>
+
+    <div class="filter-categories">
+      <button class="filter-btn active" data-target="all">All Stories</button>
+      <button class="filter-btn" data-target="beach">Beaches</button>
+      <button class="filter-btn" data-target="mountains">Mountains</button>
+      <button class="filter-btn" data-target="heritage">Heritage</button>
+      <button class="filter-btn" data-target="adventure">Adventure</button>
+      <button class="filter-btn" data-target="spiritual">Spiritual</button>
+      <button class="filter-btn" data-target="hill_station">
+        Hill Stations
+      </button>
+      <button class="filter-btn" data-target="wildlife">Wildlife</button>
+      <button class="filter-btn" data-target="honeymoon">Honeymoon</button>
+      <button class="filter-btn" data-target="family">Family</button>
+      <button class="filter-btn" data-target="solo">Solo</button>
+      <button class="filter-btn" data-target="group">Group</button>
+    </div>
+
+    <!-- Blogs Grid (filled by JS) -->
+    <div class="blogs-grid"></div>
+
+    <script src="./js/travel-blog.js"></script>
+  </body>
+</html>
