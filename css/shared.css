@@ -1,0 +1,557 @@
+/* =============================================
+   SHARED STYLES — shared.css (Mera Safar Theme)
+   Import this in all tour pages
+   ============================================= */
+
+/* ── 1. RESET & VARIABLES ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Mera Safar Brand Colors (Light Premium Theme) */
+    --clr-bg: rgb(255, 250, 243);
+    /* Warm creamy background */
+    --clr-surface: #ffffff;
+    /* Pure white for cards/header */
+    --clr-border: #eaeaea;
+    /* Light subtle border */
+    --clr-accent: #ff7e5f;
+    /* Primary Coral/Peach */
+    --clr-accent2: #ff6a45;
+    /* Darker Orange for gradients/hover */
+    --clr-accent3: #de9157;
+    /* Earthy Orange */
+    --clr-text: #2d3748;
+    /* Dark Slate for primary text */
+    --clr-muted: #718096;
+    /* Medium Grey for descriptions */
+
+    --radius: 16px;
+    --radius-sm: 8px;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 12px 30px rgba(255, 126, 95, 0.15);
+    /* Orange tinted shadow */
+    --transition: 0.3s ease;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── 2. HEADER & TOP BAR ── */
+header {
+    background-color: var(--clr-surface);
+    position: relative;
+    z-index: 1000;
+    padding-top: 95px;
+    /* Spacing for fixed top-bar */
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-surface);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 1005;
+}
+
+@media screen and (min-width: 1400px) {
+    .top-bar {
+        padding-left: calc((100% - 1400px) / 2 + 70px);
+        padding-right: calc((100% - 1400px) / 2 + 70px);
+    }
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    cursor: pointer;
+    transition: transform var(--transition);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 0 1 700px;
+    margin: 0 20px;
+}
+
+.search-bar-input {
+    width: 100%;
+    padding: 12px 24px;
+    border: 1.5px solid #ddd;
+    border-radius: 30px;
+    font-size: 15px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: all var(--transition);
+    color: var(--clr-text);
+}
+
+.search-bar-input:focus {
+    border-color: var(--clr-accent);
+    background-color: var(--clr-surface);
+    box-shadow: 0 0 0 4px rgba(255, 126, 95, 0.15);
+}
+
+/* Login Button */
+.login-button {
+    padding: 10px 28px;
+    background: linear-gradient(to right, var(--clr-accent2), var(--clr-accent3));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 126, 95, 0.3);
+    transition: all var(--transition);
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 126, 95, 0.5);
+}
+
+.mobile-login {
+    display: none;
+}
+
+/* Main Navigation Links */
+.main-nav {
+    border-top: 1px solid var(--clr-border);
+    padding: 12px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--clr-surface);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--clr-text);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 5px 0;
+    position: relative;
+    transition: color var(--transition);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--clr-accent);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--clr-surface);
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    min-width: 220px;
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-sm);
+    transform: translateY(15px);
+    transition: all var(--transition);
+    z-index: 100;
+    border: 1px solid var(--clr-border);
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--clr-muted);
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--clr-bg);
+    color: var(--clr-accent);
+    padding-left: 25px;
+    /* Nice sliding effect */
+}
+
+/* ── 3. HERO BANNER ── */
+.page-hero {
+    position: relative;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, #fffafa 0%, var(--clr-bg) 100%);
+}
+
+.page-hero .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-accent2);
+    margin-bottom: 1rem;
+    padding: 0.4rem 1rem;
+    background: rgba(255, 126, 95, 0.1);
+    border: 1px solid rgba(255, 126, 95, 0.3);
+    border-radius: 999px;
+}
+
+.page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
+
+.page-hero h1 em {
+    font-style: normal;
+    color: var(--clr-accent);
+}
+
+.page-hero p {
+    font-size: 1.15rem;
+    color: var(--clr-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ── 4. PACKAGES GRID ── */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* ── 5. PREMIUM PACKAGE CARD (Light Theme) ── */
+.pkg-card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.pkg-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(255, 126, 95, 0.4);
+}
+
+/* Card Thumbnail */
+/* Card Thumbnail */
+.pkg-card-thumb {
+    position: relative;
+    /* height: 220px;  <-- Is fixed height ko hata diya hai */
+    aspect-ratio: 16 / 9;
+    /* Ye standard banner size maintain karega */
+    overflow: hidden;
+    background: #f8fafc;
+    /* Light background taaki corners clean lagen */
+    width: 100%;
+}
+
+.pkg-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* 'cover' ki jagah 'contain' taaki poori image bina kate dikhe */
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pkg-card:hover .pkg-card-img {
+    transform: scale(1.05);
+    /* Hover par thoda smooth zoom effect */
+}
+
+.pkg-card-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #fff3eb 0%, #ffe4d6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--clr-accent);
+}
+
+/* Card Body */
+.pkg-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Badge (Special/Offer) */
+.pkg-card-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-accent2);
+    background: #fff5f2;
+    border: 1px solid #ffd8cf;
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* Title & Location */
+.pkg-card-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.pkg-card-location {
+    font-size: 0.9rem;
+    color: var(--clr-muted);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Meta Info (Duration, Rating, Group) */
+.pkg-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: #f8fafc;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid #edf2f7;
+    margin-bottom: 1.25rem;
+}
+
+.pkg-card-meta span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Tags */
+.pkg-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pkg-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--clr-muted);
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    transition: all var(--transition);
+}
+
+.pkg-card:hover .pkg-tag {
+    background: #fff5f2;
+    color: var(--clr-accent2);
+    border-color: #ffd8cf;
+}
+
+/* Card Footer (Price & Action) */
+.pkg-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px dashed var(--clr-border);
+}
+
+.pkg-card-price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--clr-text);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.pkg-card-price small {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--clr-muted);
+    margin-top: 4px;
+}
+
+/* ── 6. BUTTONS ── */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--clr-accent2), var(--clr-accent3));
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 126, 95, 0.2);
+}
+
+.pkg-card-footer .btn-primary {
+    width: auto;
+    margin-top: 0;
+    padding: 0.7rem 1.5rem;
+}
+
+.pkg-card-footer .btn-primary:hover {
+    box-shadow: 0 6px 15px rgba(255, 126, 95, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ── 7. LOADING / ERROR STATES ── */
+.state-loading,
+.state-error {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--clr-muted);
+}
+
+.state-loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ffe4d6;
+    border-top-color: var(--clr-accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.state-error {
+    color: #e53e3e;
+    background: #fff5f5;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid #feb2b2;
+}
+
+/* ── 8. RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 15px 20px;
+    }
+
+    .search-bar {
+        display: none;
+        /* Can be toggled via JS on mobile */
+    }
+
+    .nav-links {
+        display: none;
+        /* Implement hamburger menu for this */
+    }
+
+    .page-hero {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .pkg-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pkg-card-footer .btn-primary {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
