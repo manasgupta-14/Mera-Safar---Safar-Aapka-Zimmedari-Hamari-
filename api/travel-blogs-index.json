@@ -10,7 +10,8 @@
       "author": "By Admin",
       "title": "Andaman & Nicobar: Scuba Diving & Water Wonders",
       "excerpt": "Why stress? Dive into the blue waters of the Andaman Islands and explore a completely unique underwater world…",
-      "link": "#"
+      "link": "#",
+      "content": "<p>The Andaman and Nicobar Islands are a paradise for water lovers. If you have ever dreamed of swimming alongside colorful coral reefs and exotic marine life, this is the place to be.</p><h3>Why Scuba Diving Here?</h3><p>Havelock Island (now Swaraj Dweep) offers some of the best dive sites in South Asia. With crystal-clear waters offering visibility up to 40 meters, you can spot manta rays, sea turtles, and vibrant clownfish.</p><h3>Other Attractions</h3><ul><li>Radhanagar Beach for spectacular sunsets</li><li>Cellular Jail in Port Blair for a touch of history</li><li>Bioluminescent kayaking at night</li></ul><p>Pack your swimsuits and get ready for the ultimate tropical escape!</p>"
     },
     {
       "id": "blog_02",
@@ -21,7 +22,8 @@
       "author": "By Traveller",
       "title": "Varkala: The Magical Cliff & Beach Escape",
       "excerpt": "A corner of Kerala where the Arabian Sea meets towering cliffs. Discover the most peaceful cafés in the area.",
-      "link": "#"
+      "link": "#",
+      "content": "<p>Varkala is not your typical beach destination. It is the only place in southern Kerala where towering red laterite cliffs stand majestically adjacent to the Arabian Sea.</p><h3>The Cliff Experience</h3><p>The North Cliff is lined with bohemian cafes, yoga studios, and small shops selling Tibetan artifacts. Sipping a cold coffee while watching the sun dip into the ocean from a cliff-top cafe is an experience you won't forget.</p><h3>Spiritual Vibes</h3><p>Varkala is also famous for the ancient Janardanaswamy Temple and the Papanasam Beach, whose waters are believed to wash away sins.</p><p>Whether you want to surf, practice yoga, or just read a book by the sea, Varkala is the perfect chill-out spot.</p>"
     },
     {
       "id": "blog_03",
@@ -32,7 +34,8 @@
       "author": "By MeraSafar",
       "title": "Chasing Clouds: Top Hidden Mountain Treks",
       "excerpt": "If you don’t like crowds, then these untouched mountain trails and snow-covered peaks are waiting for you.",
-      "link": "#"
+      "link": "#",
+      "content": "<p>Are you tired of the crowded tourist spots in Shimla and Manali? It's time to lace up your trekking shoes and head into the wild, untouched mountains of the Himalayas.</p><h3>Offbeat Trails to Explore</h3><ul><li><strong>Tirthan Valley:</strong> A gateway to the Great Himalayan National Park, offering lush green trails and trout fishing.</li><li><strong>Bhrigu Lake Trek:</strong> A moderate trek that takes you to a high-altitude alpine meadow and a stunning glacial lake.</li><li><strong>Sandakphu:</strong> The highest peak in West Bengal, offering a jaw-dropping panorama of four of the world's five highest peaks, including Everest and Kanchenjunga.</li></ul><p>These trails offer solitude, pristine nature, and a chance to disconnect from the digital world and reconnect with yourself.</p>"
     },
     {
       "id": "blog_04",
@@ -43,7 +46,140 @@
       "author": "By Admin",
       "title": "Pondicherry French Riviera Tour: A Taste of France in India",
       "excerpt": "Yellow buildings, French-style architecture, and amazing beaches. Walking through White Town in Pondicherry feels like you are in Europe.",
-      "link": "#"
+      "link": "#",
+      "content": "<p>Pondicherry, affectionately known as 'Pondy', offers a unique blend of traditional Indian sensibilities and French architecture, making it a dreamy getaway.</p><h3>Exploring White Town</h3><p>The French Quarter, or White Town, is famous for its mustard-yellow colonial structures, bougainvillea-draped walls, and chic cafes. Rent a bicycle and pedal through the grid-like streets named 'Rue', stopping for authentic croissants and French press coffee.</p><h3>Auroville and Beaches</h3><p>Just a short drive away is Auroville, an experimental township dedicated to human unity. Don't miss the golden globe of the Matrimandir. End your day relaxing at Promenade Beach or the serene Paradise Beach.</p>"
+    },
+    {
+      "id": "blog_05",
+      "category": "adventure",
+      "image": "./assets/Rishikesh-travel-blogs.png",
+      "badge": "Action",
+      "date": "March 22, 2026",
+      "author": "By ThrillSeeker",
+      "title": "Rishikesh: River Rafting & Bungee Jumping Adventures",
+      "excerpt": "Get your adrenaline pumping! Discover the ultimate adventure capital of India with thrilling rapids and high-altitude jumps.",
+      "link": "#",
+      "content": "<p>Rishikesh isn't just the Yoga Capital of the World; it is also India's premier destination for extreme adventure sports.</p><h3>Conquering the Ganges</h3><p>The white-water rafting experience here is legendary. Ranging from Grade I to Grade IV rapids, sections like 'The Wall' and 'Roller Coaster' will get your heart racing. The best stretch is from Shivpuri to Nim Beach.</p><h3>Leap of Faith</h3><p>If you are brave enough, try India's highest bungee jump at Mohan Chatti. Jumping from a height of 83 meters towards the rocky riverbed below is an absolute thrill.</p><p>After an action-packed day, relax at one of the many riverside cafes offering healthy, organic food and stunning views.</p>"
+    },
+    {
+      "id": "blog_06",
+      "category": "spiritual",
+      "image": "./assets/Varanasi-travel-blogs.png",
+      "badge": "Peace",
+      "date": "March 05, 2026",
+      "author": "By MeraSafar",
+      "title": "Varanasi: Finding Inner Peace at the Ganga Ghats",
+      "excerpt": "Experience the divine evening Aarti and navigate the narrow, ancient alleys of one of the world's oldest living cities.",
+      "link": "#",
+      "content": "<p>Varanasi, or Kashi, is older than history itself. It is a city that attacks your senses but eventually fills your soul with absolute peace.</p><h3>The Magic of the Ghats</h3><p>Life and death coexist openly on the 80+ ghats lining the River Ganges. A sunrise boat ride offers a surreal view of locals bathing and performing morning rituals. Dashashwamedh Ghat is the center of action, while Manikarnika Ghat reminds you of life's ultimate truth.</p><h3>The Evening Aarti</h3><p>As the sun sets, the mesmerizing Ganga Aarti begins. The synchronized chanting, the heavy scent of incense, and the massive brass lamps flaming against the dark sky create a truly divine atmosphere.</p><p>Don't forget to get lost in the narrow 'galis' and enjoy a hot plate of Kachori Sabzi followed by the famous Banarasi Paan.</p>"
+    },
+    {
+      "id": "blog_07",
+      "category": "heritage",
+      "image": "./assets/Jaipur-travel-blogs.png",
+      "badge": "Classic",
+      "date": "February 14, 2026",
+      "author": "By HistoryBuff",
+      "title": "Jaipur: A Walk Through the Majestic Rajput Forts",
+      "excerpt": "Step back in time as we explore the pink-hued palaces, majestic forts, and rich royal heritage of Rajasthan.",
+      "link": "#",
+      "content": "<p>Welcome to the Pink City! Jaipur is a vibrant tapestry of majestic forts, royal palaces, and bustling bazaars that reflect the glorious past of the Rajputana empire.</p><h3>Fortresses of Power</h3><p>The crown jewel is the Amer Fort, a massive complex of pale yellow and pink sandstone built high on a hill. The intricate mirror work inside the Sheesh Mahal is breathtaking. Nearby, Nahargarh Fort offers the best sunset views overlooking the entire city.</p><h3>Architectural Marvels</h3><p>In the heart of the city stands the Hawa Mahal (Palace of Winds) with its 953 small windows, designed for royal ladies to observe street festivals unseen. The City Palace and Jantar Mantar (ancient astronomical observatory) are must-visits.</p><p>End your trip with a traditional Rajasthani Thali at Chokhi Dhani!</p>"
+    },
+    {
+      "id": "blog_08",
+      "category": "hill_station",
+      "image": "./assets/Darjeeling-travel-blogs.png",
+      "badge": "Relaxing",
+      "date": "January 28, 2026",
+      "author": "By Admin",
+      "title": "Darjeeling: Sipping Tea Above the Clouds",
+      "excerpt": "Wake up to a mesmerizing view of Mount Kanchenjunga and enjoy a serene ride on the famous Himalayan Toy Train.",
+      "link": "#",
+      "content": "<p>Known as the 'Queen of the Hills', Darjeeling is a picturesque hill station draped in sprawling tea estates and overlooked by the majestic Mount Kanchenjunga.</p><h3>The Toy Train Experience</h3><p>No trip here is complete without a ride on the Darjeeling Himalayan Railway, a UNESCO World Heritage site. The steam engine chugging through the misty mountains and looping at the Batasia Loop is pure nostalgia.</p><h3>Sunrise at Tiger Hill</h3><p>Brave the early morning cold to reach Tiger Hill before dawn. Watching the first rays of the sun paint the snow-capped peaks of Kanchenjunga (and sometimes Mount Everest) in hues of pink and gold is magical.</p><p>Spend your evenings strolling down the Mall Road, sipping world-class Darjeeling tea at Glenary's.</p>"
+    },
+    {
+      "id": "blog_09",
+      "category": "wildlife",
+      "image": "./assets/Jim-Corbett-travel-blogs.png",
+      "badge": "Wild",
+      "date": "December 12, 2025",
+      "author": "By NatureLover",
+      "title": "Jim Corbett: Into the Wild with Bengal Tigers",
+      "excerpt": "Embark on an early morning jeep safari through dense forests. Will you spot the elusive Royal Bengal Tiger?",
+      "link": "#",
+      "content": "<p>Established in 1936, Jim Corbett is India's oldest national park and a haven for wildlife enthusiasts. Located in the foothills of the Himalayas, it is famous for its healthy population of Bengal Tigers.</p><h3>The Safari Experience</h3><p>The park is divided into several zones, with Dhikala and Bijrani being the most popular for tiger sightings. An open jeep safari at dawn offers the best chance to spot these majestic predators, along with wild elephants, leopards, and over 600 species of birds.</p><h3>Jungle Stays</h3><p>For a true wilderness experience, book a stay inside the park at the Dhikala forest rest house. Falling asleep to the sounds of the jungle is an adventure in itself.</p>"
+    },
+    {
+      "id": "blog_10",
+      "category": "honeymoon",
+      "image": "./assets/Udaipur-travel-blogs.png",
+      "badge": "Couples",
+      "date": "November 20, 2025",
+      "author": "By Traveller",
+      "title": "Udaipur: The Ultimate Romantic Royal Retreat",
+      "excerpt": "Boat rides on Lake Pichola and candlelit dinners by the palace. Here is why the City of Lakes is perfect for honeymooners.",
+      "link": "#",
+      "content": "<p>Udaipur, often called the 'Venice of the East', is arguably the most romantic city in India. With its shimmering lakes and stunning white-marble palaces, it offers a fairytale setting for couples.</p><h3>Romance on the Lake</h3><p>A sunset boat cruise on Lake Pichola is a must. Glide past the magnificent Taj Lake Palace (floating in the middle of the lake) and Jag Mandir. The view of the massive City Palace illuminated at night from the water is mesmerizing.</p><h3>Royal Dining</h3><p>Udaipur is filled with rooftop restaurants offering panoramic views of the lake and palaces. Enjoy a candlelit dinner featuring rich Rajasthani cuisine like Laal Maas.</p><p>Wander hand-in-hand through the lush gardens of Saheliyon Ki Bari to complete your romantic getaway.</p>"
+    },
+    {
+      "id": "blog_11",
+      "category": "family",
+      "image": "./assets/Kerala-Houseboat-travel-blogs.png",
+      "badge": "Family First",
+      "date": "October 30, 2025",
+      "author": "By MeraSafar",
+      "title": "Kerala Backwaters: A Perfect Family Houseboat Vacation",
+      "excerpt": "Drift along the lush green backwaters of Alleppey. A relaxing, floating vacation that the whole family will cherish forever.",
+      "link": "#",
+      "content": "<p>When it comes to a relaxing family vacation, nothing beats the serene backwaters of Alleppey (Alappuzha) in Kerala. It is a network of tranquil canals, lagoons, and lakes parallel to the Arabian Sea.</p><h3>Life on a Houseboat</h3><p>Renting a traditional 'Kettuvallam' (houseboat) is the highlight here. These floating hotels come equipped with cozy bedrooms, modern bathrooms, and a personal chef. Kids and adults alike will love floating past paddy fields, coconut groves, and tiny local villages.</p><h3>Culinary Delights</h3><p>Your on-board chef will treat your family to authentic Kerala cuisine. Freshly caught Karimeen (Pearl Spot fish) fried in coconut oil, served with red rice and traditional curries, is a feast you won't forget.</p>"
+    },
+    {
+      "id": "blog_12",
+      "category": "solo",
+      "image": "./assets/Spiti-Valley-travel-blogs.png",
+      "badge": "Must Try",
+      "date": "September 15, 2025",
+      "author": "By SoloRider",
+      "title": "Spiti Valley: Finding Yourself on the Open Road",
+      "excerpt": "Rugged terrains, ancient monasteries, and starry skies. Why Spiti Valley should be your next solo road trip destination.",
+      "link": "#",
+      "content": "<p>Spiti Valley is not for the faint-hearted. It is a cold desert mountain valley located high in the Himalayas, offering rugged landscapes and a profound sense of isolation—perfect for a solo soul-searching trip.</p><h3>The Road Less Traveled</h3><p>The drive to Spiti, whether via Shimla or Manali, is challenging but incredibly rewarding. You will pass through tiny hamlets, dramatic gorges, and high-altitude passes like Kunzum La.</p><h3>Monasteries and Stargazing</h3><p>Visit the iconic Key Monastery perched on a hilltop, and send a postcard from Hikkim, the world's highest post office. At night, the lack of light pollution makes Spiti one of the best places in India for stargazing and astrophotography.</p>"
+    },
+    {
+      "id": "blog_13",
+      "category": "group",
+      "image": "./assets/Goa-travel-blogs.png",
+      "badge": "Party",
+      "date": "August 22, 2025",
+      "author": "By Admin",
+      "title": "Goa Diaries: Sun, Sand, and Unforgettable Nights",
+      "excerpt": "Gather your friends for the ultimate group trip. From serene South Goa beaches to the vibrant nightlife of the North.",
+      "link": "#",
+      "content": "<p>A trip to Goa with friends is a rite of passage. It is the ultimate destination to let your hair down, hit the beaches, and create unforgettable memories with your group.</p><h3>North vs. South</h3><p>If your group loves to party, North Goa is the place. Baga, Anjuna, and Vagator are buzzing with beach shacks, techno clubs, and flea markets. For a more relaxed vibe with pristine white sands, rent scooters and ride down to Palolem or Agonda in South Goa.</p><h3>Food and Adventure</h3><p>Try water sports like parasailing and jet-skiing. In the evenings, indulge in Goan fish curry, prawn balchao, and local Feni at famous shacks like Curlies or Thalassa.</p>"
+    },
+    {
+      "id": "blog_14",
+      "category": "spiritual",
+      "image": "./assets/Amritsar-travel-blogs.png",
+      "badge": "Divine",
+      "date": "July 11, 2025",
+      "author": "By Wanderlust",
+      "title": "Amritsar: The Divine Aura of the Golden Temple",
+      "excerpt": "Experience the soulful chants, the gleaming gold architecture, and the humbling experience of the Langar.",
+      "link": "#",
+      "content": "<p>Amritsar is the spiritual and cultural heart of the Sikh religion. The city radiates a unique energy of devotion, bravery, and incredible hospitality.</p><h3>The Golden Temple (Harmandir Sahib)</h3><p>Nothing prepares you for your first sight of the Golden Temple. The stunning gold sanctum gleaming in the center of the Amrit Sarovar (holy tank) is breathtaking. Visiting at night, when the temple is fully illuminated and the spiritual chants echo through the complex, is deeply moving.</p><h3>Langar and Wagah Border</h3><p>Do not miss the Guru-ka-Langar, the massive community kitchen that feeds over 100,000 people daily for free. In the late afternoon, drive down to the Wagah Border to witness the high-energy, patriotic Beating Retreat ceremony between Indian and Pakistani forces.</p>"
+    },
+    {
+      "id": "blog_15",
+      "category": "wildlife",
+      "image": "./assets/Kaziranga-travel-blogs.png",
+      "badge": "Nature",
+      "date": "June 05, 2025",
+      "author": "By NatureLover",
+      "title": "Kaziranga: Spotting the One-Horned Rhinoceros",
+      "excerpt": "Explore the grassy plains of Assam and witness one of the most incredible wildlife conservation success stories.",
+      "link": "#",
+      "content": "<p>Located in the heart of Assam, Kaziranga National Park is a UNESCO World Heritage site and home to two-thirds of the world's population of the Great One-Horned Rhinoceros.</p><h3>Safari Options</h3><p>The park offers both jeep and elephant safaris. The elephant safari takes you through tall elephant grass, allowing you to get remarkably close to the rhinos in their natural habitat. Jeep safaris cover larger areas and are great for spotting tigers, wild water buffaloes, and swamp deer.</p><h3>Rich Biodiversity</h3><p>Kaziranga is also a birdwatcher's paradise, recognized as an Important Bird Area by BirdLife International. The lush green tea estates surrounding the park add to the scenic beauty of your wildlife adventure.</p>"
     }
   ]
 }
