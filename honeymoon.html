@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honeymoon Packages — WanderQuest</title>
+    <link rel="stylesheet" href="./css/shared.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <img src="./assets/logo-2.png" alt="Logo of Mera Safar" />
+        </div>
+
+        <div class="search-bar">
+          <input
+            type="search"
+            class="search-bar-input"
+            id="searchInput"
+            placeholder="Search Your Destination"
+          />
+          <div id="searchSuggestions" class="search-suggestions"></div>
+        </div>
+
+        <div class="login-btn desktop-login">
+          <button type="button" class="login-button">Login</button>
+        </div>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </header>
+
+    <div id="navbar-placeholder"></div>
+
+    <header class="page-hero">
+      <span class="eyebrow">💑 Made for Two</span>
+      <h1>Honeymoon <em>Packages</em></h1>
+      <p>Romantic escapes crafted for couples who deserve the very best.</p>
+    </header>
+
+    <main class="container">
+      <div
+        id="packages-container"
+        class="packages-grid"
+        data-category-id="cat_07"
+      >
+        <div class="state-loading">
+          <div class="spinner"></div>
+          <p>Loading packages…</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/packages.js"></script>
+    <script src="./js/honeymoon.js"></script>
+  </body>
+</html>
