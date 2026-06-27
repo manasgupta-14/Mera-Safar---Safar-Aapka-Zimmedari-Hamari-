@@ -369,7 +369,8 @@ if (blogsGrid) {
             if (result.success && result.data) {
                 let html = "";
 
-                result.data.forEach((blog) => {
+                // .slice(0, 4) add kiya gaya hai taaki sirf 4 hi items aayein
+                result.data.slice(0, 4).forEach((blog) => {
                     html += `
                     <div class="blog-card" data-category="${blog.category}">
                         <div class="blog-img">
