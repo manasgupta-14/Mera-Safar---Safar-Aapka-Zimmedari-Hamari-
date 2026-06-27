@@ -5,25 +5,21 @@ let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
 // ================= SESSION & NAVBAR =================
 function updateNavbarUI() {
-    const loginBtns = document.querySelectorAll('.login-button'); // Apne navbar button ki class yahan daalein
+    const loginBtns = document.querySelectorAll('.login-button');
 
     loginBtns.forEach(btn => {
         if (isLoggedIn) {
             btn.innerText = "Logout";
             btn.onclick = (e) => {
                 e.preventDefault();
-
-                // My Account aur Navbar dono ke variables delete karein
                 localStorage.removeItem("currentUser");
                 localStorage.removeItem("isLoggedIn");
                 localStorage.removeItem("userName");
                 localStorage.removeItem("userEmail");
-
                 currentUser = null;
                 isLoggedIn = false;
-
                 alert("✅ You have been successfully logged out.");
-                window.location.href = "index.html"; // Redirect to home so everything resets smoothly
+                window.location.href = "index.html";
             };
         } else {
             btn.innerText = "Login";
@@ -40,13 +36,10 @@ function checkSession() {
         const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
         if (Date.now() - currentUser.loginTime > TWO_DAYS_MS) {
             alert("Session expired. Please sign in again to continue.");
-
-            // Session expire hone par bhi dono jagah se saaf karein
             localStorage.removeItem("currentUser");
             localStorage.removeItem("isLoggedIn");
             localStorage.removeItem("userName");
             localStorage.removeItem("userEmail");
-
             currentUser = null;
             isLoggedIn = false;
         } else {
@@ -56,17 +49,11 @@ function checkSession() {
     updateNavbarUI();
 }
 
-// Call checkSession when page loads to set the Navbar correctly
 document.addEventListener("DOMContentLoaded", () => {
     checkSession();
 });
 
-// ================= INITIALIZE ON LOAD =================
-document.addEventListener("DOMContentLoaded", () => {
-    checkSession();
-});
-
-// ================= NAVBAR & SLIDER =================
+// ================= NAVBAR HAMBURGER =================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -77,6 +64,7 @@ if (hamburger && navLinks) {
     });
 }
 
+// ================= IMAGE SLIDER =================
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
@@ -91,44 +79,36 @@ if (slider && slides.length > 0) {
     }
 
     nextBtn.addEventListener('click', () => {
-        currentIndex++;
-        if (currentIndex >= totalSlides) currentIndex = 0;
+        currentIndex = (currentIndex + 1) % totalSlides;
         updateSlider();
     });
 
     prevBtn.addEventListener('click', () => {
-        currentIndex--;
-        if (currentIndex < 0) currentIndex = totalSlides - 1;
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         updateSlider();
     });
 
     setInterval(() => {
-        currentIndex++;
-        if (currentIndex >= totalSlides) currentIndex = 0;
+        currentIndex = (currentIndex + 1) % totalSlides;
         updateSlider();
     }, 5000);
 }
 
-// ================= FETCH APIs (Updated) =================
+// ================= FETCH: DESTINATION MENU =================
 const destinationMenu = document.getElementById("destinationMenu");
 
 if (destinationMenu) {
     fetch("./api/nav-bar-destination.json")
         .then((res) => res.json())
         .then((data) => {
-
             let menuHTML = "";
 
             data.forEach(item => {
-
-                // Default page
                 let page = "destination.html";
                 let query = "category";
 
-                // Historical option ke liye alag page
                 if (item.slug === "historical") {
                     page = "historical.html";
-                    query = "category";
                 }
 
                 menuHTML += `
@@ -142,20 +122,50 @@ if (destinationMenu) {
 
             destinationMenu.innerHTML = menuHTML;
         })
-        .catch(err => console.log("Error fetching destinations:", err));
+        .catch(err => console.error("Error fetching destinations:", err));
 }
 
-const tourPackages = document.getElementById("tourpackagesMenu");
-if (tourPackages) {
+// ================= FETCH: TOUR PACKAGES MENU =================
+// ✅ Yahan sab slugs ke liye page map clearly define kar diya hai
+const TOUR_PAGE_MAP = {
+    "adventure-tours": "adventure.html",
+    "honeymoon-packages": "honeymoon.html",
+    "family-tours": "family.html",
+    "solo-trips": "solo.html",
+    // Naye slugs add karne ho to bas yahan ek line add karo:
+    // "wildlife-safari":   "wildlife.html",
+};
+
+const tourPackagesMenu = document.getElementById("tourpackagesMenu");
+
+if (tourPackagesMenu) {
     fetch("./api/nav-bar-tour-packages.json")
-        .then((res) => res.json())
+        .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status} — file nahi mili`);
+            return res.json();
+        })
         .then((data) => {
+            let menuHTML = "";
+
             data.forEach((item) => {
-                tourPackages.innerHTML += `<li><a href="#" data-slug="${item.slug}">${item.name}</a></li>`;
+                // Map mein slug milega to us page par, nahi mila to packages.html (default)
+                const page = TOUR_PAGE_MAP[item.slug] || "packages.html";
+
+                menuHTML += `
+                    <li>
+                        <a href="${page}?category=${item.slug}" data-slug="${item.slug}">
+                            ${item.name}
+                        </a>
+                    </li>
+                `;
             });
-        }).catch(err => console.log(err));
+
+            tourPackagesMenu.innerHTML = menuHTML;
+        })
+        .catch(err => console.error("Tour Packages menu error:", err));
 }
 
+// ================= FETCH: POPULAR PLACES =================
 const popularPlaces = document.getElementById("popularPlacesCard");
 
 if (popularPlaces) {
@@ -173,7 +183,6 @@ if (popularPlaces) {
                         <span class="rating">⭐ ${item.rating}</span>
                         <h3 style="margin:5px 0;">${item.name}</h3>
                         <p style="margin:0 0 10px; color:gray; font-size:.9rem;">${item.city}, ${item.state}</p>
-                        
                         <button style="padding:10px 15px; background:#007bff; color:#fff; border:none; border-radius:5px; cursor:pointer; width: 100%;"
                             onclick="openGoogleMaps(${item.lat}, ${item.lng})">
                             📍 Open in Google Maps
@@ -185,31 +194,29 @@ if (popularPlaces) {
 
             popularPlaces.innerHTML = html;
         } catch (error) {
-            console.log("Popular Places Error:", error);
+            console.error("Popular Places Error:", error);
         }
     }
     loadPopularPlaces();
 }
 
-// Function jo direct Google Maps open karega
 function openGoogleMaps(lat, lng) {
-    // Google Maps automatically user ki current location access kar lega "My Location" ke roop me
     const mapUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
-    window.open(mapUrl, "_blank"); // "_blank" se naye tab me khulega
+    window.open(mapUrl, "_blank");
 }
 
+// ================= FETCH: TRENDING PLACES =================
 const trendingPlaces = document.getElementById("trendingPlacesCard");
+
 if (trendingPlaces) {
     const loadTrendingPlaces = async () => {
         try {
             const response = await fetch("./api/trending-places-index.json");
             const data = await response.json();
-
             const filterData = data.filter(item => [1, 4, 6].includes(item.id));
             let html = "";
 
             filterData.forEach((item) => {
-                // Formatting original price to remove commas if present, just in case
                 let rawPrice = item["new-price"].toString().replace(/,/g, '');
 
                 html += `
@@ -238,27 +245,33 @@ if (trendingPlaces) {
                       <span class="old-price"><del>₹${item["old-price"]}</del></span>
                       <div class="new-price">₹${item["new-price"]}<small>/person</small></div>
                     </div>
-                    <button class="book-now-btn" onclick="localStorage.setItem('selectedPackagePrice', '${rawPrice}'); window.location.href='booking-modal.html?id=${item.id}'">Book Now</button> 
+                    <button class="book-now-btn"
+                        onclick="localStorage.setItem('selectedPackagePrice', '${rawPrice}'); window.location.href='booking-modal.html?id=${item.id}'">
+                        Book Now
+                    </button>
                   </div>
                 </div>
                 `;
             });
+
             trendingPlaces.innerHTML = html;
-        } catch (error) { console.log("Error", error); }
+        } catch (error) {
+            console.error("Trending Places Error:", error);
+        }
     };
     loadTrendingPlaces();
 }
 
+// ================= FETCH: EXPLORE CATEGORIES =================
 const exploreCategories = document.getElementById("exploreCategoryCard");
+
 if (exploreCategories) {
     const loadExploreCategories = async () => {
         try {
             const response = await fetch("./api/explore-categories-packages.json");
             const data = await response.json();
-
             const targetPackageIds = ["pkg_06", "pkg_04", "pkg_19"];
             const filterData = data.filter(item => targetPackageIds.includes(item.id));
-
             let html = "";
 
             filterData.forEach((item) => {
@@ -291,20 +304,25 @@ if (exploreCategories) {
                     <div class="price-section">
                       <div class="new-price">₹${item.price.toLocaleString('en-IN')}<small>/person</small></div>
                     </div>
-                    <button class="book-now-btn" onclick="localStorage.setItem('selectedPackagePrice', '${rawPrice}'); window.location.href='booking-modal.html?id=${item.id}'">Book Now</button> 
+                    <button class="book-now-btn"
+                        onclick="localStorage.setItem('selectedPackagePrice', '${rawPrice}'); window.location.href='booking-modal.html?id=${item.id}'">
+                        Book Now
+                    </button>
                   </div>
                 </div>
                 `;
             });
+
             exploreCategories.innerHTML = html;
         } catch (error) {
-            console.log("Explore Categories Error:", error);
+            console.error("Explore Categories Error:", error);
         }
     };
     loadExploreCategories();
 }
 
-// ================= BLOG FILTERS =================
+// ================= BLOG FILTERS (Static HTML cards ke liye) =================
+// Ye tab kaam aata hai jab blog cards JSON se nahi, seedhe HTML mein likhe hain
 document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const blogCards = document.querySelectorAll(".blog-card");
@@ -339,13 +357,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// ================= TRAVEL BLOGS FETCH API =================
+// ================= TRAVEL BLOGS =================
 const blogsGrid = document.querySelector(".blogs-grid");
 
 if (blogsGrid) {
     const loadTravelBlogs = async () => {
         try {
-            // Path check kar lein, jahan JSON file save ki hai
             const response = await fetch("./api/travel-blogs-index.json");
             const result = await response.json();
 
@@ -375,19 +392,15 @@ if (blogsGrid) {
                 });
 
                 blogsGrid.innerHTML = html;
-
-                // DATA LOAD HONE KE BAAD FILTER LOGIC RE-INITIALIZE KARNA ZARURI HAI
-                initializeBlogFilters();
+                initializeBlogFilters(); // Data load ke baad filter initialize karo
             }
         } catch (error) {
-            console.log("Travel Blogs Fetch Error:", error);
+            console.error("Travel Blogs Fetch Error:", error);
         }
     };
-
     loadTravelBlogs();
 }
 
-// Filter Logic ko Function me wrap kiya hai taaki dynamic data ke saath use kar sakein
 function initializeBlogFilters() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const blogCards = document.querySelectorAll(".blog-card");
@@ -397,14 +410,12 @@ function initializeBlogFilters() {
             button.addEventListener("click", () => {
                 filterButtons.forEach(btn => btn.classList.remove("active"));
                 button.classList.add("active");
-
                 const filterValue = button.getAttribute("data-target");
 
                 blogCards.forEach(card => {
                     const cardCategory = card.getAttribute("data-category");
-
                     if (filterValue === "all" || filterValue === cardCategory) {
-                        card.style.display = "flex"; // Agar block tha HTML me to block karein
+                        card.style.display = "flex";
                         setTimeout(() => {
                             card.style.opacity = "1";
                             card.style.transform = "scale(1)";
@@ -412,9 +423,7 @@ function initializeBlogFilters() {
                     } else {
                         card.style.opacity = "0";
                         card.style.transform = "scale(0.95)";
-                        setTimeout(() => {
-                            card.style.display = "none";
-                        }, 300);
+                        setTimeout(() => { card.style.display = "none"; }, 300);
                     }
                 });
             });
@@ -422,7 +431,7 @@ function initializeBlogFilters() {
     }
 }
 
-// ================= TESTIMONIALS FETCH API & SLIDER =================
+// ================= TESTIMONIALS =================
 const testimonialsWrapper = document.querySelector(".testimonials-wrapper");
 const dotIndicators = document.querySelector(".dot-indicators");
 
@@ -437,14 +446,10 @@ if (testimonialsWrapper) {
                 let dotsHtml = "";
 
                 result.data.forEach((item, index) => {
-                    // Pehla card aur dot default "active" hona chahiye
                     const isActive = index === 0 ? "active" : "";
-
                     cardsHtml += `
                     <div class="testimonial-card ${isActive}">
-                        <div class="quote-icon">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
                         <p class="review-text">${item.text}</p>
                         <div class="rating-stars">${item.ratingHtml}</div>
                         <div class="user-info">
@@ -456,27 +461,20 @@ if (testimonialsWrapper) {
                         </div>
                     </div>
                     `;
-
-                    // Dynamic dots generate kar rahe hain
                     dotsHtml += `<span class="dot ${isActive}" data-index="${index}"></span>`;
                 });
 
-                // HTML inject kar diya
                 testimonialsWrapper.innerHTML = cardsHtml;
                 if (dotIndicators) dotIndicators.innerHTML = dotsHtml;
-
-                // DATA INJECT HONE KE BAAD SLIDER START KAREIN
                 initTestimonialSlider();
             }
         } catch (error) {
-            console.log("Testimonials Fetch Error:", error);
+            console.error("Testimonials Fetch Error:", error);
         }
     };
-
     loadTestimonials();
 }
 
-// Fixed & Optimized Slider Logic Function
 function initTestimonialSlider() {
     const slides = document.querySelectorAll(".testimonial-card");
     const dots = document.querySelectorAll(".dot");
@@ -485,18 +483,15 @@ function initTestimonialSlider() {
 
     if (slides.length > 0) {
         let currentIndex = 0;
-        let slideInterval; // Auto-play timer ke liye variable
+        let slideInterval;
 
-        // Slide update karne ka function
         function updateSlider(index) {
             slides.forEach(slide => slide.classList.remove("active"));
             dots.forEach(dot => dot.classList.remove("active"));
-
             slides[index].classList.add("active");
             if (dots[index]) dots[index].classList.add("active");
         }
 
-        // Auto-play shuru karne ka function
         function startAutoPlay() {
             slideInterval = setInterval(() => {
                 currentIndex = (currentIndex + 1) % slides.length;
@@ -504,22 +499,19 @@ function initTestimonialSlider() {
             }, 5000);
         }
 
-        // Manual click par timer reset karne ka function
         function resetAutoPlay() {
             clearInterval(slideInterval);
             startAutoPlay();
         }
 
-        // Next Button Click Event
         if (nextBtn) {
             nextBtn.addEventListener("click", () => {
                 currentIndex = (currentIndex + 1) % slides.length;
                 updateSlider(currentIndex);
-                resetAutoPlay(); // Timer reset karein taaki achanak double slide na ho
+                resetAutoPlay();
             });
         }
 
-        // Previous Button Click Event
         if (prevBtn) {
             prevBtn.addEventListener("click", () => {
                 currentIndex = (currentIndex - 1 + slides.length) % slides.length;
@@ -528,7 +520,6 @@ function initTestimonialSlider() {
             });
         }
 
-        // Dots Click Event
         dots.forEach(dot => {
             dot.addEventListener("click", (e) => {
                 currentIndex = parseInt(e.target.getAttribute("data-index"));
@@ -537,22 +528,19 @@ function initTestimonialSlider() {
             });
         });
 
-        // Initial load par auto-play start karein
         startAutoPlay();
     }
 }
 
-// ================= WHY CHOOSE US FETCH API =================
+// ================= WHY CHOOSE US =================
 const whyChooseGrid = document.querySelector(".why-cards-grid");
 
 if (whyChooseGrid) {
     const loadWhyChooseUs = async () => {
         try {
-            // Yahan apne JSON file ka sahi path daalein (jaise: "./api/why-choose-us.json")
             const response = await fetch("./api/why-choose-us-index.json");
             const result = await response.json();
 
-            // Check karenge ki success true hai aur data array maujood hai
             if (result.success && result.data) {
                 let html = "";
 
@@ -560,151 +548,105 @@ if (whyChooseGrid) {
                     html += `
                     <div class="why-choose-card">
                         <span class="card-number">${item.id}</span>
-                        <div class="icon-box">
-                            <i class="${item.icon}"></i>
-                        </div>
+                        <div class="icon-box"><i class="${item.icon}"></i></div>
                         <h3>${item.heading}</h3>
                         <p>${item.paragraph}</p>
                     </div>
                     `;
                 });
 
-                // HTML inject kar rahe hain container mein
                 whyChooseGrid.innerHTML = html;
             }
         } catch (error) {
-            console.log("Why Choose Us Fetch Error:", error);
+            console.error("Why Choose Us Fetch Error:", error);
         }
     };
-
     loadWhyChooseUs();
 }
 
+// ================= SEARCH =================
 const searchInput = document.getElementById("searchInput");
 const suggestionBox = document.getElementById("searchSuggestions");
 
-let allData = [];
+// ✅ Guard: searchInput exist nahi karta kuch pages par — crash rokne ke liye
+if (searchInput && suggestionBox) {
 
-// Tumhari saari JSON files
-const files = [
-    "./api/packages.json",
-    "./api/nav-bar-tour-packages.json",
-    "./api/explore-categories-packages.json",
-    "./api/popular-places-card-index.json",
-    "./api/nav-bar-destination.json",
-    "./api/categories.json",
-    "./api/travel-blogs-index.json",
-    "./api/trending-places-index.json",
-    "./api/testimonial-index.json",
-    "./api/why-choose-us-index.json"
-];
+    let allData = [];
 
-// Sab JSON load karo
-Promise.allSettled(
-    files.map(file =>
-        fetch(file).then(res => res.json())
-    )
-)
-    .then(results => {
+    const files = [
+        "./api/packages.json",
+        "./api/nav-bar-tour-packages.json",
+        "./api/explore-categories-packages.json",
+        "./api/popular-places-card-index.json",
+        "./api/nav-bar-destination.json",
+        "./api/categories.json",
+        "./api/travel-blogs-index.json",
+        "./api/trending-places-index.json",
+        "./api/testimonial-index.json",
+        "./api/why-choose-us-index.json"
+    ];
 
+    Promise.allSettled(
+        files.map(file => fetch(file).then(res => res.json()))
+    ).then(results => {
         results.forEach(result => {
-
-            if (
-                result.status === "fulfilled" &&
-                Array.isArray(result.value)
-            ) {
+            if (result.status === "fulfilled" && Array.isArray(result.value)) {
                 allData.push(...result.value);
             }
-
         });
-
         console.log("Total Search Records:", allData.length);
     });
 
-// Search
-searchInput.addEventListener("input", function () {
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.trim().toLowerCase();
+        suggestionBox.innerHTML = "";
 
-    const keyword = this.value.trim().toLowerCase();
-
-    suggestionBox.innerHTML = "";
-
-    if (!keyword) {
-        suggestionBox.style.display = "none";
-        return;
-    }
-
-    const suggestions = new Set();
-
-    allData.forEach(item => {
-
-        const matched = Object.values(item).some(value => {
-
-            if (typeof value === "object") {
-                value = JSON.stringify(value);
-            }
-
-            return value &&
-                String(value)
-                    .toLowerCase()
-                    .includes(keyword);
-
-        });
-
-        if (matched) {
-
-            const text =
-                item.name ||
-                item.title ||
-                item.destination ||
-                item.place ||
-                item.category ||
-                item.slug;
-
-            if (text) {
-                suggestions.add(text);
-            }
+        if (!keyword) {
+            suggestionBox.style.display = "none";
+            return;
         }
 
-    });
+        const suggestions = new Set();
 
-    const resultArray = [...suggestions].slice(0, 10);
+        allData.forEach(item => {
+            const matched = Object.values(item).some(value => {
+                if (typeof value === "object") value = JSON.stringify(value);
+                return value && String(value).toLowerCase().includes(keyword);
+            });
 
-    if (!resultArray.length) {
-        suggestionBox.style.display = "none";
-        return;
-    }
-
-    resultArray.forEach(text => {
-
-        const div = document.createElement("div");
-
-        div.className = "suggestion-item";
-        div.textContent = text;
-
-        div.addEventListener("click", () => {
-
-            searchInput.value = text;
-            suggestionBox.style.display = "none";
-
-            // Search page par bhejna ho to
-            // window.location.href =
-            // `search.html?q=${encodeURIComponent(text)}`;
-
+            if (matched) {
+                const text = item.name || item.title || item.destination ||
+                    item.place || item.category || item.slug;
+                if (text) suggestions.add(text);
+            }
         });
 
-        suggestionBox.appendChild(div);
+        const resultArray = [...suggestions].slice(0, 10);
 
+        if (!resultArray.length) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        resultArray.forEach(text => {
+            const div = document.createElement("div");
+            div.className = "suggestion-item";
+            div.textContent = text;
+            div.addEventListener("click", () => {
+                searchInput.value = text;
+                suggestionBox.style.display = "none";
+                // window.location.href = `search.html?q=${encodeURIComponent(text)}`;
+            });
+            suggestionBox.appendChild(div);
+        });
+
+        suggestionBox.style.display = "block";
     });
 
-    suggestionBox.style.display = "block";
+    document.addEventListener("click", e => {
+        if (!e.target.closest(".search-bar")) {
+            suggestionBox.style.display = "none";
+        }
+    });
 
-});
-
-// Bahar click karne par hide
-document.addEventListener("click", e => {
-
-    if (!e.target.closest(".search-bar")) {
-        suggestionBox.style.display = "none";
-    }
-
-});
+} // end searchInput guard
