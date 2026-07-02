@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Mera Safar</title>
+    <link rel="stylesheet" href="./css/about.css" />
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts: a display serif for headings, paired with the site's existing sans-serif body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <img src="./assets/logo-2.png" alt="Logo of Mera Safar" />
+        </div>
+
+        <div class="search-bar">
+          <input
+            type="search"
+            class="search-bar-input"
+            id="searchInput"
+            placeholder="Search Your Destination"
+          />
+          <div id="searchSuggestions" class="search-suggestions"></div>
+        </div>
+
+        <div class="login-btn desktop-login">
+          <button type="button" class="login-button">Login</button>
+        </div>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Destinations ▾</a>
+            <ul class="dropdown-menu" id="destinationMenu"></ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Tour Packages ▾</a>
+            <ul class="dropdown-menu" id="tourpackagesMenu"></ul>
+          </li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="travel-blog.html">Travel Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Help</a></li>
+          <li class="mobile-login">
+            <button type="button" class="login-button">Login</button>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="secondary-nav">
+        <ul class="sec-nav-links">
+          <li><a href="#">🌍 Explore Destinations</a></li>
+          <!-- Yahan booking.html ka direct link de diya gaya hai -->
+          <li><a href="#">🎫 Book Now</a></li>
+          <li><a href="#">✈️ Plan Your Journey</a></li>
+          <li><a href="#">🗺️ Trip Planner</a></li>
+          <li><a href="#">🍽️ Restaurants & Cafes</a></li>
+          <li><a href="#">🚗 Transport / Car Rentals</a></li>
+          <li><a href="#">🌦️ Weather Info</a></li>
+          <li><a href="#">📍 Nearby Attractions</a></li>
+          <li><a href="#">📖 Travel Guide</a></li>
+          <li><a href="myAccount.html">👤 My Account</a></li>
+          <li><a href="bookings.html">📅 My Bookings</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">
+          <a href="index.html">Home</a> <span>/</span> About Us
+        </p>
+        <h1>Every great trip starts with <span>Mera Safar</span></h1>
+        <p class="hero-sub">
+          Your ultimate travel partner for seamless, stress-free journeys — from
+          the first search to the final stamp in your passport.
+        </p>
+      </div>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- Trust / Stats Bar -->
+    <section class="stats-strip">
+      <div class="stats-strip-inner">
+        <div class="stat-stamp">
+          <div class="stamp-ring"><span>50K+</span></div>
+          <p>Happy Travelers</p>
+        </div>
+        <div class="stat-stamp">
+          <div class="stamp-ring"><span>120+</span></div>
+          <p>Destinations Covered</p>
+        </div>
+        <div class="stat-stamp">
+          <div class="stamp-ring"><span>8</span></div>
+          <p>Years on the Road</p>
+        </div>
+        <div class="stat-stamp">
+          <div class="stamp-ring"><span>4.8</span></div>
+          <p>Average Trip Rating</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story container">
+      <div class="story-text">
+        <span class="section-eyebrow">Our Journey</span>
+        <h2>Built by travelers, for travelers</h2>
+        <p>
+          Welcome to <strong>Mera Safar</strong>. We started with a simple
+          vision: to make travel planning effortless, transparent, and
+          enjoyable. Whether you are looking for a serene getaway to Leh-Ladakh
+          or an adventure in Manali, we bring the world to your fingertips.
+        </p>
+        <p>
+          Our platform is built on modern technology to give you a hassle-free
+          experience — from finding the best destinations to generating instant
+          PDF tickets and offering easy refund policies.
+        </p>
+        <div class="story-quote">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            We don't just book trips. We plan journeys people actually remember.
+          </p>
+        </div>
+      </div>
+      <div class="story-image">
+        <img
+          src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          alt="Traveler looking out over a scenic journey"
+        />
+        <div class="story-image-badge">
+          <i class="fas fa-route"></i>
+          <span>Trusted route planning since day one</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision container">
+      <div class="mv-card">
+        <div class="mv-icon"><i class="fas fa-compass"></i></div>
+        <h3>Our Mission</h3>
+        <p>
+          To remove every friction point between "I want to travel" and "I'm
+          actually there" — with honest pricing, real-time booking, and support
+          that picks up the phone.
+        </p>
+      </div>
+      <div class="mv-card mv-card-alt">
+        <div class="mv-icon"><i class="fas fa-mountain-sun"></i></div>
+        <h3>Our Vision</h3>
+        <p>
+          To become India's most trusted travel companion — the first place
+          people open when a trip is still just an idea.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us container">
+      <span class="section-eyebrow center">The Mera Safar Difference</span>
+      <h2>Why travel with us?</h2>
+      <p class="section-sub">
+        Everything we build comes back to one question: does this make the trip
+        easier?
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Instant Booking</h3>
+          <p>
+            Fast, secure, and API-driven booking process with immediate
+            confirmation.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
+          <h3>Smart Ticketing</h3>
+          <p>
+            Download your verified tickets in PDF format instantly after
+            booking.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Easy Refunds</h3>
+          <p>
+            Plans changed? No worries. We offer a seamless cancel-and-refund
+            system.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-wallet"></i></div>
+          <h3>Budget Planner</h3>
+          <p>
+            Use our built-in budget estimation tools to plan a trip that fits
+            your pocket.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works / Timeline -->
+    <section class="how-it-works container">
+      <span class="section-eyebrow center">From Idea to Itinerary</span>
+      <h2>How a Mera Safar trip comes together</h2>
+      <div class="timeline">
+        <div class="timeline-track" aria-hidden="true"></div>
+        <div class="timeline-step">
+          <div class="timeline-marker">01</div>
+          <h3>Search & Compare</h3>
+          <p>
+            Explore destinations, compare packages, and shortlist what fits your
+            dates and budget.
+          </p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">02</div>
+          <h3>Book Instantly</h3>
+          <p>
+            Confirm your trip in a few clicks with secure, API-driven checkout.
+          </p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">03</div>
+          <h3>Get Your PDF Ticket</h3>
+          <p>
+            Your verified ticket lands instantly — no waiting, no follow-up
+            emails.
+          </p>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">04</div>
+          <h3>Travel, Worry-Free</h3>
+          <p>Plans change — our easy refund policy means you're covered.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <span class="section-eyebrow center">Traveler Stories</span>
+        <h2>What our travelers say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>
+              Booking Leh-Ladakh took ten minutes and the PDF ticket was in my
+              inbox before I finished my chai.
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar">AS</div>
+              <div>
+                <strong>Ananya S.</strong>
+                <span>Leh-Ladakh Trip</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>
+              Had to cancel last minute — the refund process was genuinely
+              painless. That trust matters a lot.
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar">RK</div>
+              <div>
+                <strong>Rohit K.</strong>
+                <span>Manali Getaway</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>
+              The budget planner helped me actually stick to my travel budget
+              for once. Highly recommend.
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar">PM</div>
+              <div>
+                <strong>Priya M.</strong>
+                <span>Goa Weekend</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script src="./js/about.js"></script>
+  </body>
+</html>
