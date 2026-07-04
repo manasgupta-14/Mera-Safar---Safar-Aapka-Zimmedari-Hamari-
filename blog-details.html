@@ -8,135 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
-      /* CSS for Detailed Blog Page */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #fdfdfd;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-      .container {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-        background: #fff;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        border-radius: 12px;
-      }
-      .back-btn {
-        display: inline-block;
-        margin-bottom: 20px;
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-      }
-      .back-btn:hover {
-        color: #2e86de;
-      }
-      .blog-header {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      .blog-title {
-        font-size: 32px;
-        margin-bottom: 15px;
-        color: #222;
-      }
-      .blog-meta {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        color: #777;
-        font-size: 14px;
-        margin-bottom: 20px;
-      }
-      .blog-hero-img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 30px;
-      }
-      .blog-body {
-        font-size: 18px;
-        line-height: 1.8;
-        color: #444;
-      }
-      .error-msg {
-        text-align: center;
-        color: red;
-        font-size: 20px;
-        margin-top: 50px;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/blog-details.html" />
   </head>
   <body>
     <div class="container" id="blog-detail-container">
       <h3 style="text-align: center">Loading blog details...</h3>
     </div>
 
-    <script>
-      const renderBlogDetails = async () => {
-        const container = document.getElementById("blog-detail-container");
-
-        // 1. URL se ID nikalna (e.g., ?id=blog_01)
-        const urlParams = new URLSearchParams(window.location.search);
-        const blogId = urlParams.get("id");
-
-        if (!blogId) {
-          container.innerHTML = `<p class="error-msg">Blog ID not found in URL!</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
-          return;
-        }
-
-        try {
-          // 2. JSON Data Fetch karna
-          const response = await fetch("./api/travel-blogs-index.json");
-          const result = await response.json();
-
-          if (result.success && result.data) {
-            // 3. ID ke base par specific blog find karna
-            const currentBlog = result.data.find((blog) => blog.id === blogId);
-
-            if (currentBlog) {
-              // Agar JSON mein full content nahi hai, toh excerpt use kar lenge fallback ke liye
-              const fullContent =
-                currentBlog.content ||
-                currentBlog.excerpt +
-                  "<br><br><i>(Full description data is missing in JSON file. Add a 'content' key in your JSON to see the full article here.)</i>";
-
-              // 4. HTML Render karna
-              container.innerHTML = `
-                            <a href="travel-blog.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Blogs</a>
-                            
-                            <div class="blog-header">
-                                <span class="badge" style="background:#ff4757; color:white; padding:5px 10px; border-radius:5px; font-size:12px;">${currentBlog.badge}</span>
-                                <h1 class="blog-title">${currentBlog.title}</h1>
-                                <div class="blog-meta">
-                                    <span><i class="fa-regular fa-calendar"></i> ${currentBlog.date}</span>
-                                    <span><i class="fa-regular fa-user"></i> ${currentBlog.author}</span>
-                                </div>
-                            </div>
-
-                            <img src="${currentBlog.image}" alt="${currentBlog.title}" class="blog-hero-img" onerror="this.src='https://via.placeholder.com/800x400?text=No+Image'"/>
-                            
-                            <div class="blog-body">
-                                <p>${fullContent}</p>
-                            </div>
-                        `;
-            } else {
-              container.innerHTML = `<p class="error-msg">Blog post not found!</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
-            }
-          }
-        } catch (error) {
-          console.error("Fetch Error:", error);
-          container.innerHTML = `<p class="error-msg">Failed to load blog data.</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
-        }
-      };
-
-      // Page load hote hi function call karein
-      renderBlogDetails();
-    </script>
+    <script src="./js/blog-details.js"></script>
   </body>
 </html>
