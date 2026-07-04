@@ -2,37 +2,37 @@
   {
     "id": "st_1",
     "name": "Rajasthan",
-    "image": "./assets/states/rajasthan.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlt2n8oXqqwyymhJ84aY51KghVj6Iqyc50-9TT-gaV2w&s=10",
     "description": "Experience the royal culture of Rajasthan."
   },
   {
     "id": "st_2",
     "name": "Kerala",
-    "image": "./assets/states/kerala.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5tU5Ak6VQcGvd3PNnQjv7MhGTG_2ghNGKTkdVdEp9fG1Eelf4Kqhtb5k&s=10",
     "description": "God's Own Country with serene backwaters."
   },
   {
     "id": "st_3",
     "name": "Uttarakhand",
-    "image": "./assets/states/uttarakhand.jpg",
+    "image": "https://mr-cabby-2025.s3.eu-north-1.amazonaws.com/uploads/6379020241227115159.webp",
     "description": "Land of majestic mountains and sacred temples."
   },
   {
     "id": "st_4",
     "name": "Uttar Pradesh",
-    "image": "./assets/states/uttar-pradesh.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcGdQuGCwyIYQHire2jNyl9AEBGF1wdLlMfQYkalavbA&s=10",
     "description": "Home to the Taj Mahal and rich cultural heritage."
   },
   {
     "id": "st_5",
     "name": "Goa",
-    "image": "./assets/states/goa.jpg",
+    "image": "https://images.travelxp.com/images/india/goa/Less_Crowded_and_Hidden_Beaches_in_Goa.png",
     "description": "Famous for beautiful beaches, nightlife, and Portuguese charm."
   },
   {
     "id": "st_6",
     "name": "Himachal Pradesh",
-    "image": "./assets/states/himachal-pradesh.jpg",
+    "image": "https://www.maharanacab.com/wp-content/uploads/2021/09/Himachal-Pradesh.jpg",
     "description": "Snow-capped mountains, valleys, and adventure destinations."
   }
 ]
