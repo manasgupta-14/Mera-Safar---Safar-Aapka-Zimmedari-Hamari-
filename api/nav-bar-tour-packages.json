@@ -1,37 +1,37 @@
 [
-    {
-        "id": 1,
-        "name":"Family Tours",
-        "slug":"family-tours"
-    },
-    {
-        "id": 2,
-        "name":"Honeymoon Packages",
-        "slug":"honeymoon-packages"
-    },
-    {
-        "id": 3,
-        "name":"Solo Trips",
-        "slug":"solo-trips"
-    },
-    {
-        "id": 4,
-        "name":"Adventure Tours",
-        "slug":"adventure-tours"
-    },
-    {
-        "id": 5,
-        "name":"Weekend Getaways",
-        "slug":"weekend-getaways"
-    },
-    {
-        "id": 6,
-        "name":"Group Tours",
-        "slug":"group-tours"
-    },
-    {
-        "id": 7,
-        "name":"International Tours",
-        "slug":"international-tours"
-    }
+  {
+    "id": 1,
+    "name": "Family Tours",
+    "slug": "family-tours"
+  },
+  {
+    "id": 2,
+    "name": "Honeymoon Packages",
+    "slug": "honeymoon-packages"
+  },
+  {
+    "id": 3,
+    "name": "Solo Trips",
+    "slug": "solo-trips"
+  },
+  {
+    "id": 4,
+    "name": "Adventure Tours",
+    "slug": "adventure-tours"
+  },
+  {
+    "id": 5,
+    "name": "Weekend Getaways",
+    "slug": "weekend-getaways"
+  },
+  {
+    "id": 6,
+    "name": "Group Tours",
+    "slug": "group-tours"
+  },
+  {
+    "id": 7,
+    "name": "International Tours",
+    "slug": "international-tours"
+  }
 ]
