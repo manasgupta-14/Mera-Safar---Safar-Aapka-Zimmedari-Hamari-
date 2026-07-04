@@ -780,7 +780,6 @@ header {
     }
 }
 
-/* Modals */
 .modal {
     display: none;
     position: fixed;
@@ -1129,31 +1128,23 @@ header {
     gap: 25px;
 }
 
-/* 1. Image ke wrapper ki height fix karein aur default ratio set karein */
 .card-image-wrapper {
     width: 100%;
     height: 220px;
-    /* Sabhi cards ki image height ab strictly 220px ho jayegi */
     overflow: hidden;
     position: relative;
     background-color: #f0f0f0;
-    /* Jab tak image load na ho, tab tak aacha background dikhe */
 }
 
-/* 2. Image ko stretch ya shrink hone se rokne ke liye object-fit lagayein */
 .card-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Yeh properties image ko bina crop ya stretch kiye poore box mein perfect fit karegi */
     object-position: center;
-    /* Image ka main focus hamesha center mein rahega */
     display: block;
-    /* Kisi bhi tarah ke inline space ko hatane ke liye */
     transition: transform 0.5s ease;
 }
 
-/* 3. Ensure karein ki cards ki height bhi ek barabar (equal) dikhe chahe content kam-badi ho */
 .explore-card {
     background: #ffffff;
     border-radius: 12px;
@@ -1162,15 +1153,10 @@ header {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* Yeh card ko grid row ki full height lene par majboor karega */
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eef2f5;
 }
-
-/* =======================
-   WHY CHOOSE US SECTION
-======================= */
 
 .why-choose-us {
     padding: 60px 20px;
@@ -1182,8 +1168,6 @@ header {
     max-width: 1250px;
     margin: auto;
 }
-
-/* Header */
 
 .section-header {
     text-align: center;
@@ -1219,16 +1203,12 @@ header {
     font-size: 1.1rem;
 }
 
-/* Grid */
-
 .why-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,
             minmax(320px, 1fr));
     gap: 35px;
 }
-
-/* Cards */
 
 .why-choose-card {
     position: relative;
@@ -1239,7 +1219,6 @@ header {
     overflow: hidden;
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.08);
-
     transition: 0.5s;
     animation: cardUp 1s ease forwards;
 }
@@ -1266,8 +1245,6 @@ header {
         0 25px 55px rgba(0, 0, 0, 0.15);
 }
 
-/* Card Number */
-
 .card-number {
     position: absolute;
     top: 20px;
@@ -1276,8 +1253,6 @@ header {
     font-weight: 800;
     color: rgba(255, 107, 107, 0.12);
 }
-
-/* Icon */
 
 .icon-box {
     width: 90px;
@@ -1295,18 +1270,14 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 2.2rem;
-
     box-shadow:
         0 15px 30px rgba(255, 107, 107, 0.35);
-
     transition: 0.5s;
 }
 
 .why-choose-card:hover .icon-box {
     transform: rotate(360deg) scale(1.1);
 }
-
-/* Text */
 
 .why-choose-card h3 {
     font-size: 1.5rem;
@@ -1318,8 +1289,6 @@ header {
     color: #64748b;
     line-height: 1.8;
 }
-
-/* CSS Animations */
 
 @keyframes fadeDown {
     from {
@@ -1344,8 +1313,6 @@ header {
         transform: translateY(0);
     }
 }
-
-/* Responsive */
 
 @media (max-width:768px) {
 
@@ -1377,7 +1344,6 @@ header {
     margin: 0 auto;
 }
 
-/* Header Section */
 .blog-header {
     text-align: center;
     margin-bottom: 40px;
@@ -1391,7 +1357,6 @@ header {
 
 .blog-header h2 span {
     color: #0284c7;
-    /* Sky blue theme for travel context */
 }
 
 .blog-header p {
@@ -1399,7 +1364,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* Filter Buttons */
 .filter-categories {
     display: flex;
     justify-content: center;
@@ -1428,7 +1392,6 @@ header {
     box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
 }
 
-/* Blogs Grid Layout */
 .blogs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -1436,7 +1399,6 @@ header {
     transition: all 0.4s ease;
 }
 
-/* Safari/Mobile browsers me hover par border-radius ko break hone se rokne ke liye */
 .blog-card {
     background: #ffffff;
     border-radius: 16px;
@@ -1445,8 +1407,7 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    /* NAYI LINE: Hover animation ke waqt corners ko smooth rakhega */
-    transform: translateZ(0); 
+    transform: translateZ(0);
 }
 
 .blog-card:hover {
@@ -1454,21 +1415,19 @@ header {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Image container ko better responsive banane ke liye fixed height hata kar aspect-ratio use karein */
 .blog-img {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9; /* Perfect widescreen ratio (220px height hata dein) */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
 }
 
-/* Image alignment aur rendering fix karne ke liye */
 .blog-img img {
     width: 100%;
     height: 100%;
-    object-fit:fill; /* Agar aap chahte hain ki image bilkul bhi na kate, toh ise 'contain' kar dein */
-    object-position: center top; /* Image ko perfectly center align karne ke liye */
-    display: block; /* Image ke neeche aane wale extra white space/gap ko hatane ke liye */
+    object-fit: fill;
+    object-position: center top;
+    display: block;
     transition: transform 0.5s ease;
 }
 
@@ -1490,7 +1449,6 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Blog Inner Content */
 .blog-content {
     padding: 25px;
     display: flex;
@@ -1545,7 +1503,6 @@ header {
     color: #0369a1;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .blog-header h2 {
         font-size: 2rem;
@@ -1560,7 +1517,6 @@ header {
     }
 }
 
-
 .testimonials-section {
     padding: 80px 20px;
     background: radial-gradient(circle at top right, #e0f2fe 0%, #f8fafc 70%);
@@ -1573,7 +1529,6 @@ header {
     position: relative;
 }
 
-/* Header Text */
 .testi-header {
     text-align: center;
     margin-bottom: 50px;
@@ -1594,7 +1549,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* Slider Container Setup */
 .testimonials-slider-container {
     position: relative;
     max-width: 750px;
@@ -1605,10 +1559,8 @@ header {
 .testimonials-wrapper {
     position: relative;
     height: 320px;
-    /* Standard card container height */
 }
 
-/* Single Review Card */
 .testimonial-card {
     background: #ffffff;
     padding: 40px;
@@ -1624,7 +1576,6 @@ header {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Active Class Dynamic Trigger */
 .testimonial-card.active {
     opacity: 1;
     transform: scale(1) translateX(0);
@@ -1648,14 +1599,13 @@ header {
 
 .rating-stars {
     color: #fbbf24;
-    /* Amber Gold color for stars */
     margin-bottom: 25px;
     font-size: 1rem;
 }
 
 .slider-controls {
-    position: absolute; /* Ya relative, design ke hisaab se */
-    z-index: 10; /* Z-index badha dein taaki ye wrapper ke upar aa jaye */
+    position: absolute;
+    z-index: 10;
     pointer-events: auto;
 }
 
@@ -1665,7 +1615,6 @@ header {
     z-index: 10;
 }
 
-/* User Profile Row */
 .user-info {
     display: flex;
     align-items: center;
@@ -1691,7 +1640,6 @@ header {
     color: #94a3b8;
 }
 
-/* Controls Buttons */
 .slider-controls {
     display: flex;
     justify-content: space-between;
@@ -1727,7 +1675,6 @@ header {
     box-shadow: 0 6px 15px rgba(2, 132, 199, 0.3);
 }
 
-/* Dots Indicators */
 .dot-indicators {
     display: flex;
     justify-content: center;
@@ -1750,11 +1697,9 @@ header {
     border-radius: 10px;
 }
 
-/* Responsive Styles */
 @media (max-width: 900px) {
     .slider-controls {
         display: none;
-        /* Mobile screen me dots kafi hain navigation ke liye */
     }
 
     .testimonials-wrapper {
@@ -1765,10 +1710,6 @@ header {
         padding: 30px 20px;
     }
 }
-
-/* ===========================
-     NEWSLETTER SECTION
-=========================== */
 
 .newsletter-section {
     padding: 100px 20px;
@@ -1823,8 +1764,6 @@ header {
     margin-bottom: 40px;
 }
 
-/* Form */
-
 .newsletter-form {
     max-width: 700px;
     margin: auto;
@@ -1862,8 +1801,6 @@ header {
     transform: translateY(-4px);
 }
 
-/* Features */
-
 .newsletter-features {
     display: flex;
     justify-content: center;
@@ -1882,8 +1819,6 @@ header {
 .newsletter-features i {
     color: #fff7d6;
 }
-
-/* Responsive */
 
 @media (max-width: 768px) {
 
@@ -1912,10 +1847,6 @@ header {
         gap: 15px;
     }
 }
-
-/* ===========================
-          FOOTER
-=========================== */
 
 .footer {
     background: #0f172a;
@@ -1953,8 +1884,6 @@ header {
     border-radius: 10px;
 }
 
-/* Logo */
-
 .footer-logo {
     color: #fff;
     font-size: 2rem;
@@ -1969,8 +1898,6 @@ header {
     line-height: 1.8;
     margin-bottom: 30px;
 }
-
-/* Links */
 
 .footer-column ul {
     list-style: none;
@@ -1991,8 +1918,6 @@ header {
     padding-left: 8px;
 }
 
-/* Contact */
-
 .footer-contact li {
     display: flex;
     gap: 15px;
@@ -2005,8 +1930,6 @@ header {
     min-width: 20px;
 }
 
-/* Social */
-
 .social-links {
     display: flex;
     gap: 15px;
@@ -2018,11 +1941,9 @@ header {
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-decoration: none;
     transition: 0.4s;
 }
@@ -2032,18 +1953,14 @@ header {
     transform: translateY(-5px);
 }
 
-/* Bottom Footer */
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 25px 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     max-width: 1250px;
     margin: auto;
 }
@@ -2068,8 +1985,6 @@ header {
     color: #ff6b6b;
 }
 
-/* Responsive */
-
 @media (max-width: 768px) {
 
     .footer {
@@ -2091,14 +2006,14 @@ header {
 }
 
 
-.search-suggestions{
+.search-suggestions {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
     max-height: 300px;
     overflow-y: auto;
     z-index: 9999;
@@ -2106,17 +2021,17 @@ header {
     margin-top: 5px;
 }
 
-.search-suggestions .suggestion-item{
+.search-suggestions .suggestion-item {
     padding: 12px 15px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
     transition: .3s;
 }
 
-.search-suggestions .suggestion-item:hover{
+.search-suggestions .suggestion-item:hover {
     background: #f5f5f5;
 }
 
-.search-suggestions .suggestion-item:last-child{
+.search-suggestions .suggestion-item:last-child {
     border-bottom: none;
 }

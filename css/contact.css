@@ -362,10 +362,6 @@ header {
     padding: 60px 20px;
 }
 
-/* ==========================================================================
-   Shared type & section helpers
-   ========================================================================== */
-
 h1,
 h2,
 h3,
@@ -392,10 +388,6 @@ h3,
     display: block;
     text-align: center;
 }
-
-/* ==========================================================================
-   Contact Hero
-   ========================================================================== */
 
 .contact-hero {
     position: relative;
@@ -456,10 +448,6 @@ h3,
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
 }
-
-/* ==========================================================================
-   Quick Contact Cards
-   ========================================================================== */
 
 .contact-cards {
     display: grid;
@@ -534,10 +522,6 @@ h3,
         grid-template-columns: 1fr;
     }
 }
-
-/* ==========================================================================
-   Contact Form + Side Panel
-   ========================================================================== */
 
 .contact-main {
     display: grid;
@@ -739,10 +723,6 @@ h3,
     }
 }
 
-/* ==========================================================================
-   FAQ Section
-   ========================================================================== */
-
 .contact-faq {
     text-align: center;
 }
@@ -806,17 +786,11 @@ h3,
     line-height: 1.65;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.1rem;
     }
 }
-
-
-/* ===========================
-          FOOTER
-=========================== */
 
 .footer {
     background: #0f172a;
@@ -828,11 +802,9 @@ h3,
     max-width: 1250px;
     margin: auto;
     padding: 0 20px 60px;
-
     display: grid;
     grid-template-columns:
         repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 50px;
 }
 
@@ -854,8 +826,6 @@ h3,
     border-radius: 10px;
 }
 
-/* Logo */
-
 .footer-logo {
     color: #fff;
     font-size: 2rem;
@@ -870,8 +840,6 @@ h3,
     line-height: 1.8;
     margin-bottom: 30px;
 }
-
-/* Links */
 
 .footer-column ul {
     list-style: none;
@@ -892,8 +860,6 @@ h3,
     padding-left: 8px;
 }
 
-/* Contact */
-
 .footer-contact li {
     display: flex;
     gap: 15px;
@@ -906,8 +872,6 @@ h3,
     min-width: 20px;
 }
 
-/* Social */
-
 .social-links {
     display: flex;
     gap: 15px;
@@ -919,11 +883,9 @@ h3,
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-decoration: none;
     transition: 0.4s;
 }
@@ -932,8 +894,6 @@ h3,
     background: #ff6b6b;
     transform: translateY(-5px);
 }
-
-/* Bottom Footer */
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -968,8 +928,6 @@ h3,
 .footer-policy a:hover {
     color: #ff6b6b;
 }
-
-/* Responsive */
 
 @media (max-width: 768px) {
 

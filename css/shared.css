@@ -356,7 +356,6 @@ header {
     }
 }
 
-/* ── 3. HERO BANNER ── */
 .page-hero {
     position: relative;
     padding: 6rem 2rem 4rem;
@@ -400,7 +399,6 @@ header {
     margin: 0 auto;
 }
 
-/* ── 4. PACKAGES GRID ── */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -413,7 +411,6 @@ header {
     gap: 2rem;
 }
 
-/* ── 5. PREMIUM PACKAGE CARD (Light Theme) ── */
 .pkg-card {
     background: var(--clr-surface);
     border: 1px solid var(--clr-border);
@@ -432,16 +429,11 @@ header {
     border-color: rgba(255, 126, 95, 0.4);
 }
 
-/* Card Thumbnail */
-/* Card Thumbnail */
 .pkg-card-thumb {
     position: relative;
-    /* height: 220px;  <-- Is fixed height ko hata diya hai */
     aspect-ratio: 16 / 9;
-    /* Ye standard banner size maintain karega */
     overflow: hidden;
     background: #f8fafc;
-    /* Light background taaki corners clean lagen */
     width: 100%;
 }
 
@@ -449,14 +441,12 @@ header {
     width: 100%;
     height: 100%;
     object-fit: fill;
-    /* 'cover' ki jagah 'contain' taaki poori image bina kate dikhe */
     display: block;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .pkg-card:hover .pkg-card-img {
     transform: scale(1.05);
-    /* Hover par thoda smooth zoom effect */
 }
 
 .pkg-card-img-placeholder {
@@ -470,7 +460,6 @@ header {
     color: var(--clr-accent);
 }
 
-/* Card Body */
 .pkg-card-body {
     padding: 1.5rem;
     display: flex;
@@ -478,7 +467,6 @@ header {
     flex-grow: 1;
 }
 
-/* Badge (Special/Offer) */
 .pkg-card-badge {
     align-self: flex-start;
     font-size: 0.75rem;
@@ -493,7 +481,6 @@ header {
     margin-bottom: 1rem;
 }
 
-/* Title & Location */
 .pkg-card-title {
     font-family: var(--font-display);
     font-size: 1.4rem;
@@ -512,7 +499,6 @@ header {
     gap: 5px;
 }
 
-/* Meta Info (Duration, Rating, Group) */
 .pkg-card-meta {
     display: flex;
     align-items: center;
@@ -535,7 +521,6 @@ header {
     gap: 4px;
 }
 
-/* Tags */
 .pkg-tags {
     display: flex;
     flex-wrap: wrap;
@@ -560,7 +545,6 @@ header {
     border-color: #ffd8cf;
 }
 
-/* Card Footer (Price & Action) */
 .pkg-card-footer {
     display: flex;
     align-items: center;
@@ -587,7 +571,6 @@ header {
     margin-top: 4px;
 }
 
-/* ── 6. BUTTONS ── */
 .btn {
     display: inline-block;
     padding: 0.6rem 1.2rem;
@@ -622,7 +605,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* ── 7. LOADING / ERROR STATES ── */
 .state-loading,
 .state-error {
     grid-column: 1/-1;
@@ -655,7 +637,6 @@ header {
     border: 1px solid #feb2b2;
 }
 
-/* ── 8. RESPONSIVE MEDIA QUERIES ── */
 @media (max-width: 768px) {
     .top-bar {
         padding: 15px 20px;
@@ -663,12 +644,10 @@ header {
 
     .search-bar {
         display: none;
-        /* Can be toggled via JS on mobile */
     }
 
     .nav-links {
         display: none;
-        /* Implement hamburger menu for this */
     }
 
     .page-hero {
@@ -687,12 +666,6 @@ header {
     }
 }
 
-
-
-/* ===========================
-          FOOTER
-=========================== */
-
 .footer {
     background: #0f172a;
     color: #cbd5e1;
@@ -703,11 +676,9 @@ header {
     max-width: 1250px;
     margin: auto;
     padding: 0 20px 60px;
-
     display: grid;
     grid-template-columns:
         repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 50px;
 }
 
@@ -729,8 +700,6 @@ header {
     border-radius: 10px;
 }
 
-/* Logo */
-
 .footer-logo {
     color: #fff;
     font-size: 2rem;
@@ -745,8 +714,6 @@ header {
     line-height: 1.8;
     margin-bottom: 30px;
 }
-
-/* Links */
 
 .footer-column ul {
     list-style: none;
@@ -767,8 +734,6 @@ header {
     padding-left: 8px;
 }
 
-/* Contact */
-
 .footer-contact li {
     display: flex;
     gap: 15px;
@@ -781,8 +746,6 @@ header {
     min-width: 20px;
 }
 
-/* Social */
-
 .social-links {
     display: flex;
     gap: 15px;
@@ -794,11 +757,9 @@ header {
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-decoration: none;
     transition: 0.4s;
 }
@@ -808,18 +769,14 @@ header {
     transform: translateY(-5px);
 }
 
-/* Bottom Footer */
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 25px 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     max-width: 1250px;
     margin: auto;
 }
@@ -843,8 +800,6 @@ header {
 .footer-policy a:hover {
     color: #ff6b6b;
 }
-
-/* Responsive */
 
 @media (max-width: 768px) {
 

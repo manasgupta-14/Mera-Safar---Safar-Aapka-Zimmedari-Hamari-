@@ -382,14 +382,12 @@ header {
     margin-top: 2rem;
 }
 
-/* Grid Layout for Hotels */
 .hotel-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-/* Hotel Card Styling */
 .hotel-card {
     background: white;
     border-radius: 12px;
@@ -471,11 +469,6 @@ header {
     background-color: #1e3c72;
 }
 
-
-/* ===========================
-          FOOTER
-=========================== */
-
 .footer {
     background: #0f172a;
     color: #cbd5e1;
@@ -486,11 +479,9 @@ header {
     max-width: 1250px;
     margin: auto;
     padding: 0 20px 60px;
-
     display: grid;
     grid-template-columns:
         repeat(auto-fit, minmax(250px, 1fr));
-
     gap: 50px;
 }
 
@@ -512,8 +503,6 @@ header {
     border-radius: 10px;
 }
 
-/* Logo */
-
 .footer-logo {
     color: #fff;
     font-size: 2rem;
@@ -528,8 +517,6 @@ header {
     line-height: 1.8;
     margin-bottom: 30px;
 }
-
-/* Links */
 
 .footer-column ul {
     list-style: none;
@@ -550,8 +537,6 @@ header {
     padding-left: 8px;
 }
 
-/* Contact */
-
 .footer-contact li {
     display: flex;
     gap: 15px;
@@ -564,8 +549,6 @@ header {
     min-width: 20px;
 }
 
-/* Social */
-
 .social-links {
     display: flex;
     gap: 15px;
@@ -577,11 +560,9 @@ header {
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-decoration: none;
     transition: 0.4s;
 }
@@ -591,18 +572,14 @@ header {
     transform: translateY(-5px);
 }
 
-/* Bottom Footer */
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 25px 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     max-width: 1250px;
     margin: auto;
 }
@@ -626,8 +603,6 @@ header {
 .footer-policy a:hover {
     color: #ff6b6b;
 }
-
-/* Responsive */
 
 @media (max-width: 768px) {
 
