@@ -157,3 +157,91 @@ if (form) {
         }, 900);
     });
 }
+
+
+// ================= SEARCH =================
+const searchInput = document.getElementById("searchInput");
+const suggestionBox = document.getElementById("searchSuggestions");
+
+// ✅ Guard: searchInput exist nahi karta kuch pages par — crash rokne ke liye
+if (searchInput && suggestionBox) {
+
+    let allData = [];
+
+    const files = [
+        "./api/packages.json",
+        "./api/nav-bar-tour-packages.json",
+        "./api/explore-categories-packages.json",
+        "./api/popular-places-card-index.json",
+        "./api/nav-bar-destination.json",
+        "./api/categories.json",
+        "./api/travel-blogs-index.json",
+        "./api/trending-places-index.json",
+        "./api/testimonial-index.json",
+        "./api/why-choose-us-index.json"
+    ];
+
+    Promise.allSettled(
+        files.map(file => fetch(file).then(res => res.json()))
+    ).then(results => {
+        results.forEach(result => {
+            if (result.status === "fulfilled" && Array.isArray(result.value)) {
+                allData.push(...result.value);
+            }
+        });
+        console.log("Total Search Records:", allData.length);
+    });
+
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.trim().toLowerCase();
+        suggestionBox.innerHTML = "";
+
+        if (!keyword) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        const suggestions = new Set();
+
+        allData.forEach(item => {
+            const matched = Object.values(item).some(value => {
+                if (typeof value === "object") value = JSON.stringify(value);
+                return value && String(value).toLowerCase().includes(keyword);
+            });
+
+            if (matched) {
+                const text = item.name || item.title || item.destination ||
+                    item.place || item.category || item.slug;
+                if (text) suggestions.add(text);
+            }
+        });
+
+        const resultArray = [...suggestions].slice(0, 10);
+
+        if (!resultArray.length) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        resultArray.forEach(text => {
+            const div = document.createElement("div");
+            div.className = "suggestion-item";
+            div.textContent = text;
+            div.addEventListener("click", () => {
+                searchInput.value = text;
+                suggestionBox.style.display = "none";
+                // window.location.href = `search.html?q=${encodeURIComponent(text)}`;
+            });
+            suggestionBox.appendChild(div);
+        });
+
+        suggestionBox.style.display = "block";
+    });
+
+    document.addEventListener("click", e => {
+        if (!e.target.closest(".search-bar")) {
+            suggestionBox.style.display = "none";
+        }
+    });
+
+} // end searchInput guard
