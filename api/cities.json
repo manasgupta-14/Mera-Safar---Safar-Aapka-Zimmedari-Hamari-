@@ -3,42 +3,42 @@
     "id": "ct_1",
     "stateId": "st_1",
     "name": "Jaipur",
-    "image": "./assets/cities/jaipur.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlvB1ZiWV3bOWRhWv7vFdeDhFXg7ZW_d_1elCRqeND8-2Fpenv10ISYdkR&s=10",
     "description": "The Pink City of India."
   },
   {
     "id": "ct_2",
     "stateId": "st_1",
     "name": "Udaipur",
-    "image": "./assets/cities/udaipur.jpg",
+    "image": "https://i.ytimg.com/vi/cNhtsu1lnYk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCwj7MsdgSWd2fEZPy3PsYe2hFDag",
     "description": "Famous for its beautiful lakes and palaces."
   },
   {
     "id": "ct_3",
     "stateId": "st_1",
     "name": "Jodhpur",
-    "image": "./assets/cities/jodhpur.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5AfA2vPPCbK7TZsckpTw4VbGR8JWe_gR7aalLBK8u0g&s=10",
     "description": "Known as the Blue City."
   },
   {
     "id": "ct_4",
     "stateId": "st_1",
     "name": "Jaisalmer",
-    "image": "./assets/cities/jaisalmer.jpg",
+    "image": "https://i0.wp.com/www.crossroadadventure.com/wp-content/uploads/2024/01/Jaisalmer_featured-scaled.jpg?fit=2048%2C1365&ssl=1",
     "description": "The Golden City of Rajasthan."
   },
   {
     "id": "ct_5",
     "stateId": "st_1",
     "name": "Bikaner",
-    "image": "./assets/cities/bikaner.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2NX8CjBiHAY0yRxFnrf3u9up_-0KWtI6xARQL0Kmvpg&s=10",
     "description": "Famous for forts and camel festival."
   },
   {
     "id": "ct_6",
     "stateId": "st_1",
     "name": "Mount Abu",
-    "image": "./assets/cities/mount-abu.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA-oPnODrmopF5WiYB1aDbjoYxRxV4ENGUmqp6vw4ZqQ&s=10",
     "description": "Rajasthan's only hill station."
   },
 
@@ -46,214 +46,210 @@
     "id": "ct_7",
     "stateId": "st_2",
     "name": "Munnar",
-    "image": "./assets/cities/munnar.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwVvsEoqVidd4RR3m6ILkgGwwkPADFnpS7I6o-Sr9z3A&s=10",
     "description": "Beautiful tea gardens and hills."
   },
   {
     "id": "ct_8",
     "stateId": "st_2",
     "name": "Alleppey",
-    "image": "./assets/cities/alleppey.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNEHWhDUgV090lpglybSetzGOQZTpuvgxlyA9oCFQL1w&s=10",
     "description": "Famous for backwaters and houseboats."
   },
   {
     "id": "ct_9",
     "stateId": "st_2",
     "name": "Kochi",
-    "image": "./assets/cities/kochi.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHRAj-QxHH3-vljxASVwRB1AMLm75ezqez_ZljOHkGuA&s=10",
     "description": "Historic port city with modern charm."
   },
   {
     "id": "ct_10",
     "stateId": "st_2",
     "name": "Wayanad",
-    "image": "./assets/cities/wayanad.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4X116v3MPCcC2G6uoP34OrWMFwfZcydo8FkbM-AeE2w&s=10",
     "description": "Lush forests and waterfalls."
   },
   {
     "id": "ct_11",
     "stateId": "st_2",
     "name": "Kovalam",
-    "image": "./assets/cities/kovalam.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiU3g_u06ducChFY-KcXS8JbvAvF9iOhrbMmA-JrG0dQ&s=10",
     "description": "Popular beach destination."
   },
   {
     "id": "ct_12",
     "stateId": "st_2",
     "name": "Thekkady",
-    "image": "./assets/cities/thekkady.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8YdlfUxfMFoV-q5yYsgzvf3RFux8pQ6LJBjwkwKDiw&s=10",
     "description": "Wildlife sanctuary and spice plantations."
   },
-
   {
     "id": "ct_13",
     "stateId": "st_3",
     "name": "Nainital",
-    "image": "./assets/cities/nainital.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA01Z_R3INILxIe7sCHNl4HuoIYGgQtlW-sdXJOBEh5g&s=10",
     "description": "Lake city surrounded by hills."
   },
   {
     "id": "ct_14",
     "stateId": "st_3",
     "name": "Mussoorie",
-    "image": "./assets/cities/mussoorie.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREQz4q3lFIVjieZCAhBejVEkUH1q_x36DSf21kkjf3Eg&s=10",
     "description": "Queen of the Hills."
   },
   {
     "id": "ct_15",
     "stateId": "st_3",
     "name": "Rishikesh",
-    "image": "./assets/cities/rishikesh.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9gVkhiDUJdWg_UW6-HUzc-N4r3D7depJu9dNWALrCJQ&s=10",
     "description": "Yoga capital and adventure hub."
   },
   {
     "id": "ct_16",
     "stateId": "st_3",
     "name": "Haridwar",
-    "image": "./assets/cities/haridwar.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-xyBeh3cB9M9zmtcCeQ-LSwnoBptZ7KJLAjG9DlySrw&s=10",
     "description": "Sacred city on the Ganga."
   },
   {
     "id": "ct_17",
     "stateId": "st_3",
     "name": "Auli",
-    "image": "./assets/cities/auli.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYvQQ8AcRNhglS9WOEE0YQyrq2TTBfEjqiDLNaj-hngQ&s=10",
     "description": "India's famous skiing destination."
   },
   {
     "id": "ct_18",
     "stateId": "st_3",
     "name": "Dehradun",
-    "image": "./assets/cities/dehradun.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN27gBtNkds8eD5SB8umDE1BGB7SDjMZYRntyUtav6Rw&s=10",
     "description": "Capital city with scenic beauty."
   },
-
   {
     "id": "ct_19",
     "stateId": "st_4",
     "name": "Agra",
-    "image": "./assets/cities/agra.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLhxglj2WwnLHvu5qcrGyXH_W3ooPbgDn5dhe9FGxFHg&s",
     "description": "Home of the iconic Taj Mahal."
   },
   {
     "id": "ct_20",
     "stateId": "st_4",
     "name": "Varanasi",
-    "image": "./assets/cities/varanasi.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgcqSgJBGd_bIahqRDtrSZ5YK5jqo7fNL44pvp2hLw6A&s=10",
     "description": "One of the world's oldest living cities."
   },
   {
     "id": "ct_21",
     "stateId": "st_4",
     "name": "Lucknow",
-    "image": "./assets/cities/lucknow.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx_DFPEfniwwbmtQM6OjUKVCKOz8sVyOc982yOoF-5Gw&s=10",
     "description": "City of Nawabs and kebabs."
   },
   {
     "id": "ct_22",
     "stateId": "st_4",
     "name": "Prayagraj",
-    "image": "./assets/cities/prayagraj.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxlc4HnS-YUNrtcF5o9_QkcUhGeR64TZwNx_lMRhUKOA&s",
     "description": "Famous for the Triveni Sangam."
   },
   {
     "id": "ct_23",
     "stateId": "st_4",
     "name": "Gorakhpur",
-    "image": "./assets/cities/gorakhpur.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP6B2luW_q5_QtxlP0Otubtk4jXRCTgZWsTCGezzNgJA&s",
     "description": "Known for Gorakhnath Temple and rich heritage."
   },
   {
     "id": "ct_24",
     "stateId": "st_4",
     "name": "Ayodhya",
-    "image": "./assets/cities/ayodhya.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEz0_tDlpLMcPJk04q4y5MEi9jjq5I1Uj_QNVXEXCR-g&s=10",
     "description": "Sacred birthplace of Lord Rama."
   },
-
   {
     "id": "ct_25",
     "stateId": "st_5",
     "name": "Panaji",
-    "image": "./assets/cities/panaji.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyZPBdZJHh--EUMiM78jbxz7nvU0Tlg6LItv2v6b0n-A&s=10",
     "description": "Capital city with Portuguese charm."
   },
   {
     "id": "ct_26",
     "stateId": "st_5",
     "name": "Calangute",
-    "image": "./assets/cities/calangute.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSqL30sGWYlHNEVLO8oj5xbgldX2AVD-pxgqDj3UFhA&s=10",
     "description": "Goa's most famous beach."
   },
   {
     "id": "ct_27",
     "stateId": "st_5",
     "name": "Baga",
-    "image": "./assets/cities/baga.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-D8AoMnSJoqnNKoIZFk9Pi7EvSIizhO1mNYwQz67zQ&s=10",
     "description": "Popular for nightlife and water sports."
   },
   {
     "id": "ct_28",
     "stateId": "st_5",
     "name": "Candolim",
-    "image": "./assets/cities/candolim.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXKF8IayTTgm49ireWQnBUNPqdjzpDKZN8tZg1EydOaQ&s=10",
     "description": "Peaceful beach with resorts."
   },
   {
     "id": "ct_29",
     "stateId": "st_5",
     "name": "Vagator",
-    "image": "./assets/cities/vagator.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmaglxGnM-fl5_123P0weS9ACOXPpcznMW_-q4xcelRg&s=10",
     "description": "Cliffside beaches and vibrant cafes."
   },
   {
     "id": "ct_30",
     "stateId": "st_5",
     "name": "Palolem",
-    "image": "./assets/cities/palolem.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkgknzegbevDCA5s03gKZN65NcI8Uc4VQLn0aFup68A&s=10",
     "description": "One of South Goa's most scenic beaches."
   },
-
   {
     "id": "ct_31",
     "stateId": "st_6",
     "name": "Shimla",
-    "image": "./assets/cities/shimla.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr6TrtVi-FGsHKNLI-7LvcqrhZGfNAfKYkJ0xzuLbAeA&s=10",
     "description": "Queen of Hills."
   },
   {
     "id": "ct_32",
     "stateId": "st_6",
     "name": "Manali",
-    "image": "./assets/cities/manali.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqH1WFrhrpO2Ps2_hB3u1MqOROP3z2OzbJYOd3xWxtNQ&s=10",
     "description": "Adventure and snow paradise."
   },
   {
     "id": "ct_33",
     "stateId": "st_6",
     "name": "Dharamshala",
-    "image": "./assets/cities/dharamshala.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH-Ha3jnzDUConbLhaLaOArZKdLcdZgoHYcmMB9tzEUw&s=10",
     "description": "Home of the Dalai Lama."
   },
   {
     "id": "ct_34",
     "stateId": "st_6",
     "name": "Kasol",
-    "image": "./assets/cities/kasol.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tbrifVt1vTrtK4UO2kQDDJ1n9OBIUnRtGvZnS7RTYQ&s=10",
     "description": "A backpacker's favorite destination."
   },
   {
     "id": "ct_35",
     "stateId": "st_6",
     "name": "Kullu",
-    "image": "./assets/cities/kullu.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiTfYYehcGSKBFj7eO9Q5001HbW16lOCEhoUERtk4V3Q&s=10",
     "description": "Valley of Gods."
   },
   {
     "id": "ct_36",
     "stateId": "st_6",
     "name": "Spiti",
-    "image": "./assets/cities/spiti.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm17F4rWDXCdrzt86H7FkfDmGBSPjvr3s0HItq7j04hQ&s=10",
     "description": "Cold desert with breathtaking landscapes."
   }
 ]
