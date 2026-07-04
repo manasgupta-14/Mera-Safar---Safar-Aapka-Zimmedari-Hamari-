@@ -52,7 +52,7 @@
     {
       "id": "blog_05",
       "category": "adventure",
-      "image": "./assets/Rishikesh-travel-blogs.png",
+      "image": "",
       "badge": "Action",
       "date": "March 22, 2026",
       "author": "By ThrillSeeker",
@@ -64,7 +64,7 @@
     {
       "id": "blog_06",
       "category": "spiritual",
-      "image": "./assets/Varanasi-travel-blogs.png",
+      "image": "",
       "badge": "Peace",
       "date": "March 05, 2026",
       "author": "By MeraSafar",
@@ -76,7 +76,7 @@
     {
       "id": "blog_07",
       "category": "heritage",
-      "image": "./assets/Jaipur-travel-blogs.png",
+      "image": "",
       "badge": "Classic",
       "date": "February 14, 2026",
       "author": "By HistoryBuff",
@@ -88,7 +88,7 @@
     {
       "id": "blog_08",
       "category": "hill_station",
-      "image": "./assets/Darjeeling-travel-blogs.png",
+      "image": "",
       "badge": "Relaxing",
       "date": "January 28, 2026",
       "author": "By Admin",
@@ -100,7 +100,7 @@
     {
       "id": "blog_09",
       "category": "wildlife",
-      "image": "./assets/Jim-Corbett-travel-blogs.png",
+      "image": "",
       "badge": "Wild",
       "date": "December 12, 2025",
       "author": "By NatureLover",
@@ -112,7 +112,7 @@
     {
       "id": "blog_10",
       "category": "honeymoon",
-      "image": "./assets/Udaipur-travel-blogs.png",
+      "image": "",
       "badge": "Couples",
       "date": "November 20, 2025",
       "author": "By Traveller",
@@ -124,7 +124,7 @@
     {
       "id": "blog_11",
       "category": "family",
-      "image": "./assets/Kerala-Houseboat-travel-blogs.png",
+      "image": "",
       "badge": "Family First",
       "date": "October 30, 2025",
       "author": "By MeraSafar",
@@ -136,7 +136,7 @@
     {
       "id": "blog_12",
       "category": "solo",
-      "image": "./assets/Spiti-Valley-travel-blogs.png",
+      "image": "",
       "badge": "Must Try",
       "date": "September 15, 2025",
       "author": "By SoloRider",
@@ -148,7 +148,7 @@
     {
       "id": "blog_13",
       "category": "group",
-      "image": "./assets/Goa-travel-blogs.png",
+      "image": "",
       "badge": "Party",
       "date": "August 22, 2025",
       "author": "By Admin",
@@ -160,7 +160,7 @@
     {
       "id": "blog_14",
       "category": "spiritual",
-      "image": "./assets/Amritsar-travel-blogs.png",
+      "image": "",
       "badge": "Divine",
       "date": "July 11, 2025",
       "author": "By Wanderlust",
@@ -172,7 +172,7 @@
     {
       "id": "blog_15",
       "category": "wildlife",
-      "image": "./assets/Kaziranga-travel-blogs.png",
+      "image": "",
       "badge": "Nature",
       "date": "June 05, 2025",
       "author": "By NatureLover",
