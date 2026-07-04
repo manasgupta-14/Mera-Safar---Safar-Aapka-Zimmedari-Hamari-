@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // URL se Booking ID aur download parameter nikalna
     const urlParams = new URLSearchParams(window.location.search);
     const bookingId = urlParams.get('bookingId');
-    const isDownload = urlParams.get('download'); // Check if download is requested
+    const isDownload = urlParams.get('download'); 
 
     if (!bookingId) {
         alert("No Booking ID found!");
@@ -10,10 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // LocalStorage se booking details lana
     let myBookings = JSON.parse(localStorage.getItem("myBookings")) || [];
     
-    // Yahan BookingID ki jagah bookingId aayega (exact match with previous code)
     let bookingData = myBookings.find(b => b.bookingId === bookingId);
 
     if (!bookingData) {
@@ -22,21 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // HTML elements mein data dalna (Saare variables lowercase/camelCase kiye gaye hain)
     document.getElementById("tkt-id").innerText = bookingData.bookingId;
     document.getElementById("tkt-time").innerText = bookingData.bookingTime;
     document.getElementById("tkt-name").innerText = bookingData.name;
     document.getElementById("tkt-package").innerText = bookingData.packageName;
-    document.getElementById("tkt-date").innerText = bookingData.departureDate; // Date ki jagah departureDate
+    document.getElementById("tkt-date").innerText = bookingData.departureDate; 
     document.getElementById("tkt-pax").innerText = bookingData.totalPax + " (" + bookingData.packageType + ")";
     document.getElementById("tkt-email").innerText = bookingData.email;
     document.getElementById("tkt-mobile").innerText = bookingData.mobile;
-    document.getElementById("tkt-price").innerText = "₹" + bookingData.totalAmount; // FinalPrice ki jagah totalAmount
+    document.getElementById("tkt-price").innerText = "₹" + bookingData.totalAmount; 
 
-    // FIX: Sirf tabhi download trigger karein jab URL me 'download=true' ho
     if (isDownload === 'true') {
         setTimeout(() => {
-            // Yahan bhi bookingId case theek kiya gaya hai
             downloadPDF(bookingData.bookingId);
         }, 1000);
     }
@@ -45,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function downloadPDF(bookingId) {
     const element = document.getElementById("ticketContent");
 
-    // Fallback if bookingId is undefined when clicking the manual download button
     if (!bookingId) {
         const urlParams = new URLSearchParams(window.location.search);
         bookingId = urlParams.get('bookingId') || 'Ticket';

@@ -1,24 +1,18 @@
-// ================= js/myAccount.js =================
-
-// 1. Protection: Check if user is logged in
 let currentUserData = JSON.parse(localStorage.getItem("currentUser"));
 let isUserLoggedIn = localStorage.getItem("isLoggedIn");
 
 if (!currentUserData && isUserLoggedIn !== "true") {
     alert("Access Denied. Please log in to view your account.");
-    window.location.href = "login.html"; 
+    window.location.href = "login.html";
 }
 
-// 2. Load existing user data on page load
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Load Profile Picture
     const savedPic = localStorage.getItem("profilePicture");
     if (savedPic) {
         document.getElementById("profileImagePreview").src = savedPic;
     }
 
-    // Load Profile Details (Syncing with currentUser)
     const savedName = currentUserData ? currentUserData.name : (localStorage.getItem("userName") || "Test User");
     const savedEmail = currentUserData ? currentUserData.email : (localStorage.getItem("userEmail") || "user@example.com");
 
@@ -26,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("emailAddress").value = savedEmail;
 });
 
-// 3. Handle Profile Picture Upload
 document.getElementById("profilePictureInput").addEventListener("change", function (event) {
     const file = event.target.files[0];
 
@@ -44,18 +37,15 @@ document.getElementById("profilePictureInput").addEventListener("change", functi
     }
 });
 
-// 4. Handle Edit Profile Submission
 document.getElementById("editProfileForm").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const newName = document.getElementById("fullName").value;
     const newEmail = document.getElementById("emailAddress").value;
 
-    // Save to localStorage individually
     localStorage.setItem("userName", newName);
     localStorage.setItem("userEmail", newEmail);
 
-    // Update currentUser object as well so Navbar also gets the updated name
     if (currentUserData) {
         currentUserData.name = newName;
         currentUserData.email = newEmail;
@@ -65,9 +55,8 @@ document.getElementById("editProfileForm").addEventListener("submit", function (
     alert("Profile details updated successfully!");
 });
 
-// 5. Handle Change Password Submission
 document.getElementById("changePasswordForm").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const currentPass = document.getElementById("currentPassword").value;
     const newPass = document.getElementById("newPassword").value;
@@ -87,14 +76,12 @@ document.getElementById("changePasswordForm").addEventListener("submit", functio
     document.getElementById("changePasswordForm").reset();
 });
 
-// 6. Logout Functionality (SYNCED)
 function logout() {
-    // Navbar aur My Account dono ke variables delete karein
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("currentUser");
     localStorage.removeItem("userName");
     localStorage.removeItem("userEmail");
 
     alert("You have been logged out successfully.");
-    window.location.href = "index.html"; 
+    window.location.href = "index.html";
 }

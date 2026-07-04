@@ -1,18 +1,8 @@
-/* =============================================
-   packages.js — Real JSON se data fetch karta hai
-   Sources:
-     - ./api/explore-categories-packages.json  (packages data)
-     - ./api/categories.json                   (category info: icon, name)
-   Usage: loadPackages(categoryId)
-   ============================================= */
-
-// ── Cache: ek baar fetch, baar baar use ──
 let _packagesData = null;
 let _categoriesData = null;
 
-// Dono JSON files ek saath load karo (parallel)
 async function fetchAllData() {
-    if (_packagesData && _categoriesData) return; // already loaded
+    if (_packagesData && _categoriesData) return; 
 
     const [pkgRes, catRes] = await Promise.all([
         fetch("./api/explore-categories-packages.json"),
@@ -26,14 +16,12 @@ async function fetchAllData() {
     _categoriesData = await catRes.json();
 }
 
-// Category ka icon categories.json se nikalo
 function getCategoryIcon(categoryId) {
     if (!_categoriesData) return "📦";
     const cat = _categoriesData.find(c => c.id === categoryId);
     return cat ? cat.icon : "📦";
 }
 
-// Cards render karo
 function renderPackages(packages, container) {
     if (!packages || packages.length === 0) {
         container.innerHTML = `
@@ -49,13 +37,11 @@ function renderPackages(packages, container) {
             ? `₹${pkg.price.toLocaleString("en-IN")}`
             : pkg.price;
 
-        // Image hai to use karo, nahi hai to emoji placeholder
         const imageHTML = pkg.image
             ? `<img class="pkg-card-img" src="${pkg.image}" alt="${pkg.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                <div class="pkg-card-img-placeholder" style="display:none">${icon}</div>`
             : `<div class="pkg-card-img-placeholder">${icon}</div>`;
 
-        // Tags
         const tagsHTML = pkg.tags && pkg.tags.length
             ? `<div class="pkg-tags">${pkg.tags.map(t => `<span class="pkg-tag">#${t}</span>`).join("")}</div>`
             : "";
@@ -87,12 +73,10 @@ function renderPackages(packages, container) {
     }).join("");
 }
 
-// Main function — har page yahi call karega
 async function loadPackages(categoryId) {
     const container = document.getElementById("packages-container");
     if (!container) return;
 
-    // Loading state dikhao
     container.innerHTML = `
         <div class="state-loading">
             <div class="spinner"></div>
@@ -102,7 +86,6 @@ async function loadPackages(categoryId) {
     try {
         await fetchAllData();
 
-        // categoryId se match karo
         const filtered = _packagesData.filter(pkg => pkg.categoryId === categoryId);
         renderPackages(filtered, container);
 

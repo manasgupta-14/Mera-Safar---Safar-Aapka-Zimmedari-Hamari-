@@ -1,9 +1,7 @@
-// ================= GLOBAL VARIABLES =================
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 let isLoggedIn = (currentUser !== null) || (localStorage.getItem("isLoggedIn") === "true");
 let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
-// ================= SESSION & NAVBAR =================
 function updateNavbarUI() {
     const loginBtns = document.querySelectorAll('.login-button');
 
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     checkSession();
 });
 
-// ================= NAVBAR HAMBURGER =================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -64,7 +61,6 @@ if (hamburger && navLinks) {
     });
 }
 
-// ================= IMAGE SLIDER =================
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
@@ -94,7 +90,6 @@ if (slider && slides.length > 0) {
     }, 5000);
 }
 
-// ================= FETCH: DESTINATION MENU =================
 const destinationMenu = document.getElementById("destinationMenu");
 
 if (destinationMenu) {
@@ -125,15 +120,11 @@ if (destinationMenu) {
         .catch(err => console.error("Error fetching destinations:", err));
 }
 
-// ================= FETCH: TOUR PACKAGES MENU =================
-// ✅ Yahan sab slugs ke liye page map clearly define kar diya hai
 const TOUR_PAGE_MAP = {
     "adventure-tours": "adventure.html",
     "honeymoon-packages": "honeymoon.html",
     "family-tours": "family.html",
     "solo-trips": "solo.html",
-    // Naye slugs add karne ho to bas yahan ek line add karo:
-    // "wildlife-safari":   "wildlife.html",
 };
 
 const tourPackagesMenu = document.getElementById("tourpackagesMenu");
@@ -148,7 +139,6 @@ if (tourPackagesMenu) {
             let menuHTML = "";
 
             data.forEach((item) => {
-                // Map mein slug milega to us page par, nahi mila to packages.html (default)
                 const page = TOUR_PAGE_MAP[item.slug] || "packages.html";
 
                 menuHTML += `
@@ -165,7 +155,6 @@ if (tourPackagesMenu) {
         .catch(err => console.error("Tour Packages menu error:", err));
 }
 
-// ================= FETCH: POPULAR PLACES =================
 const popularPlaces = document.getElementById("popularPlacesCard");
 
 if (popularPlaces) {
@@ -205,7 +194,6 @@ function openGoogleMaps(lat, lng) {
     window.open(mapUrl, "_blank");
 }
 
-// ================= FETCH: TRENDING PLACES =================
 const trendingPlaces = document.getElementById("trendingPlacesCard");
 
 if (trendingPlaces) {
@@ -262,7 +250,6 @@ if (trendingPlaces) {
     loadTrendingPlaces();
 }
 
-// ================= FETCH: EXPLORE CATEGORIES =================
 const exploreCategories = document.getElementById("exploreCategoryCard");
 
 if (exploreCategories) {
@@ -321,8 +308,6 @@ if (exploreCategories) {
     loadExploreCategories();
 }
 
-// ================= BLOG FILTERS (Static HTML cards ke liye) =================
-// Ye tab kaam aata hai jab blog cards JSON se nahi, seedhe HTML mein likhe hain
 document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const blogCards = document.querySelectorAll(".blog-card");
@@ -357,7 +342,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// ================= TRAVEL BLOGS =================
 const blogsGrid = document.querySelector(".blogs-grid");
 
 if (blogsGrid) {
@@ -369,7 +353,6 @@ if (blogsGrid) {
             if (result.success && result.data) {
                 let html = "";
 
-                // .slice(0, 4) add kiya gaya hai taaki sirf 4 hi items aayein
                 result.data.slice(0, 4).forEach((blog) => {
                     html += `
                     <div class="blog-card" data-category="${blog.category}">
@@ -393,7 +376,7 @@ if (blogsGrid) {
                 });
 
                 blogsGrid.innerHTML = html;
-                initializeBlogFilters(); // Data load ke baad filter initialize karo
+                initializeBlogFilters();
             }
         } catch (error) {
             console.error("Travel Blogs Fetch Error:", error);
@@ -432,7 +415,6 @@ function initializeBlogFilters() {
     }
 }
 
-// ================= TESTIMONIALS =================
 const testimonialsWrapper = document.querySelector(".testimonials-wrapper");
 const dotIndicators = document.querySelector(".dot-indicators");
 
@@ -533,7 +515,6 @@ function initTestimonialSlider() {
     }
 }
 
-// ================= WHY CHOOSE US =================
 const whyChooseGrid = document.querySelector(".why-cards-grid");
 
 if (whyChooseGrid) {
@@ -565,11 +546,9 @@ if (whyChooseGrid) {
     loadWhyChooseUs();
 }
 
-// ================= SEARCH =================
 const searchInput = document.getElementById("searchInput");
 const suggestionBox = document.getElementById("searchSuggestions");
 
-// ✅ Guard: searchInput exist nahi karta kuch pages par — crash rokne ke liye
 if (searchInput && suggestionBox) {
 
     let allData = [];
@@ -636,7 +615,6 @@ if (searchInput && suggestionBox) {
             div.addEventListener("click", () => {
                 searchInput.value = text;
                 suggestionBox.style.display = "none";
-                // window.location.href = `search.html?q=${encodeURIComponent(text)}`;
             });
             suggestionBox.appendChild(div);
         });
@@ -650,4 +628,4 @@ if (searchInput && suggestionBox) {
         }
     });
 
-} // end searchInput guard
+} 

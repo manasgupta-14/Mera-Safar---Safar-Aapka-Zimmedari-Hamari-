@@ -20,7 +20,6 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
     let pendingUser = { name, email, mobile, dob, password: pass, token };
     localStorage.setItem("pendingUser", JSON.stringify(pendingUser));
 
-    // verification link login page pe bhejege jaha logic likha hai
     let currentUrl = window.location.origin + window.location.pathname;
     let verifyLink = currentUrl.replace('signUp.html', 'login.html') + `?verify_token=${token}`;
 

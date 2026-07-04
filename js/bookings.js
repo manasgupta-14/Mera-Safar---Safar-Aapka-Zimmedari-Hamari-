@@ -1,5 +1,3 @@
-// ================= FETCH APIs =================
-// ================= FETCH APIs (Updated) =================
 const destinationMenu = document.getElementById("destinationMenu");
 
 if (destinationMenu) {
@@ -11,11 +9,9 @@ if (destinationMenu) {
 
             data.forEach(item => {
 
-                // Default page
                 let page = "destination.html";
                 let query = "category";
 
-                // Historical option ke liye alag page
                 if (item.slug === "historical") {
                     page = "historical.html";
                     query = "category";
@@ -68,7 +64,6 @@ function loadMyBookings() {
         return;
     }
 
-    // FIX: 'b.Email' ki jagah 'b.email' kiya gaya hai
     let userBookings = myBookings.filter(b => b.email === currentUser.email);
 
     if (userBookings.length === 0) {
@@ -80,14 +75,11 @@ function loadMyBookings() {
             </div>
         `;
     } else {
-        // Reverse array so newest bookings show first
         userBookings.reverse();
 
         listContainer.innerHTML = userBookings.map(b => {
-            // FIX: 'b.Status' ki jagah 'b.status' kiya gaya hai
             const isCancelled = b.status === 'Cancelled';
 
-            // FIX: Saare variables ko exact match kiya gaya hai jo aapne booking-modal.js me save kiye the
             return `
             <div class="booking-item-card" style="${isCancelled ? 'opacity: 0.7;' : ''}">
                 <div class="booking-details">
@@ -124,18 +116,14 @@ function loadMyBookings() {
     }
 }
 
-// Booking Cancel karne ka naya function jo dusre page par bhejega
 function cancelBooking(bookingId) {
-    // Naye policy page par redirect karein aur URL me bookingId pass karein
     window.location.href = `cancel.html?bookingId=${bookingId}`;
 }
 
-// Download functionality handle karne ka function
 function downloadTicket(bookingId) {
     window.open(`pdf.html?bookingId=${bookingId}&download=true`, '_blank');
 }
 
-// Navbar Session Logic
 function updateNavbarUI() {
     const loginBtns = document.querySelectorAll('.login-button');
     loginBtns.forEach(btn => {
@@ -175,7 +163,6 @@ function checkSession() {
     updateNavbarUI();
 }
 
-// Mobile Hamburger Menu Logic
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 if (hamburger && navLinks) {

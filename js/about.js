@@ -1,9 +1,7 @@
-// ================= GLOBAL VARIABLES =================
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 let isLoggedIn = (currentUser !== null) || (localStorage.getItem("isLoggedIn") === "true");
 let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
-// ================= SESSION & NAVBAR =================
 function updateNavbarUI() {
     const loginBtns = document.querySelectorAll('.login-button');
 
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     checkSession();
 });
 
-// ================= NAVBAR HAMBURGER =================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -64,7 +61,6 @@ if (hamburger && navLinks) {
     });
 }
 
-// ================= FETCH: DESTINATION MENU =================
 const destinationMenu = document.getElementById("destinationMenu");
 
 if (destinationMenu) {
@@ -95,15 +91,11 @@ if (destinationMenu) {
         .catch(err => console.error("Error fetching destinations:", err));
 }
 
-// ================= FETCH: TOUR PACKAGES MENU =================
-// ✅ Yahan sab slugs ke liye page map clearly define kar diya hai
 const TOUR_PAGE_MAP = {
     "adventure-tours": "adventure.html",
     "honeymoon-packages": "honeymoon.html",
     "family-tours": "family.html",
     "solo-trips": "solo.html",
-    // Naye slugs add karne ho to bas yahan ek line add karo:
-    // "wildlife-safari":   "wildlife.html",
 };
 
 const tourPackagesMenu = document.getElementById("tourpackagesMenu");
@@ -118,7 +110,6 @@ if (tourPackagesMenu) {
             let menuHTML = "";
 
             data.forEach((item) => {
-                // Map mein slug milega to us page par, nahi mila to packages.html (default)
                 const page = TOUR_PAGE_MAP[item.slug] || "packages.html";
 
                 menuHTML += `
@@ -135,13 +126,9 @@ if (tourPackagesMenu) {
         .catch(err => console.error("Tour Packages menu error:", err));
 }
 
-
-
-// ================= SEARCH =================
 const searchInput = document.getElementById("searchInput");
 const suggestionBox = document.getElementById("searchSuggestions");
 
-// ✅ Guard: searchInput exist nahi karta kuch pages par — crash rokne ke liye
 if (searchInput && suggestionBox) {
 
     let allData = [];
@@ -208,7 +195,6 @@ if (searchInput && suggestionBox) {
             div.addEventListener("click", () => {
                 searchInput.value = text;
                 suggestionBox.style.display = "none";
-                // window.location.href = `search.html?q=${encodeURIComponent(text)}`;
             });
             suggestionBox.appendChild(div);
         });
@@ -222,4 +208,4 @@ if (searchInput && suggestionBox) {
         }
     });
 
-} // end searchInput guard
+} 

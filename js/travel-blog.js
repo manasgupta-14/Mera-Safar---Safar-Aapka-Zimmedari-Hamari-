@@ -1,9 +1,7 @@
-// ================= GLOBAL VARIABLES =================
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 let isLoggedIn = (currentUser !== null) || (localStorage.getItem("isLoggedIn") === "true");
 let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
-// ================= SESSION & NAVBAR =================
 function updateNavbarUI() {
     const loginBtns = document.querySelectorAll('.login-button');
     loginBtns.forEach(btn => {
@@ -48,7 +46,6 @@ function checkSession() {
     updateNavbarUI();
 }
 
-// ================= HAMBURGER MENU =================
 function initHamburger() {
     const hamburger = document.querySelector('.hamburger');
     const mainNav = document.querySelector('.main-nav');
@@ -60,7 +57,6 @@ function initHamburger() {
         hamburger.classList.toggle('toggle');
     });
 
-    // Mobile dropdown toggle (click instead of hover)
     const dropdowns = mainNav.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('a');
@@ -74,7 +70,6 @@ function initHamburger() {
         }
     });
 
-    // Close nav when clicking outside
     document.addEventListener('click', (e) => {
         if (!hamburger.contains(e.target) && !mainNav.contains(e.target)) {
             mainNav.classList.remove('active');
@@ -83,7 +78,6 @@ function initHamburger() {
     });
 }
 
-// ================= LOAD BLOGS =================
 const blogsGrid = document.querySelector(".blogs-grid");
 
 async function loadTravelBlogs() {
@@ -125,7 +119,6 @@ async function loadTravelBlogs() {
 
             blogsGrid.innerHTML = html;
 
-            // Filter buttons ko re-bind karo (cards dynamic load ke baad)
             bindFilterButtons();
 
         } else {
@@ -137,7 +130,6 @@ async function loadTravelBlogs() {
     }
 }
 
-// ================= FILTER BUTTONS =================
 function bindFilterButtons() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const blogCards = document.querySelectorAll(".blog-card");
@@ -173,30 +165,23 @@ function bindFilterButtons() {
     });
 }
 
-// ================= FETCH: HOTELS DATA (doc2 se add kiya) =================
-// Ye ek utility function hai — jis page par hotel list render karni ho,
-// wahan await fetchHotelsData() call karke result use kar lena.
 async function fetchHotelsData() {
     try {
-        // Aapki JSON file ka path
         const response = await fetch('./api/hotels.json');
 
-        // Agar file nahi milti ya koi network error aata hai
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        // Response ko JSON format me convert karna
         const data = await response.json();
         return data;
 
     } catch (error) {
         console.error("Fetch problem:", error);
-        throw error; // Is error ko aage render function handle karega
+        throw error; 
     }
 }
 
-// ================= FETCH: DESTINATION MENU (doc2 se add kiya) =================
 function loadDestinationMenu() {
     const destinationMenu = document.getElementById("destinationMenu");
     if (!destinationMenu) return;
@@ -228,8 +213,6 @@ function loadDestinationMenu() {
         .catch(err => console.error("Error fetching destinations:", err));
 }
 
-// ================= FETCH: TOUR PACKAGES MENU (doc2 se add kiya) =================
-// ✅ Yahan sab slugs ke liye page map clearly define kar diya hai
 const TOUR_PAGE_MAP = {
     "adventure-tours": "adventure.html",
     "honeymoon-packages": "honeymoon.html",
@@ -250,7 +233,6 @@ function loadTourPackagesMenu() {
             let menuHTML = "";
 
             data.forEach((item) => {
-                // Map mein slug milega to us page par, nahi mila to packages.html (default)
                 const page = TOUR_PAGE_MAP[item.slug] || "packages.html";
 
                 menuHTML += `
@@ -267,12 +249,10 @@ function loadTourPackagesMenu() {
         .catch(err => console.error("Tour Packages menu error:", err));
 }
 
-// ================= SEARCH (doc2 se add kiya) =================
 function initSearch() {
     const searchInput = document.getElementById("searchInput");
     const suggestionBox = document.getElementById("searchSuggestions");
 
-    // ✅ Guard: searchInput exist nahi karta kuch pages par — crash rokne ke liye
     if (!searchInput || !suggestionBox) return;
 
     let allData = [];
@@ -339,7 +319,6 @@ function initSearch() {
             div.addEventListener("click", () => {
                 searchInput.value = text;
                 suggestionBox.style.display = "none";
-                // window.location.href = `search.html?q=${encodeURIComponent(text)}`;
             });
             suggestionBox.appendChild(div);
         });
@@ -354,7 +333,6 @@ function initSearch() {
     });
 }
 
-// ================= INIT =================
 document.addEventListener("DOMContentLoaded", () => {
     checkSession();
     initHamburger();
@@ -363,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadTourPackagesMenu();
     initSearch();
 
-    // Agar cards static HTML mein hain (JSON se nahi), tab bhi filter kaam kare
     const staticCards = document.querySelectorAll(".blog-card");
     if (staticCards.length > 0) {
         bindFilterButtons();

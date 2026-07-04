@@ -1,10 +1,7 @@
-// 1. Fetch Data from JSON File
-// ================= GLOBAL VARIABLES =================
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 let isLoggedIn = (currentUser !== null) || (localStorage.getItem("isLoggedIn") === "true");
 let usersData = JSON.parse(localStorage.getItem("usersData")) || {};
 
-// ================= SESSION & NAVBAR =================
 function updateNavbarUI() {
     const loginBtns = document.querySelectorAll('.login-button');
 
@@ -54,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     checkSession();
 });
 
-// ================= NAVBAR HAMBURGER =================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -67,25 +63,21 @@ if (hamburger && navLinks) {
 
 async function fetchHotelsData() {
     try {
-        // Aapki JSON file ka path
         const response = await fetch('./api/hotels.json');
 
-        // Agar file nahi milti ya koi network error aata hai
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        // Response ko JSON format me convert karna
         const data = await response.json();
         return data;
 
     } catch (error) {
         console.error("Fetch problem:", error);
-        throw error; // Is error ko aage render function handle karega
+        throw error; 
     }
 }
 
-// ================= FETCH: DESTINATION MENU =================
 const destinationMenu = document.getElementById("destinationMenu");
 
 if (destinationMenu) {
@@ -116,15 +108,11 @@ if (destinationMenu) {
         .catch(err => console.error("Error fetching destinations:", err));
 }
 
-// ================= FETCH: TOUR PACKAGES MENU =================
-// ✅ Yahan sab slugs ke liye page map clearly define kar diya hai
 const TOUR_PAGE_MAP = {
     "adventure-tours": "adventure.html",
     "honeymoon-packages": "honeymoon.html",
     "family-tours": "family.html",
     "solo-trips": "solo.html",
-    // Naye slugs add karne ho to bas yahan ek line add karo:
-    // "wildlife-safari":   "wildlife.html",
 };
 
 const tourPackagesMenu = document.getElementById("tourpackagesMenu");
@@ -139,7 +127,6 @@ if (tourPackagesMenu) {
             let menuHTML = "";
 
             data.forEach((item) => {
-                // Map mein slug milega to us page par, nahi mila to packages.html (default)
                 const page = TOUR_PAGE_MAP[item.slug] || "packages.html";
 
                 menuHTML += `
@@ -157,11 +144,9 @@ if (tourPackagesMenu) {
 }
 
 
-// ================= SEARCH =================
 const searchInput = document.getElementById("searchInput");
 const suggestionBox = document.getElementById("searchSuggestions");
 
-// ✅ Guard: searchInput exist nahi karta kuch pages par — crash rokne ke liye
 if (searchInput && suggestionBox) {
 
     let allData = [];
@@ -228,7 +213,6 @@ if (searchInput && suggestionBox) {
             div.addEventListener("click", () => {
                 searchInput.value = text;
                 suggestionBox.style.display = "none";
-                // window.location.href = `search.html?q=${encodeURIComponent(text)}`;
             });
             suggestionBox.appendChild(div);
         });
@@ -242,21 +226,17 @@ if (searchInput && suggestionBox) {
         }
     });
 
-} // end searchInput guard
+} 
 
-// 2. Render Data to HTML
 async function renderHotels() {
     const hotelGrid = document.getElementById('hotel-grid');
     const loader = document.getElementById('loader');
 
     try {
-        // Fetch data using the new function
         const hotels = await fetchHotelsData();
 
-        // Hide loader once data is received
         loader.style.display = 'none';
 
-        // Loop through each hotel and create HTML
         hotels.forEach(hotel => {
             const hotelCard = document.createElement('div');
             hotelCard.className = 'hotel-card';
@@ -280,11 +260,9 @@ async function renderHotels() {
         });
 
     } catch (error) {
-        // Agar JSON fetch fail ho jaye toh user ko error dikhaye
         loader.innerText = "Failed to load hotels data. Please try again later.";
         console.error("Error rendering hotels:", error);
     }
 }
 
-// Call the function when page loads
 window.onload = renderHotels;
