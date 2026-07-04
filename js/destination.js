@@ -132,7 +132,7 @@ const tourPackagesMenu = document.getElementById("tourpackagesMenu");
 if (tourPackagesMenu) {
     fetch("./api/nav-bar-tour-packages.json")
         .then((res) => {
-            if (!res.ok) throw new Error(`HTTP ${res.status} — file nahi mili`);
+            if (!res.ok) throw new Error(`HTTP ${res.status} — file can't find`);
             return res.json();
         })
         .then((data) => {
