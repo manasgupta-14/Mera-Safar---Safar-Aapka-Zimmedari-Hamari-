@@ -1,28 +1,28 @@
-const renderBlogDetails = async () => {
-    const container = document.getElementById("blog-detail-container");
+ const renderBlogDetails = async () => {
+        const container = document.getElementById("blog-detail-container");
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const blogId = urlParams.get("id");
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get("id");
 
-    if (!blogId) {
-        container.innerHTML = `<p class="error-msg">Blog ID not found in URL!</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
-        return;
-    }
+        if (!blogId) {
+          container.innerHTML = `<p class="error-msg">Blog ID not found in URL!</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
+          return;
+        }
 
-    try {
-        const response = await fetch("./api/travel-blogs-index.json");
-        const result = await response.json();
+        try {
+          const response = await fetch("./api/travel-blogs-index.json");
+          const result = await response.json();
 
-        if (result.success && result.data) {
+          if (result.success && result.data) {
             const currentBlog = result.data.find((blog) => blog.id === blogId);
 
             if (currentBlog) {
-                const fullContent =
-                    currentBlog.content ||
-                    currentBlog.excerpt +
-                    "<br><br><i>(Full description data is missing in JSON file. Add a 'content' key in your JSON to see the full article here.)</i>";
+              const fullContent =
+                currentBlog.content ||
+                currentBlog.excerpt +
+                  "<br><br><i>(Full description data is missing in JSON file. Add a 'content' key in your JSON to see the full article here.)</i>";
 
-                container.innerHTML = `
+              container.innerHTML = `
                             <a href="travel-blog.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Blogs</a>
                             
                             <div class="blog-header">
@@ -41,13 +41,13 @@ const renderBlogDetails = async () => {
                             </div>
                         `;
             } else {
-                container.innerHTML = `<p class="error-msg">Blog post not found!</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
+              container.innerHTML = `<p class="error-msg">Blog post not found!</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
             }
+          }
+        } catch (error) {
+          console.error("Fetch Error:", error);
+          container.innerHTML = `<p class="error-msg">Failed to load blog data.</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
         }
-    } catch (error) {
-        console.error("Fetch Error:", error);
-        container.innerHTML = `<p class="error-msg">Failed to load blog data.</p><a href="travel-blog.html" class="back-btn">Go Back</a>`;
-    }
-};
+      };
 
-renderBlogDetails();
+      renderBlogDetails();
