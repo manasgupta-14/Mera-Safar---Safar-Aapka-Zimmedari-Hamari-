@@ -173,11 +173,195 @@ function bindFilterButtons() {
     });
 }
 
+// ================= FETCH: HOTELS DATA (doc2 se add kiya) =================
+// Ye ek utility function hai — jis page par hotel list render karni ho,
+// wahan await fetchHotelsData() call karke result use kar lena.
+async function fetchHotelsData() {
+    try {
+        // Aapki JSON file ka path
+        const response = await fetch('./api/hotels.json');
+
+        // Agar file nahi milti ya koi network error aata hai
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Response ko JSON format me convert karna
+        const data = await response.json();
+        return data;
+
+    } catch (error) {
+        console.error("Fetch problem:", error);
+        throw error; // Is error ko aage render function handle karega
+    }
+}
+
+// ================= FETCH: DESTINATION MENU (doc2 se add kiya) =================
+function loadDestinationMenu() {
+    const destinationMenu = document.getElementById("destinationMenu");
+    if (!destinationMenu) return;
+
+    fetch("./api/nav-bar-destination.json")
+        .then((res) => res.json())
+        .then((data) => {
+            let menuHTML = "";
+
+            data.forEach(item => {
+                let page = "destination.html";
+                let query = "category";
+
+                if (item.slug === "historical") {
+                    page = "historical.html";
+                }
+
+                menuHTML += `
+                    <li>
+                        <a href="${page}?${query}=${item.slug}" data-slug="${item.slug}">
+                            ${item.name}
+                        </a>
+                    </li>
+                `;
+            });
+
+            destinationMenu.innerHTML = menuHTML;
+        })
+        .catch(err => console.error("Error fetching destinations:", err));
+}
+
+// ================= FETCH: TOUR PACKAGES MENU (doc2 se add kiya) =================
+// ✅ Yahan sab slugs ke liye page map clearly define kar diya hai
+const TOUR_PAGE_MAP = {
+    "adventure-tours": "adventure.html",
+    "honeymoon-packages": "honeymoon.html",
+    "family-tours": "family.html",
+    "solo-trips": "solo.html",
+};
+
+function loadTourPackagesMenu() {
+    const tourPackagesMenu = document.getElementById("tourpackagesMenu");
+    if (!tourPackagesMenu) return;
+
+    fetch("./api/nav-bar-tour-packages.json")
+        .then((res) => {
+            if (!res.ok) throw new Error(`HTTP ${res.status} — file nahi mili`);
+            return res.json();
+        })
+        .then((data) => {
+            let menuHTML = "";
+
+            data.forEach((item) => {
+                // Map mein slug milega to us page par, nahi mila to packages.html (default)
+                const page = TOUR_PAGE_MAP[item.slug] || "packages.html";
+
+                menuHTML += `
+                    <li>
+                        <a href="${page}?category=${item.slug}" data-slug="${item.slug}">
+                            ${item.name}
+                        </a>
+                    </li>
+                `;
+            });
+
+            tourPackagesMenu.innerHTML = menuHTML;
+        })
+        .catch(err => console.error("Tour Packages menu error:", err));
+}
+
+// ================= SEARCH (doc2 se add kiya) =================
+function initSearch() {
+    const searchInput = document.getElementById("searchInput");
+    const suggestionBox = document.getElementById("searchSuggestions");
+
+    // ✅ Guard: searchInput exist nahi karta kuch pages par — crash rokne ke liye
+    if (!searchInput || !suggestionBox) return;
+
+    let allData = [];
+
+    const files = [
+        "./api/packages.json",
+        "./api/nav-bar-tour-packages.json",
+        "./api/explore-categories-packages.json",
+        "./api/popular-places-card-index.json",
+        "./api/nav-bar-destination.json",
+        "./api/categories.json",
+        "./api/travel-blogs-index.json",
+        "./api/trending-places-index.json",
+        "./api/testimonial-index.json",
+        "./api/why-choose-us-index.json"
+    ];
+
+    Promise.allSettled(
+        files.map(file => fetch(file).then(res => res.json()))
+    ).then(results => {
+        results.forEach(result => {
+            if (result.status === "fulfilled" && Array.isArray(result.value)) {
+                allData.push(...result.value);
+            }
+        });
+        console.log("Total Search Records:", allData.length);
+    });
+
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.trim().toLowerCase();
+        suggestionBox.innerHTML = "";
+
+        if (!keyword) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        const suggestions = new Set();
+
+        allData.forEach(item => {
+            const matched = Object.values(item).some(value => {
+                if (typeof value === "object") value = JSON.stringify(value);
+                return value && String(value).toLowerCase().includes(keyword);
+            });
+
+            if (matched) {
+                const text = item.name || item.title || item.destination ||
+                    item.place || item.category || item.slug;
+                if (text) suggestions.add(text);
+            }
+        });
+
+        const resultArray = [...suggestions].slice(0, 10);
+
+        if (!resultArray.length) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        resultArray.forEach(text => {
+            const div = document.createElement("div");
+            div.className = "suggestion-item";
+            div.textContent = text;
+            div.addEventListener("click", () => {
+                searchInput.value = text;
+                suggestionBox.style.display = "none";
+                // window.location.href = `search.html?q=${encodeURIComponent(text)}`;
+            });
+            suggestionBox.appendChild(div);
+        });
+
+        suggestionBox.style.display = "block";
+    });
+
+    document.addEventListener("click", e => {
+        if (!e.target.closest(".search-bar")) {
+            suggestionBox.style.display = "none";
+        }
+    });
+}
+
 // ================= INIT =================
 document.addEventListener("DOMContentLoaded", () => {
     checkSession();
     initHamburger();
     loadTravelBlogs();
+    loadDestinationMenu();
+    loadTourPackagesMenu();
+    initSearch();
 
     // Agar cards static HTML mein hain (JSON se nahi), tab bhi filter kaam kare
     const staticCards = document.querySelectorAll(".blog-card");
