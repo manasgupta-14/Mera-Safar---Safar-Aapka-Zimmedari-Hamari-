@@ -404,7 +404,7 @@ if (searchInput && suggestionBox) {
             createCard(
                 place.name,
                 placeDescription,
-                place.image,
+                place.imageUrl,
                 "View Details",
                 "fa-circle-info",
                 () => {
@@ -421,7 +421,7 @@ if (searchInput && suggestionBox) {
         const detailImage = document.getElementById("detailImage");
         const fallbackImg = "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=80";
 
-        detailImage.src = place.image || fallbackImg;
+        detailImage.src = place.imageUrl || fallbackImg;   // ✅ fixed
         detailImage.onerror = function () {
             this.src = fallbackImg;
         };
