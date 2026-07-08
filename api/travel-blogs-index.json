@@ -52,7 +52,7 @@
     {
       "id": "blog_05",
       "category": "adventure",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi5ukzX9r383k0x5fhOC8FPXt_PYnEFjc44ztpwhY1EQ&s=10",
       "badge": "Action",
       "date": "March 22, 2026",
       "author": "By ThrillSeeker",
@@ -64,7 +64,7 @@
     {
       "id": "blog_06",
       "category": "spiritual",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzIg0zNXCZe1VFQ9z5y52ttNnVXGtRlA-aJ4YAmuOKw&s=10",
       "badge": "Peace",
       "date": "March 05, 2026",
       "author": "By MeraSafar",
@@ -76,7 +76,7 @@
     {
       "id": "blog_07",
       "category": "heritage",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEhqj_iHPvrAWpVBXI2XpRKnMPmthMl9sEq3WdCERAuw&s=10",
       "badge": "Classic",
       "date": "February 14, 2026",
       "author": "By HistoryBuff",
@@ -88,7 +88,7 @@
     {
       "id": "blog_08",
       "category": "hill_station",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQORt2Wxp0Y__ZBKNgkKoejygusSiHVPOEsrzXwOpwLCw&s=10",
       "badge": "Relaxing",
       "date": "January 28, 2026",
       "author": "By Admin",
@@ -100,7 +100,7 @@
     {
       "id": "blog_09",
       "category": "wildlife",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbiEPEU80K7bfA3rLvS02QAC071OQhOnDQZvZgdYfURA&s=10",
       "badge": "Wild",
       "date": "December 12, 2025",
       "author": "By NatureLover",
@@ -112,7 +112,7 @@
     {
       "id": "blog_10",
       "category": "honeymoon",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyTIwr0wiPM93nj9lzz56rK5rADbR-CTxNWQO-PVFq-g&s=10",
       "badge": "Couples",
       "date": "November 20, 2025",
       "author": "By Traveller",
@@ -124,7 +124,7 @@
     {
       "id": "blog_11",
       "category": "family",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlYSr0SU7OV5KgctIGpyDzn52vA98Mw_AJEzAB_iKK2g&s=10",
       "badge": "Family First",
       "date": "October 30, 2025",
       "author": "By MeraSafar",
@@ -136,7 +136,7 @@
     {
       "id": "blog_12",
       "category": "solo",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQaeu75QLduOyDtgsrURIBPjqwxEzmALLx7pVw8LFyfQ&s=10",
       "badge": "Must Try",
       "date": "September 15, 2025",
       "author": "By SoloRider",
@@ -148,7 +148,7 @@
     {
       "id": "blog_13",
       "category": "group",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRES7xcydSLJzb5ELhCf6Uy17ijPUl5UDIhQwvsnheqtg&s=10",
       "badge": "Party",
       "date": "August 22, 2025",
       "author": "By Admin",
@@ -160,7 +160,7 @@
     {
       "id": "blog_14",
       "category": "spiritual",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDWWOBzwD5xLefQEiYJSY5Qyf7b9oDzJyJobHzLxoQ7Q&s=10",
       "badge": "Divine",
       "date": "July 11, 2025",
       "author": "By Wanderlust",
@@ -172,7 +172,7 @@
     {
       "id": "blog_15",
       "category": "wildlife",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ-9kLUQGQQv3r1G8jkXJ3iXFwEV8Q3GS7NTchfFdRbg&s=10",
       "badge": "Nature",
       "date": "June 05, 2025",
       "author": "By NatureLover",

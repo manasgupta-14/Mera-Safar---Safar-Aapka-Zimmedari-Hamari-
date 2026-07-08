@@ -262,7 +262,7 @@
   {
     "id": "pkg_21",
     "categoryId": "cat_06",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Kf8jSHU9D56ia7F6Uy2kqGkgRd2Jj4z2U9Qmj4a-FA&s=10",
     "name": "Jim Corbett Tiger Safari",
     "desitination": "Jim Corbett, Uttarakhand",
     "duration": "3 Days/2 Nights",
@@ -275,7 +275,7 @@
   {
     "id": "pkg_22",
     "categoryId": "cat_06",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROmdyLy3kZZRC8ROyESwr3qarpYesaApZKustx25vsvg&s",
     "name": "Ranthambore National Park Tour",
     "desitination": "Ranthambore, Rajasthan",
     "duration": "3 Days/2 Nights",
@@ -288,7 +288,7 @@
   {
     "id": "pkg_23",
     "categoryId": "cat_06",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUAIiBbMgjJs6obUt6GexkQbF6x21BwliVbTdk2ZqNQ&s=10",
     "name": "Kaziranga One-Horned Rhino Tour",
     "desitination": "Kaziranga, Assam",
     "duration": "4 Days/3 Nights",
@@ -301,7 +301,7 @@
   {
     "id": "pkg_24",
     "categoryId": "cat_06",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl45Akn8ww2mgJGkAB2-SfDPyXq9MOlbNvbm_doB7jPg&s=10",
     "name": "Gir Asiatic Lion Safari",
     "desitination": "Gir, Gujarat",
     "duration": "3 Days/2 Nights",
@@ -314,7 +314,7 @@
   {
     "id": "pkg_25",
     "categoryId": "cat_07",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcCnVCkonG64RYhY-AkM9GpfFjvjBKxVPDF-MW3je_uQ&s=10",
     "name": "Srinagar & Gulmarg Paradise",
     "desitination": "Kashmir",
     "duration": "5 Days/4 Nights",
@@ -327,7 +327,7 @@
   {
     "id": "pkg_26",
     "categoryId": "cat_07",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfsSkHbK0DDFw2Oz1OF3gByjORxboskIEhfV7tkeZPLA&s=10",
     "name": "Darjeeling Tea Garden Retreat",
     "desitination": "Darjeeling, West Bengal",
     "duration": "4 Days/3 Nights",
@@ -340,8 +340,8 @@
   {
     "id": "pkg_07",
     "categoryId": "cat_27",
-    "image": "",
-    "name": "Ooty Nilgiri Romantic Escap",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUNZipS6XVJwvvYKqeeQPSLQF6IrBay-k_JSplGcUmUg&s=10",
+    "name": "Ooty Nilgiri Romantic Escape",
     "desitination": "Ooty, Tamil Nadu",
     "duration": "3 Days/2 Nights",
     "rating": "4.7",
@@ -353,7 +353,7 @@
   {
     "id": "pkg_28",
     "categoryId": "cat_07",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkKWFiD6pnRI8PEFFukymmnMtCRlJcs3bTi8_xXeoLWQ&s=10",
     "name": "Shimla Honeymoon Bliss",
     "desitination": "Shimla, Himachal",
     "duration": "3 Days/2 Nights",
@@ -366,7 +366,7 @@
   {
     "id": "pkg_29",
     "categoryId": "cat_08",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6SyEuipPIMwKDZcPaVKYawwWyCpW7X4-66_LjjDEbbw&s=10",
     "name": "Royal Mysore Family Tour",
     "desitination": "Mysore, Karnataka",
     "duration": "3 Days/2 Nights",
@@ -379,7 +379,7 @@
   {
     "id": "pkg_30",
     "categoryId": "cat_08",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd5shqTRavioodU_Nrm8f5TUssZu9MSJgsrRCXsY87hQ&s",
     "name": "Nainital Lake & Mall Road Trip",
     "desitination": "Nainital, Uttarakhand",
     "duration": "3 Days/2 Nights",
@@ -392,7 +392,7 @@
   {
     "id": "pkg_31",
     "categoryId": "cat_08",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfmeaYwm34-ISzymyB1haf7melJ-RHEn73TF_SI-LtRw&s=10",
     "name": "Srinagar Family Getaway",
     "desitination": "Srinagar, Kashmir",
     "duration": "4 Days/3 Nights",
@@ -405,7 +405,7 @@
   {
     "id": "pkg_32",
     "categoryId": "cat_08",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMlN_Srq6X1hfP5n_IHXLID_gUKfRJyLl7KOwOW1pFcg&s=10",
     "name": "JaiJaipur Culture & Forts Tour",
     "desitination": "Jaipur, Rajasthan",
     "duration": "3 Days/2 Nights",
@@ -418,7 +418,7 @@
   {
     "id": "pkg_33",
     "categoryId": "cat_09",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfgfhd5-GH4V5d2lR6JlCgBEjmyXY39-zwUhC3lEtyxg&s=10",
     "name": "Pushkar Cultural Soul-Search",
     "desitination": "Pushkar, Rajasthan",
     "duration": "3 Days/2 Nights",
@@ -431,7 +431,7 @@
   {
     "id": "pkg_34",
     "categoryId": "cat_09",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHl01rzWsouoyAyL_3W4RHEqYi-iFLYN8VD1s_Q7qTQ&s=10",
     "name": "McLeodGanj Trek & Tranquility",
     "desitination": "Dharamshala, Himachal",
     "duration": "4 Days/3 Nights",
@@ -444,7 +444,7 @@
   {
     "id": "pkg_35",
     "categoryId": "cat_09",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUoP_b4iJQzp8H56erxIlDa__59PAg4Zwk-63E6gJO_A&s=10",
     "name": "Hampi Solo Photography Trail",
     "desitination": "Hampi, Karnataka",
     "duration": "3 Days/2 Nights",
@@ -457,7 +457,7 @@
   {
     "id": "pkg_36",
     "categoryId": "cat_09",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyXzvHj2KxqLGPKuO64_zSKIx9KLIlMIY5MNbVGDiZDQ&s=10",
     "name": "Rishikesh Solo Backpacker",
     "desitination": "Rishikesh, Uttarakhand",
     "duration": "3 Days/2 Nights",
@@ -470,7 +470,7 @@
   {
     "id": "pkg_37",
     "categoryId": "cat_10",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ219BicBy_XzcaY6jjWiWhgM35E2lmzLlRhFHYvr5MvA&s=10",
     "name": "Jaipur-Udaipur Royal Road Trip",
     "desitination": "Rajasthan",
     "duration": "5 Days/4 Nights",
@@ -483,7 +483,7 @@
   {
     "id": "pkg_38",
     "categoryId": "cat_10",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwE28L8NJKm_a6den2N7mMhFKtiou0OOxrXRKIEXVgBQ&s=10",
     "name": "Manali-Leh Ultimate Bike Trip",
     "desitination": "Himachal to Ladakh",
     "duration": "10 Days/9 Nights",
@@ -496,7 +496,7 @@
   {
     "id": "pkg_39",
     "categoryId": "cat_10",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrp1IMTuYXS4_Lel8N_dY0XKU8ugLOqgFV7ooxhMeCbw&s=10",
     "name": "Goa Group Beach Party",
     "desitination": "Goa",
     "duration": "4 Days/3 Nights",
@@ -509,7 +509,7 @@
   {
     "id": "pkg_40",
     "categoryId": "cat_10",
-    "image": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTkEGV6D7wqvNT_dyri26qtX3QNzcIaVKY4Tl6XXFHQ&s=10",
     "name": "Meghalaya Nature Expedition",
     "desitination": "Meghalaya",
     "duration": "6 Days/5 Nights",
