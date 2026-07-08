@@ -1348,7 +1348,7 @@
     "cityId": "ct_19",
     "categoryId": "cat_2",
     "name": "Taj Mahal",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaLW_706MnzISyTkMK3v5QlUMJ1zQQRaXevIREnPtKlg&s=10",
     "details": {
       "history": "Mausoleum built in 1631 by Emperor Shah Jahan.",
       "package": {
@@ -1362,7 +1362,7 @@
     "cityId": "ct_19",
     "categoryId": "cat_2",
     "name": "Agra Fort",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ02VZ-IJ8apIx00Q5VtqRhjm6Jbytj15T4pa1Y2qS0w&s=10",
     "details": {
       "history": "Mughal fort built in 1565 by Emperor Akbar.",
       "package": { "price": 2200, "description": "Guided historical walk" }
@@ -1373,7 +1373,7 @@
     "cityId": "ct_19",
     "categoryId": "cat_2",
     "name": "Fatehpur Sikri",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9948wHQHXFkqFDg6m8GjDKYutwhPDKWRRJw1Cdow_Dg&s=10",
     "details": {
       "history": "City founded in 1569 by Akbar, abandoned due to water shortage.",
       "package": { "price": 2500, "description": "Day trip and local guide" }
@@ -1384,7 +1384,7 @@
     "cityId": "ct_19",
     "categoryId": "cat_1",
     "name": "Mehtab Bagh",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStgwNocJXumMrr_R2Zs9zOx72NeOMNsSanOO27HlfeXw&s=10",
     "details": {
       "history": "Charbagh complex aligned perfectly with the Taj Mahal.",
       "package": { "price": 1000, "description": "Sunset photography tour" }
@@ -1395,7 +1395,7 @@
     "cityId": "ct_19",
     "categoryId": "cat_2",
     "name": "Tomb of Akbar",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8VCDp5FRbX2G1E0LRKqRC-Nc66WpMaNVgMeLx2EUKqA&s=10",
     "details": {
       "history": "Mausoleum built in 1605-1613 in Sikandra.",
       "package": { "price": 1500, "description": "Architecture tour" }
@@ -1405,8 +1405,8 @@
     "id": "pl_114",
     "cityId": "ct_19",
     "categoryId": "cat_2",
-    "name": "Itmad-ud-Daula",
-    "imageUrl": "",
+    "name": "Itmad-ud-Daulah",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSjIAs_PMto_eMIBVc04cI-hBEWAvW74xMRL4zoRSDlw&s=10",
     "details": {
       "history": "Mausoleum known as the Baby Taj.",
       "package": { "price": 1200, "description": "Heritage walk" }
@@ -1417,7 +1417,7 @@
     "cityId": "ct_20",
     "categoryId": "cat_3",
     "name": "Kashi Vishwanath",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVzLojRgZ6fmCDEvYePefrhw8g5qkMjVYuEVvQ31Thrw&s=10",
     "details": {
       "history": "Prominent Shiva temple rebuilt in 1780.",
       "package": {
@@ -1431,7 +1431,7 @@
     "cityId": "ct_20",
     "categoryId": "cat_3",
     "name": "Dashashwamedh Ghat",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfmKPcI5weVncjEBOt-BkBudnQrUCXz0LDruqPGH8ibw&s=10",
     "details": {
       "history": "Main ghat known for the daily Ganga Aarti.",
       "package": {
@@ -1445,7 +1445,7 @@
     "cityId": "ct_20",
     "categoryId": "cat_3",
     "name": "Assi Ghat",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJY1Eg5lMzdvP7GSz9WUHTVaL4rCux9w9cnanm14hYg&s=10",
     "details": {
       "history": "Southernmost ghat where pilgrims bathe before worship.",
       "package": {
@@ -1459,7 +1459,7 @@
     "cityId": "ct_20",
     "categoryId": "cat_2",
     "name": "Sarnath",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9MN8d8-MUxx6C0yviKEySg494_f8ITpMhbacngOkJbg&s=10",
     "details": {
       "history": "Place where Buddha gave his first sermon.",
       "package": {
@@ -1473,7 +1473,7 @@
     "cityId": "ct_20",
     "categoryId": "cat_2",
     "name": "Ramnagar Fort",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9AKTJQ7WE4gPVS5-NlELxIrIU_fVryL4URegBfR76pQ&s=10",
     "details": {
       "history": "Fort in Varanasi built in 1750 by Kashi Naresh.",
       "package": {
@@ -1487,7 +1487,7 @@
     "cityId": "ct_20",
     "categoryId": "cat_3",
     "name": "Sankat Mochan Temple",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5-cQN2uTPVOJY_U_zz6nnagHjuqkD8e7CDCeNGXZxg&s=10",
     "details": {
       "history": "Hanuman temple founded by Tulsidas.",
       "package": { "price": 800, "description": "Temple visit and offering" }
@@ -1498,7 +1498,7 @@
     "cityId": "ct_21",
     "categoryId": "cat_2",
     "name": "Bara Imambara",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfmzwZB3md6PyWMDQPSliPal2UkYcigLKo3qiY-i2q7A&s=10",
     "details": {
       "history": "Built by Asaf-ud-Daula in 1784, known for its labyrinth.",
       "package": { "price": 1800, "description": "Maze tour and Awadhi dinner" }
@@ -1509,7 +1509,7 @@
     "cityId": "ct_21",
     "categoryId": "cat_2",
     "name": "Chhota Imambara",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_EVEM7DQnoyUw3wah15W0n_J4nFzV8VMO-e7CCwCAQ&s=10",
     "details": {
       "history": "Imposing monument built in 1838 known as Palace of Lights.",
       "package": { "price": 1500, "description": "Heritage walk" }
@@ -1520,7 +1520,7 @@
     "cityId": "ct_21",
     "categoryId": "cat_2",
     "name": "Rumi Darwaza",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjCNU6oR31Gqd5cvc2mK3I2h_G3w-6Zh-ZJKLY5SJVSQ&s=10",
     "details": {
       "history": "Imposing gateway built in 1784 showcasing Awadhi architecture.",
       "package": { "price": 1200, "description": "Old Lucknow walking tour" }
@@ -1531,7 +1531,7 @@
     "cityId": "ct_21",
     "categoryId": "cat_2",
     "name": "British Residency",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3vspBMRqJ1CIH8UEnu6rQtxX0gxHrEN5v1I8fPmGkRQ&s",
     "details": {
       "history": "Site of the historic 1857 Siege of Lucknow.",
       "package": { "price": 1500, "description": "Guided history tour" }
@@ -1542,7 +1542,7 @@
     "cityId": "ct_21",
     "categoryId": "cat_1",
     "name": "Ambedkar Park",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr1NsUzAnZB4KaxCF-e6cW_DOn95ePSTGmhmCm63OGvA&s=10",
     "details": {
       "history": "Memorial park dedicated to Dr. B.R. Ambedkar built in 2008.",
       "package": { "price": 1000, "description": "Park entry and photography" }
@@ -1553,7 +1553,7 @@
     "cityId": "ct_21",
     "categoryId": "cat_4",
     "name": "Hazratganj",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEzua7EGX-U9WkKdgedpAp-g60aVJWSJFy5vc6ErWHJQ&s=10",
     "details": {
       "history": "Major shopping area established in 1810.",
       "package": {
@@ -1567,7 +1567,7 @@
     "cityId": "ct_22",
     "categoryId": "cat_3",
     "name": "Shri Krishna Janmasthan",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8NJ8kAWSbzK8b6fWagfUCdnjixwuQahwjdJCYRn2Sag&s=10",
     "details": {
       "history": "Temple built around the prison cell where Krishna was born.",
       "package": { "price": 1500, "description": "Temple darshan and guide" }
@@ -1578,7 +1578,7 @@
     "cityId": "ct_22",
     "categoryId": "cat_3",
     "name": "Dwarkadhish Temple",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLEeyKtb2qOSVEhCDhBCLgd1TIR4b_ZV07TLZXS1c7cw&s=10",
     "details": {
       "history": "Historic Hindu temple built in 1814.",
       "package": { "price": 1200, "description": "Morning Aarti visit" }
@@ -1589,7 +1589,7 @@
     "cityId": "ct_22",
     "categoryId": "cat_3",
     "name": "Vishram Ghat",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToiGJJCC5xrkNZvbs8g7wk3hsrZbbXo1VDT9KZQ6YTuA&s=10",
     "details": {
       "history": "Ghat where Lord Krishna rested after killing Kansa.",
       "package": { "price": 1000, "description": "Evening boat ride" }
@@ -1600,7 +1600,7 @@
     "cityId": "ct_22",
     "categoryId": "cat_3",
     "name": "Gita Mandir",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlaju_29YJ0VWIa4f23oR6zSCrjgnnYNdoJWkA8r6Wbw&s=10",
     "details": {
       "history": "Temple displaying the entire Bhagavad Gita on its walls.",
       "package": { "price": 800, "description": "Temple tour" }
@@ -1611,7 +1611,7 @@
     "cityId": "ct_22",
     "categoryId": "cat_3",
     "name": "Govardhan Hill",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCIe_tEL0Yv9qcXZeTlYFHGNoaYbDwyPVQ0vO2-UjL1Q&s=10",
     "details": {
       "history": "Sacred hill lifted by Lord Krishna.",
       "package": { "price": 2000, "description": "Guided Parikrama" }
@@ -1622,7 +1622,7 @@
     "cityId": "ct_22",
     "categoryId": "cat_3",
     "name": "Kusum Sarovar",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsOHtXCk30CHX8612yD9NyYXlplLsVGUB9ofepKBZyfg&s=10",
     "details": {
       "history": "Historical sandstone reservoir on the Govardhan parikrama path.",
       "package": {
@@ -1636,7 +1636,7 @@
     "cityId": "ct_23",
     "categoryId": "cat_3",
     "name": "Triveni Sangam",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgCwX9qtFR-DHiE5I2GnvqTDoLmIHNGYK6na5NTbLZLNb6J_yToeM7kGI&s=10",
     "details": {
       "history": "Confluence of three rivers: Ganga, Yamuna, and mythical Saraswati.",
       "package": {
@@ -1650,7 +1650,7 @@
     "cityId": "ct_23",
     "categoryId": "cat_2",
     "name": "Allahabad Fort",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W0zLox6vil5fA7G60LHj6CyTnHZ3Rv2lJGx_FlvxhQ&s=10",
     "details": {
       "history": "Massive fort built by Emperor Akbar in 1583.",
       "package": {
@@ -1664,7 +1664,7 @@
     "cityId": "ct_23",
     "categoryId": "cat_2",
     "name": "Khusro Bagh",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoEuo1I1-SNm3XYNOUuYLPyxaNgauRGlPl1kg7Kn6AIA&s=10",
     "details": {
       "history": "Walled garden housing tombs of Jahangir's family.",
       "package": { "price": 1000, "description": "Heritage walk" }
@@ -1675,7 +1675,7 @@
     "cityId": "ct_23",
     "categoryId": "cat_2",
     "name": "Anand Bhavan",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZYec-LV7Mn-qV4EfSli6Abo_wJtdnrQtgpaVKCdbyQ&s=10",
     "details": {
       "history": "Historic house museum of the Nehru family.",
       "package": { "price": 1500, "description": "Museum entry and guide" }
@@ -1686,7 +1686,7 @@
     "cityId": "ct_23",
     "categoryId": "cat_1",
     "name": "Chandrashekhar Azad Park",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8giBS69k86RZmmlFodtTeeBd4wZbe9TvGtPzkH3eDqw&s=10",
     "details": {
       "history": "Largest park in Prayagraj, where Azad martyred himself.",
       "package": { "price": 800, "description": "Park walk and museum visit" }
@@ -1697,7 +1697,7 @@
     "cityId": "ct_23",
     "categoryId": "cat_2",
     "name": "All Saints Cathedral",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPBqUbDTGGu0FU0_EMWB88v6kDQtN3AJk0wqesoBuwQ&s=10",
     "details": {
       "history": "Gothic style church built in the late 19th century.",
       "package": { "price": 1000, "description": "Architectural tour" }
@@ -1708,7 +1708,7 @@
     "cityId": "ct_24",
     "categoryId": "cat_3",
     "name": "Ram Janmabhoomi",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ96VLKDGNwod6PIge_kAnn23B3-j3u1nJdzFyxLIYt-g&s=10",
     "details": {
       "history": "Sacred site recognized as the birthplace of Lord Rama.",
       "package": { "price": 2000, "description": "VIP Darshan and local guide" }
@@ -1719,7 +1719,7 @@
     "cityId": "ct_24",
     "categoryId": "cat_3",
     "name": "Hanuman Garhi",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCmT4ak8ef-KY6hKW4qPFEO3PTBmVbysX4jp3xb_JnSw&s=10",
     "details": {
       "history": "10th-century temple dedicated to Lord Hanuman.",
       "package": { "price": 1200, "description": "Temple visit and offering" }
@@ -1730,7 +1730,7 @@
     "cityId": "ct_24",
     "categoryId": "cat_3",
     "name": "Kanak Bhawan",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubIFKDuhzCpGKiM3RKWlurFn6J0O5ZEET-AxQDsEhzA&s=10",
     "details": {
       "history": "Palace gifted to Sita by Kaikeyi after her marriage.",
       "package": { "price": 1500, "description": "Heritage temple tour" }
@@ -1741,7 +1741,7 @@
     "cityId": "ct_24",
     "categoryId": "cat_3",
     "name": "Nageshwarnath Temple",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFIqojIVYEVBDmnltkGltVXmaxAldrAb31SZREY088qg&s=10",
     "details": {
       "history": "Ancient temple said to have been established by Kush.",
       "package": { "price": 1000, "description": "Darshan during Aarti" }
@@ -1752,7 +1752,7 @@
     "cityId": "ct_24",
     "categoryId": "cat_3",
     "name": "Treta Ke Thakur",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMucWm-emmO8oh4HJlCwrjhlQaMm0MNFxvT1WD7lv0cA&s=10",
     "details": {
       "history": "Temple where Lord Rama performed the Ashvamedha Yagya.",
       "package": { "price": 1000, "description": "Historical religious tour" }
@@ -1763,7 +1763,7 @@
     "cityId": "ct_24",
     "categoryId": "cat_3",
     "name": "Guptar Ghat",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-PvzO0JmZlXAGfA_WSdrmhX8BAkK7hljc0d9r0h5FPg&s=10",
     "details": {
       "history": "Ghat where Lord Rama took Jal Samadhi.",
       "package": { "price": 1500, "description": "Evening boat ride" }
@@ -1774,7 +1774,7 @@
     "cityId": "ct_25",
     "categoryId": "cat_2",
     "name": "Church of Immaculate Conception",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx3bPV9mmeT0YlDl8zr_UzNM6Q5hKFh2-Bn1LrO2j-qQ&s=10",
     "details": {
       "history": "One of the first churches built in Goa in 1541.",
       "package": { "price": 1500, "description": "Guided tour of Panjim" }
@@ -1785,7 +1785,7 @@
     "cityId": "ct_25",
     "categoryId": "cat_2",
     "name": "Fontainhas",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVl3QWPKWCj1vX0RXYohQuSkTYCBfGSxO4C8fqmOvcGQ&s=10",
     "details": {
       "history": "Old Latin Quarter maintaining Portuguese influence.",
       "package": {
@@ -1799,7 +1799,7 @@
     "cityId": "ct_25",
     "categoryId": "cat_4",
     "name": "Miramar Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhGbLvmL79EUfjnhAdVAp3u4mSYegS1LSH0JQpsihY_g&s=10",
     "details": {
       "history": "Urban beach located at the Mandovi River confluence.",
       "package": { "price": 1500, "description": "Sunset cruise" }
@@ -1810,7 +1810,7 @@
     "cityId": "ct_25",
     "categoryId": "cat_1",
     "name": "Dona Paula",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRshop2b9C_uJgOieBY9G1Qh--4xOpWcD17BuuT9Naf3g&s=10",
     "details": {
       "history": "Viewpoint where two of Goa's rivers meet the Arabian Sea.",
       "package": {
@@ -1824,7 +1824,7 @@
     "cityId": "ct_25",
     "categoryId": "cat_2",
     "name": "Goa State Museum",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRvnUEAX4UDVoci1UQIXwtMdahNXoSK0vqMDH7V4VqrA&s=10",
     "details": {
       "history": "Museum showcasing Goan artifacts and history.",
       "package": { "price": 1000, "description": "Museum entry and tour" }
@@ -1835,7 +1835,7 @@
     "cityId": "ct_25",
     "categoryId": "cat_4",
     "name": "Casino Royale",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFjgLTv8g1N1O6v7OBq5Dt-AelboKNmGLSGIiKw7UTCA&s=10",
     "details": {
       "history": "Famous offshore casino on the Mandovi River.",
       "package": {
@@ -1849,7 +1849,7 @@
     "cityId": "ct_26",
     "categoryId": "cat_4",
     "name": "Bogmalo Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxMZAiLzJkJXYP6HEdWSDjZyiNC_80M9ZsC1k0wvXmw&s=10",
     "details": {
       "history": "Small, picturesque beach situated in a bay.",
       "package": {
@@ -1863,7 +1863,7 @@
     "cityId": "ct_26",
     "categoryId": "cat_1",
     "name": "Japanese Garden",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQkeDz2eJV_BLeEDybZDb5O4LY5CGzmRBSZanfrkABw&s=10",
     "details": {
       "history": "Garden offering stunning views of the Arabian Sea.",
       "package": { "price": 1000, "description": "Picnic and photography" }
@@ -1874,7 +1874,7 @@
     "cityId": "ct_26",
     "categoryId": "cat_2",
     "name": "Naval Aviation Museum",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsH2-10Tqt0uhV0LtuHUUYZyfbn347RVxYw2EIhg7nDg&s=10",
     "details": {
       "history": "Military aviation museum established in 1998.",
       "package": {
@@ -1888,7 +1888,7 @@
     "cityId": "ct_26",
     "categoryId": "cat_2",
     "name": "Mormugao Fort",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwi4AS57PXvFmUJi6-eRnmdGJnAF-2ZLJyatAjBVv3QQ&s=10",
     "details": {
       "history": "Fortress built in 1624 to protect the harbor.",
       "package": { "price": 1200, "description": "Historical tour" }
@@ -1899,7 +1899,7 @@
     "cityId": "ct_26",
     "categoryId": "cat_4",
     "name": "Hansa Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR16xtkPMdQhdop7kHOTqcAmeiknUd_PJh1U2RZ7QD2MA&s=10",
     "details": {
       "history": "Pristine beach controlled by the Indian Navy.",
       "package": { "price": 2000, "description": "Guided beach access" }
@@ -1910,7 +1910,7 @@
     "cityId": "ct_26",
     "categoryId": "cat_1",
     "name": "Heart Shaped Lake",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLPnmZVaqmVmTQOTlOHTSJLN_Bo6RIPUX2lMEosuxbvQ&s=10",
     "details": {
       "history": "Natural lagoon known for its unique shape near Bogmalo.",
       "package": {
@@ -1924,7 +1924,7 @@
     "cityId": "ct_27",
     "categoryId": "cat_4",
     "name": "Colva Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5sQYtfiR-eVJVfw_0IN431QOzU-o_y2XLI44x3WHHUA&s=10",
     "details": {
       "history": "Oldest and largest beach in South Goa.",
       "package": {
@@ -1938,7 +1938,7 @@
     "cityId": "ct_27",
     "categoryId": "cat_2",
     "name": "Monte Hill",
-    "imageUrl": "",
+    "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/b4/91/e9/monte-hill.jpg?w=1200&h=-1&s=1",
     "details": {
       "history": "Historic hill featuring a chapel built in 1520.",
       "package": { "price": 1000, "description": "Sightseeing walk" }
@@ -1949,7 +1949,7 @@
     "cityId": "ct_27",
     "categoryId": "cat_4",
     "name": "Benaulim Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStQzPAXaZ668SdlrKvXIzmJhOFSq5lYTdawB1PyzIDhA&s=10",
     "details": {
       "history": "Tranquil beach famous for fishing and myth of Parashurama.",
       "package": { "price": 2500, "description": "Dolphin spotting boat trip" }
@@ -1960,7 +1960,7 @@
     "cityId": "ct_27",
     "categoryId": "cat_4",
     "name": "Majorda Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrIvbIifphiEl3tMsb3fhU8Bc74IaPJb-TGy7aHRSz4A&s=10",
     "details": {
       "history": "Beach where Jesuits allegedly discovered Goan toddy.",
       "package": { "price": 2500, "description": "Beach stay and baking tour" }
@@ -1971,7 +1971,7 @@
     "cityId": "ct_27",
     "categoryId": "cat_2",
     "name": "Holy Spirit Church",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNh2i8RqyiUC-J8bgVTd5NsQjv4IIOqqsE21cPgXmcNw&s=10",
     "details": {
       "history": "Large church built by the Jesuits in 1564.",
       "package": { "price": 1000, "description": "Architectural tour" }
@@ -1982,7 +1982,7 @@
     "cityId": "ct_27",
     "categoryId": "cat_4",
     "name": "Margao Market",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7DqVm4Ot21CWXRX2u8WuoWKYKFfgUASqm5cehSa--QA&s=10",
     "details": {
       "history": "Bustling traditional market of South Goa.",
       "package": {
@@ -1996,7 +1996,7 @@
     "cityId": "ct_28",
     "categoryId": "cat_4",
     "name": "Calangute Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJx4l3-fOtYuW2lrPuCbz9QGI_ykwrQUZMyJdEkSW9BA&s=10",
     "details": {
       "history": "Known as the Queen of Beaches in Goa.",
       "package": { "price": 3500, "description": "Parasailing and beach party" }
@@ -2007,7 +2007,7 @@
     "cityId": "ct_28",
     "categoryId": "cat_4",
     "name": "Baga Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgYxCmafwxTyzwWH2zig1nBzzY1GvxHE_sEIIGd0Cmcw&s=10",
     "details": {
       "history": "Famous for nightlife and the hippie culture of the 60s.",
       "package": {
@@ -2021,7 +2021,7 @@
     "cityId": "ct_28",
     "categoryId": "cat_4",
     "name": "Tito's Lane",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyZ9-lZwZNgFpXjkZlBenVO823_macPh2fSsjzAjaHxQ&s=10",
     "details": {
       "history": "Epicenter of Goa's clubbing scene since 1971.",
       "package": { "price": 3000, "description": "VIP club entry and drinks" }
@@ -2032,7 +2032,7 @@
     "cityId": "ct_28",
     "categoryId": "cat_2",
     "name": "St. Alex Church",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIjK7Kr8B1a_ZNdiqIZx3RhQ8SX_B61v9vKigXAjBIhw&s=10",
     "details": {
       "history": "Church with massive Indian style cupolas built in 1741.",
       "package": { "price": 1000, "description": "Heritage walk" }
@@ -2043,7 +2043,7 @@
     "cityId": "ct_28",
     "categoryId": "cat_4",
     "name": "Candolim Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXKF8IayTTgm49ireWQnBUNPqdjzpDKZN8tZg1EydOaQ&s=10",
     "details": {
       "history": "Calmer beach strip starting from Fort Aguada.",
       "package": { "price": 4000, "description": "Luxury beach resort 1N stay" }
@@ -2054,7 +2054,7 @@
     "cityId": "ct_28",
     "categoryId": "cat_2",
     "name": "Aguada Fort",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIVRwHiqNQtvzbu4E3h5u8FfkWDdCJW68y4Sxrw1Pl9A&s=10",
     "details": {
       "history": "17th-century Portuguese fort and lighthouse.",
       "package": { "price": 1200, "description": "Guided tour and entry fees" }
@@ -2065,7 +2065,7 @@
     "cityId": "ct_29",
     "categoryId": "cat_4",
     "name": "Anjuna Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYjGlz-yFhppvzWjLxxsqVJWSRjHS9A_XG4OBuzGiaVA&s=10",
     "details": {
       "history": "Famous for its trance parties and rock formations.",
       "package": { "price": 3000, "description": "Beach club access" }
@@ -2076,7 +2076,7 @@
     "cityId": "ct_29",
     "categoryId": "cat_2",
     "name": "Chapora Fort",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfRQA1ROiG1uFiwwCntoi4acKspsZpMfagnnrFnuUF-A&s=10",
     "details": {
       "history": "Fort built by Adil Shah, famously featured in Dil Chahta Hai.",
       "package": { "price": 1500, "description": "Trek and sunset view" }
@@ -2087,7 +2087,7 @@
     "cityId": "ct_29",
     "categoryId": "cat_4",
     "name": "Curlies",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQc-DaCaC8RWk7wjKmC834DcDv9wOXqC-9ADrSTk-Ezg&s=10",
     "details": {
       "history": "One of the oldest and most iconic beach shacks in Goa.",
       "package": { "price": 2500, "description": "Seafront dining experience" }
@@ -2098,7 +2098,7 @@
     "cityId": "ct_29",
     "categoryId": "cat_4",
     "name": "Anjuna Flea Market",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTkyLMGbJSraTqt-unDHc2gBHU7-IeTL9swnajC2oqGQ&s=10",
     "details": {
       "history": "Started by hippies in the 1960s to barter goods.",
       "package": { "price": 1000, "description": "Guided shopping tour" }
@@ -2109,7 +2109,7 @@
     "cityId": "ct_29",
     "categoryId": "cat_4",
     "name": "Vagator Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVwY9y78E4fHyMBwxn8FpxvLENo-UTdzf9Ha28lbJkIA&s=10",
     "details": {
       "history": "Crescent beach famous for its red cliffs.",
       "package": { "price": 3500, "description": "Sundowner party pass" }
@@ -2120,7 +2120,7 @@
     "cityId": "ct_29",
     "categoryId": "cat_4",
     "name": "Ozran Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1VyCEAS6luis8m2sYi8zX0B_Og3uxTqxlQK_wlomSbA&s=10",
     "details": {
       "history": "Also known as Little Vagator, featuring a Shiva rock carving.",
       "package": { "price": 2000, "description": "Beach hopping tour" }
@@ -2131,7 +2131,7 @@
     "cityId": "ct_30",
     "categoryId": "cat_4",
     "name": "Palolem Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCpuRdOPZ1-40xsGpbKLWvOjQ3eyYlGEE_KI6IFbQfLQ&s=10",
     "details": {
       "history": "Crescent-shaped beach enclosed by thick forest.",
       "package": { "price": 5500, "description": "2N stay in luxury beach hut" }
@@ -2142,7 +2142,7 @@
     "cityId": "ct_30",
     "categoryId": "cat_4",
     "name": "Agonda Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1RidmMQxTD2dZRQt1TzcDkVFMB4nosiEL8peku5Fl4g&s=10",
     "details": {
       "history": "Quiet beach known as a nesting site for Olive Ridley turtles.",
       "package": {
@@ -2156,7 +2156,7 @@
     "cityId": "ct_30",
     "categoryId": "cat_1",
     "name": "Butterfly Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfpcAoB022gVmq6ck7HSUL6TdRgz8lShFS_PY8VQoktw&s=10",
     "details": {
       "history": "Secluded cove accessible only by boat or jungle trek.",
       "package": { "price": 2500, "description": "Boat ride and snorkeling" }
@@ -2167,7 +2167,7 @@
     "cityId": "ct_30",
     "categoryId": "cat_4",
     "name": "Cola Beach",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNisx045lVz-GrMB8X9tqbx43okjgqcj2pkqSvfQaFZg&s=10",
     "details": {
       "history": "Hidden beach featuring a freshwater emerald lagoon.",
       "package": { "price": 3500, "description": "Kayaking and private tent" }
@@ -2178,7 +2178,7 @@
     "cityId": "ct_30",
     "categoryId": "cat_2",
     "name": "Cabo de Rama Fort",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLafKnXiNInQ2O0b7iNsYd_h0hllU0s3nzcX0XNPlReg&s=10",
     "details": {
       "history": "Ancient fort claimed by Portuguese in 1763.",
       "package": { "price": 1000, "description": "Sightseeing and nature walk" }
@@ -2189,7 +2189,7 @@
     "cityId": "ct_30",
     "categoryId": "cat_1",
     "name": "Cotigao Wildlife Sanctuary",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_gpGQKSh-_VS-1Sg9ilIH2vg5Agc6G1cGwX4nJ4clkg&s=10",
     "details": {
       "history": "Established in 1968, known for its tall trees and treetop watchtower.",
       "package": {
@@ -2203,7 +2203,7 @@
     "cityId": "ct_31",
     "categoryId": "cat_3",
     "name": "Hidimba Temple",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNmdota9p74Cnov_RZ5cWkcATurfUeFVdfTfAaUQXfsQ&s=10",
     "details": {
       "history": "Wooden temple built in 1553 surrounded by cedar forest.",
       "package": { "price": 1500, "description": "Local sightseeing tour" }
@@ -2214,7 +2214,7 @@
     "cityId": "ct_31",
     "categoryId": "cat_1",
     "name": "Solang Valley",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtFMuZBc9S8m2qSv1Z3n6u7qWtf87hOLGIooZb9VzKw&s=10",
     "details": {
       "history": "Famous for winter sports and summer adventure activities.",
       "package": { "price": 3500, "description": "Paragliding and ATV ride" }
@@ -2225,7 +2225,7 @@
     "cityId": "ct_31",
     "categoryId": "cat_1",
     "name": "Rohtang Pass",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjzEB8C-C0YjCqOAAM23k1NHA-kt_WkG3pHAxmW3m92A&s=10",
     "details": {
       "history": "Ancient trade route connecting Kullu with Lahaul and Spiti.",
       "package": { "price": 4000, "description": "Snow activities and permit" }
@@ -2236,7 +2236,7 @@
     "cityId": "ct_31",
     "categoryId": "cat_3",
     "name": "Manu Temple",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1fbK7QnAXqeEsRQIMFp_L385v3-5SfLfXkcRlgj5Rqg&s=10",
     "details": {
       "history": "Dedicated to the sage Manu, the creator of the world in Hindu mythology.",
       "package": { "price": 1000, "description": "Old Manali walking tour" }
@@ -2247,7 +2247,7 @@
     "cityId": "ct_31",
     "categoryId": "cat_3",
     "name": "Vashisht Baths",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDn0Hz8u8x4CJ2Sp0TCb5WoiEwKeuniTgwpZY_bkEvJw&s=10",
     "details": {
       "history": "Natural hot water springs located in a small village.",
       "package": {
@@ -2261,7 +2261,7 @@
     "cityId": "ct_31",
     "categoryId": "cat_4",
     "name": "Old Manali",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyCAe91lDfaW_G2NqkygY7oVSPO04D11hpYORLw5hxeA&s=10",
     "details": {
       "history": "Famous for its rustic charm, cafes, and apple orchards.",
       "package": { "price": 2500, "description": "Cafe hopping and live music" }
@@ -2272,7 +2272,7 @@
     "cityId": "ct_32",
     "categoryId": "cat_4",
     "name": "The Ridge",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW6UN8WbMkrACfIPjhs6wHTzZwEol1yeYxe9OaDx-xlQ&s=10",
     "details": {
       "history": "Open space in Shimla constructed during the British era.",
       "package": { "price": 3500, "description": "1N stay near Mall Road" }
@@ -2283,7 +2283,7 @@
     "cityId": "ct_32",
     "categoryId": "cat_4",
     "name": "Mall Road",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU1seOtON41ugBo1AZASZDWuwqEsoKiOUbJF2YR31mYw&s=10",
     "details": {
       "history": "Constructed by the British, the main commercial street of Shimla.",
       "package": { "price": 1500, "description": "Heritage walk and shopping" }
@@ -2294,7 +2294,7 @@
     "cityId": "ct_32",
     "categoryId": "cat_3",
     "name": "Jakhu Temple",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRARTUz-IQzYe0IpN6yXJtnJfBlVGJ9FArqacdIXMyzCg&s=10",
     "details": {
       "history": "Ancient temple dedicated to Lord Hanuman on Shimla's highest peak.",
       "package": {
@@ -2308,7 +2308,7 @@
     "cityId": "ct_32",
     "categoryId": "cat_2",
     "name": "Christ Church",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9l9yieWSZSDfRscVmoeYnsxy9KytNO1N2egX9INkfUQ&s=10",
     "details": {
       "history": "Second oldest church in North India, built in 1857.",
       "package": { "price": 1000, "description": "Architectural tour" }
@@ -2319,7 +2319,7 @@
     "cityId": "ct_32",
     "categoryId": "cat_2",
     "name": "Viceregal Lodge",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOqdfRy0ef7g8V3b1nXsKQoDZ4VQeFF2xZ2RGR8aPYzg&s",
     "details": {
       "history": "Residence of the British Viceroy, built in 1888.",
       "package": { "price": 1200, "description": "Guided historical tour" }
@@ -2330,7 +2330,7 @@
     "cityId": "ct_32",
     "categoryId": "cat_1",
     "name": "Kufri",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHSEKK78w7F4UAqavYQ43fT4QcKJr6AqsHT9tlsWaPig&s=10",
     "details": {
       "history": "A small hill station founded in 1819 by the British.",
       "package": { "price": 2500, "description": "Yak ride and amusement park" }
@@ -2341,7 +2341,7 @@
     "cityId": "ct_33",
     "categoryId": "cat_3",
     "name": "Namgyal Monastery",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKwvu0WK6hBJhZm3uup5Lg4Pp8QnkINvNHPgFXiEL1Vg&s=10",
     "details": {
       "history": "Relocated to Dharamshala in 1959, the personal monastery of the Dalai Lama.",
       "package": { "price": 2500, "description": "Tibetan culture tour" }
@@ -2352,7 +2352,7 @@
     "cityId": "ct_33",
     "categoryId": "cat_3",
     "name": "Tsuglagkhang Complex",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYB34_AR4J1ByDXQZFsaq5ceYXgejgDndd2-qGLJYzTg&s=10",
     "details": {
       "history": "The largest Tibetan temple outside Tibet.",
       "package": {
@@ -2366,7 +2366,7 @@
     "cityId": "ct_33",
     "categoryId": "cat_1",
     "name": "Triund Trek",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiq5V_98xOyYhffNMIMCM5qdO9X4dPIbMGivsNyNEcDg&s=10",
     "details": {
       "history": "Trekking trail used for centuries by local Gaddi shepherds.",
       "package": {
@@ -2380,7 +2380,7 @@
     "cityId": "ct_33",
     "categoryId": "cat_1",
     "name": "Bhagsunag Waterfall",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPJeo5AEQdWfQ94PTawRAIMmoUukHbX8igMAwcyUKGKw&s=10",
     "details": {
       "history": "Scenic waterfall connected to an ancient Shiva temple.",
       "package": { "price": 1200, "description": "Trek and temple visit" }
@@ -2391,7 +2391,7 @@
     "cityId": "ct_33",
     "categoryId": "cat_4",
     "name": "HPCA Stadium",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfGEaQ87DZNCZaOHDJOUKQ_1mNbHcqceST2pKH_QzZbw&s=10",
     "details": {
       "history": "Picturesque cricket stadium situated at an altitude of 1457 meters.",
       "package": { "price": 1000, "description": "Stadium tour" }
@@ -2402,7 +2402,7 @@
     "cityId": "ct_33",
     "categoryId": "cat_2",
     "name": "St. John in the Wilderness",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIthZjXIwY9h2_0ZvIZ4T6NJ5YPK2gjMxugR_Eyfbs8Q&s=10",
     "details": {
       "history": "Neo-Gothic church built in 1852 amidst deodar forests.",
       "package": { "price": 1000, "description": "Heritage tour" }
@@ -2413,7 +2413,7 @@
     "cityId": "ct_34",
     "categoryId": "cat_1",
     "name": "Khajjiar",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyYPx6Rz-0WANGK-eOSDJ6fzVHId3Sgw03wf3RX8sa5A&s=10",
     "details": {
       "history": "Often referred to as the Mini Switzerland of India.",
       "package": {
@@ -2427,7 +2427,7 @@
     "cityId": "ct_34",
     "categoryId": "cat_1",
     "name": "Panchpula",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKNdjGIDbXJWBAQdNZZ-W_BnglaH1-c7BvYM0vBHW5g&s=10",
     "details": {
       "history": "Scenic spot where a monument stands for freedom fighter Sardar Ajit Singh.",
       "package": { "price": 1200, "description": "Nature walk and photography" }
@@ -2438,7 +2438,7 @@
     "cityId": "ct_34",
     "categoryId": "cat_1",
     "name": "Dainkund Peak",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHJuade3fnPLezCjqW9lYuAUeC-4Vf2LblWIL4MKDhg&s=10",
     "details": {
       "history": "Highest peak in Dalhousie, known as the singing hill.",
       "package": {
@@ -2452,7 +2452,7 @@
     "cityId": "ct_34",
     "categoryId": "cat_1",
     "name": "Kalatop Wildlife Sanctuary",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAmJHfDnhvtW2LJkwK-m3bcD14fj3u27b1Mo_IKZgSjQ&s=10",
     "details": {
       "history": "Established in 1958, home to the Himalayan black bear.",
       "package": {
@@ -2466,7 +2466,7 @@
     "cityId": "ct_34",
     "categoryId": "cat_1",
     "name": "Satdhara Falls",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLfp1TrhWcMiNdZ2dUybUO0fuS-bwfoLMuaaNQEHZj2g&s=10",
     "details": {
       "history": "Seven springs believed to have therapeutic value due to mica.",
       "package": { "price": 1000, "description": "Nature walk" }
@@ -2477,7 +2477,7 @@
     "cityId": "ct_34",
     "categoryId": "cat_2",
     "name": "St. John's Church",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGlJag7PvUU7ynA_xcz2OoNI7era2epP3jGEQg8ha33g&s=10",
     "details": {
       "history": "Oldest church in Dalhousie, built in 1863.",
       "package": { "price": 1000, "description": "Historical tour" }
@@ -2488,7 +2488,7 @@
     "cityId": "ct_35",
     "categoryId": "cat_1",
     "name": "Kheerganga Trek",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVnSdOm7ykLbvsooA4J2aLDouptdYdDqEE4c9ETrxtw&s=10",
     "details": {
       "history": "Trek leading to natural hot water springs at 2960 meters.",
       "package": {
@@ -2502,7 +2502,7 @@
     "cityId": "ct_35",
     "categoryId": "cat_3",
     "name": "Manikaran Sahib",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3qztaUrfVDGt3kBQjbghHcLte-m_EanYukuA2Lj6xsw&s=10",
     "details": {
       "history": "Important pilgrimage site for Sikhs and Hindus, known for hot springs.",
       "package": { "price": 1500, "description": "Langar and hot spring bath" }
@@ -2513,7 +2513,7 @@
     "cityId": "ct_35",
     "categoryId": "cat_4",
     "name": "Tosh Village",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLgPYrXZ-bI9vSy7zn7XqIcTHx4kKKbF70HM-4z8c1hg&s=10",
     "details": {
       "history": "Traditional Himachali village situated at the edge of the Parvati Valley.",
       "package": {
@@ -2527,7 +2527,7 @@
     "cityId": "ct_35",
     "categoryId": "cat_1",
     "name": "Parvati River",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-4ZMqYS3W49323ShGC9viWjZvkc9AEz-U2NJu2bhCwg&s=10",
     "details": {
       "history": "Glacial river originating from the ManTalai Glacier.",
       "package": {
@@ -2541,7 +2541,7 @@
     "cityId": "ct_35",
     "categoryId": "cat_1",
     "name": "Chalal Trek",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuXWCgKQBuEM5TpWiO6VIeEaFmgHV9GAVJ_d5UcjBMaQ&s=10",
     "details": {
       "history": "Known as the trance village of Kasol, accessible by a suspension bridge.",
       "package": { "price": 1200, "description": "Guided village trek" }
@@ -2552,7 +2552,7 @@
     "cityId": "ct_35",
     "categoryId": "cat_2",
     "name": "Malana Village",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJZiVDq0O5vsHJwl2yWuD9IsnUtMN6ElWy5nLCtw3xQ&s=10",
     "details": {
       "history": "Ancient solitary village with its own unique democratic system.",
       "package": {
@@ -2566,7 +2566,7 @@
     "cityId": "ct_36",
     "categoryId": "cat_3",
     "name": "Key Monastery",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA4d9nI1d9da-hkaoZQ4DN0a_Hji-KLg-V4XumynR-RQ&s=10",
     "details": {
       "history": "Founded in the 11th century, it is the biggest monastery in Spiti.",
       "package": {
@@ -2580,7 +2580,7 @@
     "cityId": "ct_36",
     "categoryId": "cat_1",
     "name": "Chandratal Lake",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvrZJfEHgjO-j0SRbKtWCKbmhS8riwlWWuvs8oVz4IIA&s=10",
     "details": {
       "history": "Crescent-shaped high altitude lake situated at 4300 meters.",
       "package": { "price": 5000, "description": "Overnight luxury camping" }
@@ -2591,7 +2591,7 @@
     "cityId": "ct_36",
     "categoryId": "cat_4",
     "name": "Kaza",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSthSovy2EzgBG4_pZ4tbifCzaPh1I0k_L7L4FYkfIciA&s=10",
     "details": {
       "history": "The sub-divisional headquarters of the remote Spiti Valley.",
       "package": {
@@ -2605,7 +2605,7 @@
     "cityId": "ct_36",
     "categoryId": "cat_1",
     "name": "Pin Valley National Park",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST_TnwjfY9NlGva9HxTmL8-oGZ_2Q64Z5CEL9S8CjnkQ&s=10",
     "details": {
       "history": "Established in 1987, natural habitat of the snow leopard.",
       "package": {
@@ -2619,7 +2619,7 @@
     "cityId": "ct_36",
     "categoryId": "cat_3",
     "name": "Tabo Monastery",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW4-JhQKWI-I8kTTkMq0hTsvRHiCcO8v3RYar9JtI56A&s=10",
     "details": {
       "history": "Founded in 996 CE, often called the Ajanta of the Himalayas.",
       "package": {
@@ -2633,7 +2633,7 @@
     "cityId": "ct_36",
     "categoryId": "cat_3",
     "name": "Dhankar Monastery",
-    "imageUrl": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcsefl0OLWIUGREhPpJn_6g6-vW8ZixziB3Ff89BGOkA&s=10",
     "details": {
       "history": "1000-year-old fort monastery built on a 300-meter high spur.",
       "package": {

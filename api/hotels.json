@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Himalayan Retreat",
     "location": "Manali, Himachal Pradesh",
-    "image": "https://images.unsplash.com/photo-1566073171526-873166385cb0?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjzWwkL5KXm-4NCW4LDGn7YHBmuELVcy9jDJNXhsYrVg&s=10",
     "price": "₹4,500 / night",
     "rating": 4.8,
     "amenities": "Free WiFi • Breakfast Included • Pool"
@@ -12,7 +12,7 @@
     "id": 2,
     "name": "Ganges View Resort",
     "location": "Rishikesh, Uttarakhand",
-    "image": "https://images.unsplash.com/photo-1542314831-c6a4d1424368?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXj_jyBGx_XJkq2tdOtDHreEiAuxYyraBvK2kLijM-Q&s=10",
     "price": "₹3,200 / night",
     "rating": 4.5,
     "amenities": "Yoga Classes • Spa • River View"
@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Ladakh Sarai Resort",
     "location": "Leh, Ladakh",
-    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS125xjSjK1J4rbIr99FmawPTAYMeagldn35rWO7v4uQ&s=10",
     "price": "₹6,000 / night",
     "rating": 4.9,
     "amenities": "Mountain View • Heater • Breakfast"
@@ -30,7 +30,7 @@
     "id": 4,
     "name": "Kedarnath Eco Stay",
     "location": "Kedarnath, Uttarakhand",
-    "image": "https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3bbjs5MK6l5bhikKh2YG9S_0BXbCs8VFRYX_OZhq5Q&s",
     "price": "₹2,500 / night",
     "rating": 4.3,
     "amenities": "Temple View • Warm Water • Meals"
@@ -39,7 +39,7 @@
     "id": 5,
     "name": "Royal Heritage Hotel",
     "location": "Amer, Rajasthan",
-    "image": "https://images.unsplash.com/photo-1551882547-ff40c0d129df?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRpHLdUCArRp0YGmrImRUNPc37L_jKnmDTGGGG0IbuQ&s=10",
     "price": "₹8,500 / night",
     "rating": 4.7,
     "amenities": "Palace Feel • Pool • Fine Dining"
@@ -48,7 +48,7 @@
     "id": 6,
     "name": "The Taj Palace",
     "location": "Mumbai, Maharashtra",
-    "image": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqH_ib8bVveB5BbRWl3r_3GBL0vEIo5RLK-bKkZTrNeA&s=10",
     "price": "₹12,000 / night",
     "rating": 5.0,
     "amenities": "Sea View • Luxury Spa • Gym"
@@ -57,7 +57,7 @@
     "id": 7,
     "name": "Goa Beach Resort",
     "location": "North Goa",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT82f5mrq_r5fg6RJgOyYbVZK14JhiMjlPypv_Q5UYBHg&s=10",
     "price": "₹5,500 / night",
     "rating": 4.6,
     "amenities": "Private Beach • Bar • Free WiFi"
@@ -66,7 +66,7 @@
     "id": 8,
     "name": "Pine Tree Residency",
     "location": "Shimla, Himachal",
-    "image": "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7vZoRSYPX_xB4bcJUmtZYItzPzG7il9OaPGigOZOfIQ&s=10",
     "price": "₹3,800 / night",
     "rating": 4.4,
     "amenities": "Balcony View • Heater • Parking"
@@ -75,7 +75,7 @@
     "id": 9,
     "name": "Backwaters Villa",
     "location": "Alleppey, Kerala",
-    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYhpd0yyGCxqMUliqQzGtuHpQv9aLx6pT1dXcYujvyAA&s=10",
     "price": "₹4,100 / night",
     "rating": 4.7,
     "amenities": "Houseboat Style • Meals • AC"
@@ -84,7 +84,7 @@
     "id": 10,
     "name": "City Square Inn",
     "location": "New Delhi",
-    "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=500&auto=format&fit=crop&q=60",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL9qQZDERarExewTLXmbquS0_ZHbktpHYwYfZYs_IFTA&s",
     "price": "₹2,800 / night",
     "rating": 4.1,
     "amenities": "City Center • Metro Access • AC"

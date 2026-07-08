@@ -4,7 +4,7 @@
     "cityId": "ct_1",
     "categoryId": "cat_02",
     "name": "Hawa Mahal",
-    "image": "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=800&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4OQP3J6V3Uyt5N1EPZ53PqLoynjv8894HL-DxahNlZA&s=10",
     "details": {
       "history": "Built in 1799 by Maharaja Sawai Pratap Singh, this five-story palace is constructed of red and pink sandstone.",
       "package": {
@@ -18,7 +18,7 @@
     "cityId": "ct_1",
     "categoryId": "cat_02",
     "name": "Amer Fort",
-    "image": "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI1uPkaHqvWGysk43DyiCCzGjIPrtlHN5pbegdBssLVg&s=10",
     "details": {
       "history": "Built by Raja Man Singh I in 1592, known for its artistic Hindu style elements and cobbled paths.",
       "package": {
@@ -32,7 +32,7 @@
     "cityId": "ct_19",
     "categoryId": "cat_02",
     "name": "Taj Mahal",
-    "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdc47uqFmQ7Yy_u-36jImcVq-XIW5LNtqEf6ChlUJktg&s=10",
     "details": {
       "history": "Commissioned in 1631 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.",
       "package": {
@@ -46,7 +46,7 @@
     "cityId": "ct_19",
     "categoryId": "cat_02",
     "name": "Agra Fort",
-    "image": "https://images.unsplash.com/photo-1598977123418-45f04b616a04?auto=format&fit=crop&w=800&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVzKyBIup_slY36Pu7Z4O8M6SNrwQk0P-qAn1aODytIQ&s=10",
     "details": {
       "history": "A historical fort built in 1565 by Emperor Akbar, serving as the main residence of the Mughal Dynasty rulers.",
       "package": {
@@ -60,7 +60,7 @@
     "cityId": "ct_12",
     "categoryId": "cat_02",
     "name": "Bara Imambara",
-    "image": "https://images.unsplash.com/photo-1600868153491-c6fe4283c742?auto=format&fit=crop&w=800&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCXDRZLkv4BREtn-CvGBmXgttvqcmXynwBfFxg1RLSjQ&s=10",
     "details": {
       "history": "Built by Asaf-ud-Daula, Nawab of Awadh in 1784, famous for its incredible incredible maze, the Bhulbhulaiya.",
       "package": {
@@ -74,7 +74,7 @@
     "cityId": "ct_13",
     "categoryId": "cat_02",
     "name": "Basilica of Bom Jesus",
-    "image": "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=800&q=80",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiGTof-ghBsaos8MQOj_L7JwBJ9TdZDkts41keIdvHnQ&s=10",
     "details": {
       "history": "Constructed in 1605, this UNESCO World Heritage Site holds the mortal remains of St. Francis Xavier.",
       "package": {
