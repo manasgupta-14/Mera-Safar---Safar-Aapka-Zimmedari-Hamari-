@@ -979,3 +979,30 @@ h3,
 .search-suggestions .suggestion-item:last-child {
     border-bottom: none;
 }
+
+
+.coming-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: #f3f4f6;
+    border: 1px solid #ddd;
+    color: #777;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: not-allowed;
+    user-select: none;
+    pointer-events: none;
+}
+
+.coming-soon small {
+    background: #ff9800;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
