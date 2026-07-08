@@ -588,10 +588,10 @@ header {
 }
 
 .btn-primary {
-    background: linear-gradient(to right, var(--clr-accent2), var(--clr-accent3));
-    color: #fff;
+    background: linear-gradient(to top, rgb(255, 200, 97) , rgb(254, 254, 148));
+    color: #000000;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(255, 126, 95, 0.2);
+    box-shadow: 0 8px 10px rgba(255, 126, 95, 0.2);
 }
 
 .pkg-card-footer .btn-primary {
