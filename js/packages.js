@@ -9,8 +9,8 @@ async function fetchAllData() {
         fetch("./api/categories.json")
     ]);
 
-    if (!pkgRes.ok) throw new Error(`packages JSON nahi mila: ${pkgRes.status}`);
-    if (!catRes.ok) throw new Error(`categories JSON nahi mila: ${catRes.status}`);
+    if (!pkgRes.ok) throw new Error(`packages JSON Not Found: ${pkgRes.status}`);
+    if (!catRes.ok) throw new Error(`categories JSON Not Found: ${catRes.status}`);
 
     _packagesData = await pkgRes.json();
     _categoriesData = await catRes.json();
@@ -26,7 +26,7 @@ function renderPackages(packages, container) {
     if (!packages || packages.length === 0) {
         container.innerHTML = `
             <div class="state-error">
-                ⚠️ Is category mein koi package nahi mila.
+                ⚠️ Not Found Package of This Category.
             </div>`;
         return;
     }
@@ -93,7 +93,7 @@ async function loadPackages(categoryId) {
         console.error("loadPackages error:", err);
         container.innerHTML = `
             <div class="state-error">
-                ⚠️ Packages load nahi ho sake. Refresh karke dobara try karein.
+                ⚠️ Package is not load Please Refresh the page Again.
             </div>`;
     }
 }
